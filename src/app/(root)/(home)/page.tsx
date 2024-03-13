@@ -9,6 +9,7 @@ import SkillupCourses from "./homepagesections/SkillupCourses"
 import UpcomingEvents from "./homepagesections/upcomingEvents"
 import WhyDss from "./homepagesections/WhyDataspaceAcademy/whydss_section"
 import Skills from "./homepagesections/skills"
+import IntrestingForm from "@/components/forms/IntrestingForm"
 
 export default function Home() {
   return (
@@ -20,6 +21,7 @@ export default function Home() {
       <WhyDss />
       <LearnerReview />
       <UpcomingEvents />
+      <IntrestingForm />
       <SkillupCourses />
       <DownloadApp />
     </FadeIn>

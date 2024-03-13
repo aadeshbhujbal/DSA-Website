@@ -1,9 +1,11 @@
 {
+"style": "default",
   "rsc": true,
   "tailwind": {
     "config": "tailwind.config.ts",
     "css": "src/app/globals.css",
-    "cssVariables": true
+    "cssVariables": true,
+    "baseColor": "slate"
   },
   "aliases": {
     "components": "@/src/components",
