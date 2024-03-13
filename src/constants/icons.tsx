@@ -303,33 +303,30 @@ export const DurationIcon: React.FC<InitialProps> = ({ title, titleId, ...props 
     </svg>
   )
 }
-
-export const TickIcon: React.FC<InitialProps> = ({ title, titleId, ...props }) => {
+export const TickIcon: React.FC<InitialProps> = ({ title, titleId, fillColor = "#41BF0B", ...props }) => {
   return (
-    <svg xmlns="http://www.w3.org/2000/svg" width={20} height={20} fill="none" aria-labelledby={titleId} {...props}>
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width={20}
+      height={20}
+      fill={fillColor}
+      aria-labelledby={titleId}
+      {...props}
+    >
       {title ? <title id={titleId}>{title}</title> : null}
       <path
-        fill="#41BF0B"
+        fill={fillColor} // Set fill color for the path
         d="M8.197 1.695c.093.032.185.07.274.114l1.069.526c.29.143.63.143.92 0l1.069-.526a2.292 2.292 0 0 1 3.068 1.043l.061.136.053.139.383 1.128c.105.306.345.546.651.65l1.128.384a2.292 2.292 0 0 1 1.318 3.182l-.526 1.069c-.143.29-.143.63 0 .92l.526 1.069a2.292 2.292 0 0 1-1.318 3.182l-1.128.383a1.042 1.042 0 0 0-.65.651l-.384 1.128a2.292 2.292 0 0 1-3.182 1.318l-1.07-.526a1.042 1.042 0 0 0-.92 0l-1.068.526a2.292 2.292 0 0 1-3.182-1.318l-.384-1.128a1.042 1.042 0 0 0-.65-.65l-1.128-.384a2.292 2.292 0 0 1-1.318-3.182l.526-1.07c.143-.29.143-.63 0-.92l-.526-1.068a2.292 2.292 0 0 1 1.318-3.182l1.128-.384c.306-.104.546-.344.65-.65l.384-1.128a2.292 2.292 0 0 1 2.908-1.432Zm4.694 5.78L8.375 11.99 6.73 10.016a.625.625 0 1 0-.96.8l2.083 2.5a.625.625 0 0 0 .922.042l5-5a.625.625 0 1 0-.884-.883Z"
       />
     </svg>
   )
 }
 
-
-
 export const NoiseBg = (props: SVGProps<SVGSVGElement>) => (
-  <svg
-    xmlns="http://www.w3.org/2000/svg"
-    width={120}
-    height={120}
-    fill="none"
-    {...props}
-  >
+  <svg xmlns="http://www.w3.org/2000/svg" width={120} height={120} fill="none" {...props}>
     <g opacity={0.05}>
       <path fill="#fff" d="M0 0h120v120H0z" />
       <path stroke="#E0E5F2" strokeOpacity={0.16} d="M.5.5h119v119H.5z" />
     </g>
   </svg>
 )
-

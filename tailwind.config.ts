@@ -4,7 +4,13 @@ const colors = require("tailwindcss/colors")
 const { default: flattenColorPalette } = require("tailwindcss/lib/util/flattenColorPalette")
 const config = {
   darkMode: ["class"],
-  content: ["./pages/**/*.{ts,tsx}", "./components/**/*.{ts,tsx}", "./app/**/*.{ts,tsx}", "./src/**/*.{ts,tsx}"],
+  content: [
+    "./pages/**/*.{ts,tsx}",
+    "./components/**/*.{ts,tsx}",
+    "./app/**/*.{ts,tsx}",
+    "./src/**/*.{ts,tsx}",
+    "./node_modules/react-tailwindcss-select/dist/index.esm.js",
+  ],
   prefix: "",
   theme: {
     container: {
@@ -126,11 +132,13 @@ const config = {
         fourth: "moveHorizontal 40s ease infinite",
         fifth: "moveInCircle 20s ease infinite",
         scroll: "scroll var(--animation-duration, 40s) var(--animation-direction, forwards) linear infinite",
+        scroll1: "scroll var(--animation-duration, 800s) var(--animation-direction, forwards) linear infinite",
       },
     },
   },
   plugins: [
     require("tailwindcss-animate"),
+
     addVariablesForColors,
     function ({ matchUtilities, theme }: any) {
       matchUtilities(

@@ -29,4 +29,5 @@ export interface OurProgramIcons extends SVGProps<SVGSVGElement> {
 export interface InitialProps extends SVGProps<SVGSVGElement> {
   title?: string
   titleId?: string
+  fillColor?: string // Optional fill color prop
 }
