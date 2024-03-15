@@ -14,10 +14,12 @@ function SkillupCourses() {
   // State to store the currently hovered card index
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null)
   return (
-    <Section className="">
-      <h2 className="h4 my-4 pb-2 text-center !font-medium text-black">Upskill yourself with our free courses</h2>
+    <Section className="!p-0">
+      <h2 className="h4 my-4 px-8 pb-2 text-center !font-medium text-black sm:px-0">
+        Upskill yourself with our free courses
+      </h2>
       <Container className="bg-grid-black/[0.05] sm:!p-0">
-        <div className="p-6  sm:p-1">
+        <div className="sm:p-1  md:p-6">
           <div className="mx-auto flex w-full max-w-7xl flex-row flex-wrap items-center justify-center gap-4 overflow-hidden rounded-md py-8 sm:gap-8 sm:p-4 ">
             {skillupCourses.map((item, index) => {
               const colorIndex = index % colors.length

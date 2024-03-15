@@ -1,10 +1,9 @@
 import Link from "next/link"
 import { SVGProps } from "react"
 import { Logo } from "./FooterLogo"
-import { SocialMedia,  } from "./SocialMedia"
+import { SocialMedia } from "./SocialMedia"
 import { Container } from "../../ui/Container"
 import { FadeIn } from "../../ui/FadeIn"
-
 
 const navigation = [
   {
@@ -15,7 +14,7 @@ const navigation = [
       { title: "Blogs", href: "/blogs" },
       { title: "Jobs", href: "/jobs" },
       { title: "Events", href: "/events" },
-      ],
+    ],
   },
   {
     title: "TOP SELLING COURSES",
@@ -156,10 +155,10 @@ function ReachUs() {
 
 export function Footer() {
   return (
-    <Container className="mt-24  bg-black sm:mt-32">
+    <Container className="mt-4 bg-black ">
       <div className=" mx-auto">
         <FadeIn>
-          <div className="space-y-8 px-4 py-16 sm:px-6 lg:space-y-16">
+          <div className="space-y-8 px-4 py-0 sm:px-6 lg:space-y-16">
             <div className="grid grid-cols-1 gap-2 lg:grid-cols-3">
               <div className="">
                 <Link href="/" aria-label="Home">

@@ -38,8 +38,8 @@ function MainLayoutInner({ children }: { children: React.ReactNode }) {
       </motion.div>
       <motion.div
         layout
-        style={{ borderTopLeftRadius: 80, borderTopRightRadius: 40 }}
-        className="relative flex flex-auto overflow-hidden bg-red-800 pt-14 "
+        // style={{ borderTopLeftRadius: 30, borderTopRightRadius: 30 }}
+        className="relative flex flex-auto overflow-hidden bg-black !pt-8 "
       >
         <Footer />
       </motion.div>

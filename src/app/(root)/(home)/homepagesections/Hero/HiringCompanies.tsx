@@ -7,7 +7,7 @@ import { hiringCompanies } from "@/constants"
 const HiringCompanies = () => {
   const id = useId()
   return (
-    <Container>
+    <Container className="!p-0">
       <h2 className="h4 mt-6 px-4 text-center !font-medium text-black lg:mt-16">
         Ignite Your Career With Top Hiring Companies
       </h2>

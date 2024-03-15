@@ -1,11 +1,14 @@
-// In your Input component file
-
 import * as React from "react"
 import { cn } from "@/lib/utils"
 
 import { VariantProps, Variants } from "./Variants"
+interface InputProps {
+  id?: any
+  defaultValue?: any
+  type?: string
+}
 
-const Input = React.forwardRef<HTMLInputElement, VariantProps>(
+const Input = React.forwardRef<HTMLInputElement, VariantProps & InputProps>(
   ({ className, variant = "default", size = "default", placeholder, ...props }, ref) => {
     return (
       <input

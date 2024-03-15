@@ -38,7 +38,7 @@ const singleWord: Variants = {
 const AnimatedTextH1: React.FC<AnimatedTextH1Props> = ({ text, className = "" }) => {
   return (
     <div className=" flex w-full items-center justify-center  overflow-hidden py-2 text-center sm:py-0">
-      <Container>
+      <Container className="!p-0">
         <motion.h1
           className={`text-dark dark:text-light h1 inline-block w-full font-medium capitalize ${className}`}
           variants={quote}

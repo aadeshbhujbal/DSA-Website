@@ -27,6 +27,7 @@ const config = {
       },
       boxShadow: {
         "hero-card": "0px 4px 40.9px 0px rgba(0, 0, 0, 0.12)",
+        "shadow-bottom": "0px -8px 20px 0px rgba(0, 0, 0, 0.06)",
       },
       colors: {
         blue: {

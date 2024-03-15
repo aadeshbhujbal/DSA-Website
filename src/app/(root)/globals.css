@@ -102,7 +102,7 @@ h6 {
   }
 
   .h4 {
-    @apply !font-clashgrotesk text-xl font-normal leading-[130%] md:text-2xl lg:text-3xl 2xl:text-3xl;
+    @apply !font-clashgrotesk text-2xl font-normal leading-[130%] md:text-2xl lg:text-3xl 2xl:text-3xl;
   }
 
   .h5 {
@@ -227,4 +227,32 @@ h6 {
   /* .hoverpause:hover {
     animation-duration: 500s !important;
   } */
+  .tick-icon-list {
+    list-style-type: none; /* Remove default list-style */
+    padding-left: 0; /* Remove default padding */
+  }
+
+  .tick-icon-list li {
+    padding-left: 24px; /* Add padding to accommodate the icon */
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' fill='%2341BF0B'%3E%3Cpath d='M0 0h24v24H0z' fill='none'%3E%3C/path%3E%3Cpath d='M8.197 1.695c.093.032.185.07.274.114l1.069.526c.29.143.63.143.92 0l1.069-.526a2.292 2.292 0 0 1 3.068 1.043l.061.136.053.139.383 1.128c.105.306.345.546.651.65l1.128.384a2.292 2.292 0 0 1 1.318 3.182l-.526 1.069c-.143.29-.143.63 0 .92l.526 1.069a2.292 2.292 0 0 1-1.318 3.182l-1.128.383a1.042 1.042 0 0 0-.65.651l-.384 1.128a2.292 2.292 0 0 1-3.182 1.318l-1.07-.526a1.042 1.042 0 0 0-.92 0l-1.068.526a2.292 2.292 0 0 1-3.182-1.318l-.384-1.128a1.042 1.042 0 0 0-.65-.65l-1.128-.384a2.292 2.292 0 0 1-1.318-3.182l.526-1.07c.143-.29.143-.63 0-.92l-.526-1.068a2.292 2.292 0 0 1 1.318-3.182l1.128-.384c.306-.104.546-.344.65-.65l.384-1.128a2.292 2.292 0 0 1 2.908-1.432Zm4.694 5.78L8.375 11.99 6.73 10.016a.625.625 0 1 0-.96.8l2.083 2.5a.625.625 0 0 0 .922.042l5-5a.625.625 0 1 0-.884-.883Z'%3E%3C/path%3E%3C/svg%3E"); /* Use TickIcon SVG here */
+    background-repeat: no-repeat;
+    background-size: 20px; /* Set the size of the icon */
+    background-position: top 5px left; /* Position the icon */
+    margin-bottom: 12px; /* Adjust as needed for spacing between list items */
+  }
+  .grow_ellipse::after {
+    border-radius: 50%;
+    left: -50%;
+    right: -50%;
+    top: -150%;
+    bottom: -150%;
+    line-height: 8.34em;
+    transform: scale(0, 0);
+  }
+  .grow_ellipse:hover::after {
+    transform: scale(1, 1);
+  }
+  .shadow-bottom {
+    box-shadow: 0px -8px 20px 0px rgba(0, 0, 0, 0.06);
+  }
 }

@@ -2,8 +2,8 @@ import clsx from "clsx"
 import React from "react"
 
 export interface VariantProps {
-  variant?: "primary" | "secondary" | "default" | "destructive" | "ghost" | "link" | "outline"
-  size?: "small" | "medium" | "large" | "default" | "icon"
+  variant?: "primary" | "secondary" | "default" | "destructive" | "ghost" | "link" | "outline" | "tab"
+  size?: "small" | "medium" | "large" | "default" | "icon" | undefined
   className?: string
   href?: string
   children?: React.ReactNode
@@ -24,6 +24,7 @@ export const Variants = ({ variant, size }: { variant?: VariantProps["variant"];
     secondary: "bg-secondary text-secondary-foreground hover:bg-secondary/80",
     ghost: " bg-transparent ",
     link: "text-primary underline-offset-4 hover:underline",
+    tab: " !bg-background !py-3 !text-black rounded data-[state=active]:!bg-black rounded-lg w-full data-[state=active]:!text-white data-[state=active]:shadow-sm",
   }
 
   const sizeClasses = {
@@ -35,21 +36,4 @@ export const Variants = ({ variant, size }: { variant?: VariantProps["variant"];
   }
 
   return clsx(variant && variantClasses[variant], size && sizeClasses[size])
-}
-
-{
-  /* <FormItem>
-<FormLabel>Country</FormLabel>
-<Select
-  {...field}
-  options={countries.map((country) => ({
-    label: `${country.flag}  ${country.phone_code}`,
-    value: country.country_code,
-  }))}
-  className="w-32 bg-transparent hover:bg-accent  hover:text-accent-foreground"
-  defaultValue={form.getValues("country")}
-  isSearchable
-  onChange={(selectedOption) => form.setValue("country", selectedOption)}
-/>
-</FormItem> */
 }

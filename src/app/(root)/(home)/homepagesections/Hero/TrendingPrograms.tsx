@@ -7,7 +7,7 @@ import { TrendingIcon } from "@/constants/icons"
 const TrendingPrograms = () => {
   const id = useId()
   return (
-    <Container className="px-4 md:p-0">
+    <Container className="px-4 md:!p-0">
       <h2 className="h5 mt-6 text-center !font-medium text-black md:mt-12">Trending Programs</h2>
       <div className="mx-auto mt-4  flex flex-wrap justify-center gap-2 md:mt-8 md:max-w-3xl md:gap-6  lg:max-w-4xl ">
         {trendingPrograms.map((item) => {

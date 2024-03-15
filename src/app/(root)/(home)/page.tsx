@@ -1,6 +1,8 @@
+import IntrestingForm from "@/components/forms/IntrestingForm"
 import { FadeIn } from "@/components/ui/FadeIn"
 import DownloadApp from "./homepagesections/DownloadApp"
 import Hero from "./homepagesections/Hero/Hero"
+import { HiringTrends } from "./homepagesections/hiringtrends"
 import IndustryExperts from "./homepagesections/IndustryExperts"
 import LearnerReview from "./homepagesections/LearnerReview"
 import Lms from "./homepagesections/Lms"
@@ -8,8 +10,6 @@ import OurPrograms from "./homepagesections/OurPrograms"
 import SkillupCourses from "./homepagesections/SkillupCourses"
 import UpcomingEvents from "./homepagesections/upcomingEvents"
 import WhyDss from "./homepagesections/WhyDataspaceAcademy/whydss_section"
-import Skills from "./homepagesections/skills"
-import IntrestingForm from "@/components/forms/IntrestingForm"
 
 export default function Home() {
   return (
@@ -17,6 +17,7 @@ export default function Home() {
       <Hero />
       <OurPrograms />
       <IndustryExperts />
+      <HiringTrends />
       <Lms />
       <WhyDss />
       <LearnerReview />

@@ -14,7 +14,7 @@ const DataspaceCertification = () => {
             alt={"certificate"}
             width={400}
             height={400}
-            className="lg:w-auto lg:max-w-[900px]"
+            className="lg:!w-xl lg:max-w-[900px]"
           />
         </div>
         <div className="">
