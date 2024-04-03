@@ -78,7 +78,7 @@ const LearnerReview = () => {
           </InfiniteMoving>
         </div>
       </Container>
-      <Container className="mt-12 !max-w-full !p-0 pb-4 sm:pb-0">
+      {/* <Container className="mt-12 !max-w-full !p-0 pb-4 sm:pb-0">
         <h2 className="h4 text-center !font-medium text-black">We got featured!</h2>
         <div className="mx-auto flex flex-wrap justify-center gap-4 py-6 sm:flex-row md:flex-nowrap  lg:gap-8 ">
           <Link href="/">
@@ -118,7 +118,7 @@ const LearnerReview = () => {
             />
           </Link>
         </div>
-      </Container>
+      </Container> */}
     </Section>
   )
 }

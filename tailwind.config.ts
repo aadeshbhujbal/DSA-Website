@@ -28,6 +28,7 @@ const config = {
       boxShadow: {
         "hero-card": "0px 4px 40.9px 0px rgba(0, 0, 0, 0.12)",
         "shadow-bottom": "0px -8px 20px 0px rgba(0, 0, 0, 0.06)",
+        upwards: "0px -8px 10px 0px rgba(0, 0, 0, 0.03)",
       },
       colors: {
         blue: {
@@ -149,6 +150,12 @@ const config = {
               `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="40" height="40" fill="none" stroke="${value}"><path d="M0 .5H31.5V32"/></svg>`
             )}")`,
           }),
+          "bg-grid-gradient": (value: any) => ({
+            backgroundImage: `linear-gradient(180deg, rgba(236, 255, 227, 0.00) 0%, #ECFFE3 100%), url("${svgToDataUri(
+              `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="40" height="40" fill="none" stroke="${value}"><path d="M0 .5H31.5V32"/></svg>`
+            )}")`,
+          }),
+
           "bg-grid-small": (value: any) => ({
             backgroundImage: `url("${svgToDataUri(
               `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="16" height="16" fill="none" stroke="${value}"><path d="M0 .5H31.5V32"/></svg>`
