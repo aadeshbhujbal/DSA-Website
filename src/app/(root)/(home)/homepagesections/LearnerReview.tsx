@@ -1,5 +1,4 @@
 import Image from "next/image"
-import Link from "next/link"
 import React, { useId } from "react"
 import { Card } from "@/components/ui/card"
 import { Container } from "@/components/ui/Container"
@@ -78,47 +77,6 @@ const LearnerReview = () => {
           </InfiniteMoving>
         </div>
       </Container>
-      {/* <Container className="mt-12 !max-w-full !p-0 pb-4 sm:pb-0">
-        <h2 className="h4 text-center !font-medium text-black">We got featured!</h2>
-        <div className="mx-auto flex flex-wrap justify-center gap-4 py-6 sm:flex-row md:flex-nowrap  lg:gap-8 ">
-          <Link href="/">
-            <Image
-              src={"/images/ed.png"}
-              className="w-[140px]  rounded-xl shadow-[rgba(6,_8,_24,_0.08)_0px_9px_20px] sm:w-72  lg:max-w-60 xl:max-w-72"
-              alt=""
-              width={300}
-              height={300}
-            />
-          </Link>
-          <Link href="/">
-            <Image
-              src={"/images/blogrizm.png"}
-              className="w-[140px]  rounded-xl shadow-[rgba(6,_8,_24,_0.08)_0px_9px_20px]   sm:w-72 lg:max-w-60 xl:max-w-72"
-              alt=""
-              width={300}
-              height={300}
-            />
-          </Link>
-          <Link href="/">
-            <Image
-              src={"/images/mid-day.png"}
-              className="w-[140px]  rounded-xl shadow-[rgba(6,_8,_24,_0.08)_0px_9px_20px] sm:w-72 lg:max-w-60 xl:max-w-72"
-              alt=""
-              width={300}
-              height={300}
-            />
-          </Link>
-          <Link href="/">
-            <Image
-              src={"/images/cio.png"}
-              className="w-[140px]  rounded-xl  shadow-[rgba(6,_8,_24,_0.08)_0px_9px_20px] sm:w-72 lg:max-w-60 xl:max-w-72"
-              alt=""
-              width={300}
-              height={300}
-            />
-          </Link>
-        </div>
-      </Container> */}
     </Section>
   )
 }
