@@ -15,7 +15,7 @@ function SkillupCourses() {
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null)
   return (
     <Section className="!p-0">
-      <h2 className="h4 my-4 px-8 pb-2 text-center !font-medium text-black sm:px-0">
+      <h2 className="h4 my-4 px-8 pb-2 pt-4 text-center !font-medium text-black sm:px-0">
         Upskill yourself with our free courses
       </h2>
       <Container className="bg-grid-black/[0.05] sm:!p-0">

@@ -1,3 +1,4 @@
+import { useEffect, useState } from "react"
 import { Area, AreaChart, CartesianGrid, ResponsiveContainer, Tooltip, XAxis, YAxis } from "recharts"
 
 interface AreaChartDataItem {
@@ -11,7 +12,7 @@ interface AreaChartProps {
 
 const CustomAreaChart: React.FC<AreaChartProps> = ({ data }) => {
   return (
-    <div style={{ width: "100%", height: 350 }}>
+    <div className="chart_properties">
       <ResponsiveContainer>
         <AreaChart
           data={data}

@@ -12,7 +12,7 @@ import { CalanderIcon } from "@/constants/icons"
 const UpcomingEvents = () => {
   return (
     <Section className="!py-0">
-      <Container className="bg-gradient-to-b from-[#c6ffae4d]  to-white/10 p-4 sm:pb-12">
+      <Container className="bg-gradient-to-b from-[#c6ffae4d]  to-white/10 p-4 sm:!pb-4">
         <h2 className="h4 py-6 text-center !font-medium text-black sm:pt-0">Upcoming Events</h2>
 
         <div className="mx-auto flex w-full flex-row flex-wrap  items-center justify-center gap-8 overflow-hidden rounded-md py-4 2xl:max-w-7xl">

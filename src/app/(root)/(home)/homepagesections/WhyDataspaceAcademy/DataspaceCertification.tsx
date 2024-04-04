@@ -1,6 +1,7 @@
 import Image from "next/image"
 import React from "react"
 import Button from "@/components/ui/button"
+import { TickIcon } from "@/constants/icons"
 
 const DataspaceCertification = () => {
   return (
@@ -23,6 +24,20 @@ const DataspaceCertification = () => {
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore Lorem
             ipsum dolor sit amet, consectetur adipiscing elit.
           </p>
+          <ul className="my-4 flex flex-col gap-3 lg:flex-row">
+            <li className="small-medium flex items-center text-white">
+              <TickIcon title="Easy apply for trending jobs" titleId="easyApply" className="mr-2" />
+              Easy apply for trending jobs
+            </li>
+            <li className="small-medium flex items-center text-white">
+              <TickIcon title="Get the best learning experience" titleId="learningExperience" className="mr-2" />
+              Get the best learning experience
+            </li>
+            <li className="small-medium flex items-center text-white">
+              <TickIcon title="Enroll free skill-up courses" titleId="freeCourses" className="mr-2" />
+              Enroll free skill-up courses
+            </li>
+          </ul>
           <Button size="large" variant={"default"} className="my-4">
             Get in touch
           </Button>

@@ -27,11 +27,11 @@ export function HiringTrends(this: any) {
           guide you towards a successful career path in technology.
         </p>
 
-        <div className="shadow-upwards mx-auto my-6 max-w-6xl rounded-2xl bg-gradient-to-b from-white   to-transparent  p-12 ">
+        <div className="mx-auto my-6 max-w-6xl rounded-2xl bg-gradient-to-b from-white to-transparent  p-4 shadow-upwards  md:p-12 ">
           <h6 className="h6 !font-mediumbold">Categories</h6>
 
-          <VerticalTabs defaultValue="cybersecurity" className="flex w-full flex-row !p-0">
-            <VerticalTabsList className="flex w-full max-w-60 flex-col !items-start gap-4 bg-transparent pt-4">
+          <VerticalTabs defaultValue="cybersecurity" className="flex w-full flex-col !p-0 md:flex-row">
+            <VerticalTabsList className="custom-scrollbar flex w-full flex-row !items-start gap-4 overflow-scroll bg-transparent pt-4 sm:max-w-60 md:flex-col ">
               <VerticalTabsTrigger value="cybersecurity" variant="tab" className="!bg-transparent !py-3">
                 Cybersecurity
               </VerticalTabsTrigger>

@@ -77,7 +77,7 @@ const HeroCard: React.FC<HeroCardProps> = ({ className, x, y, rotate, title, sub
   return (
     <motion.div
       className={cn(
-        "shadow-hero-card inset-y absolute inset-x-0 z-[-1] max-w-44 rounded-xl border-b-[6px] !bg-[#ffffff] px-4 py-6 text-center text-card-foreground opacity-100 md:px-6 ",
+        "inset-y absolute inset-x-0 z-[-1] hidden max-w-44 rounded-xl border-b-[6px] !bg-[#ffffff] px-4 py-6 text-center text-card-foreground opacity-100 shadow-hero-card md:px-6 lg:block ",
         className
       )}
       style={{ x, y: adjustedY, rotate: `${rotate}deg`, borderColor }}
