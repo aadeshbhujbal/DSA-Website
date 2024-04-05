@@ -72,19 +72,22 @@ export const socialMediaProfiles = [
 
 export function SocialMedia({ className, invert = false }: { className?: string; invert?: boolean }) {
   return (
-    <ul className={clsx("flex gap-x-8", invert ? "text-white" : "text-neutral-950", className)}>
-      {socialMediaProfiles.map((socialMediaProfile) => (
-        <li key={socialMediaProfile.title}>
-          <Link
-            href={socialMediaProfile.href}
-            aria-label={socialMediaProfile.title}
-            className={clsx("transition", invert ? "hover:text-neutral-200" : "hover:text-neutral-700")}
-          >
-            <socialMediaProfile.icon className="size-8 fill-current" />
-          </Link>
-        </li>
-      ))}
-    </ul>
+    <>
+      {" "}
+      <h5 className="h5 mt-5 !font-medium text-[#CCCCCC]">Social Handles </h5>
+      <ul className={clsx("flex gap-x-8", invert ? "text-white" : "text-neutral-950", className)}>
+        {socialMediaProfiles.map((socialMediaProfile) => (
+          <li key={socialMediaProfile.title}>
+            <Link
+              href={socialMediaProfile.href}
+              aria-label={socialMediaProfile.title}
+              className={clsx("transition", invert ? "hover:text-neutral-200" : "hover:text-neutral-700")}
+            >
+              <socialMediaProfile.icon className="size-8 fill-current" />
+            </Link>
+          </li>
+        ))}
+      </ul>
+    </>
   )
-
 }

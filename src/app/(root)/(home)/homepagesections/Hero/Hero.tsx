@@ -24,12 +24,12 @@ export default function Hero() {
         <div className="bg-gradient-to-b from-white/80 to-white/20 bg-clip-text pb-0 text-transparent">
           <BackgroundGradientAnimation>
             <AnimatedTextH1
-              className="mt-8 max-w-3xl px-6 py-4 !pb-0 font-medium text-black sm:px-0 md:max-w-xl lg:mt-20 lg:max-w-3xl 2xl:mt-24 2xl:max-w-4xl"
+              className="mt-36 max-w-3xl px-6 py-4 !pb-0 font-medium text-black sm:max-w-md sm:px-0 md:max-w-xl lg:mt-40 lg:max-w-3xl 2xl:mt-48 2xl:max-w-4xl"
               text="Unlock High-Demand Tech Skills Effortlessly!"
             />
 
             <AnimatedText2
-              className="max-w-100 p-4  px-6 !pb-0 pt-0 text-black sm:px-0  sm:pt-4 md:max-w-xl lg:max-w-4xl 3xl:max-w-6xl"
+              className="max-w-100 p-4  px-6 !pb-0 pt-0 text-black sm:max-w-md sm:px-0  sm:pt-4 md:max-w-xl lg:max-w-4xl 3xl:max-w-6xl"
               text="DataSpace Academy, the education arm of Satts Cyber Technology Private Limited, provides over 100 courses to cultivate skilled professionals aligned with the latest global trends, ensuring their impact in the industry."
             />
             <HeroCards />

@@ -31,20 +31,28 @@ export function HiringTrends(this: any) {
           <h6 className="h6 !font-mediumbold">Categories</h6>
 
           <VerticalTabs defaultValue="cybersecurity" className="flex w-full flex-col !p-0 md:flex-row">
-            <VerticalTabsList className="custom-scrollbar flex w-full flex-row !items-start gap-4 overflow-scroll bg-transparent pt-4 sm:max-w-60 md:flex-col ">
-              <VerticalTabsTrigger value="cybersecurity" variant="tab" className="!bg-transparent !py-3">
+            <VerticalTabsList className="custom-scrollbar  flex h-16 w-full scroll-mb-3.5 flex-row !items-start gap-1 overflow-scroll bg-transparent pt-4 sm:h-auto md:flex-col  md:gap-4  lg:max-w-60">
+              <VerticalTabsTrigger value="cybersecurity" variant="tab" className="!bg-transparent !p-2 lg:!p-3 ">
                 Cybersecurity
               </VerticalTabsTrigger>
-              <VerticalTabsTrigger value="Data_Science_Analytics" variant="tab" className="!bg-transparent !py-3">
+              <VerticalTabsTrigger
+                value="Data_Science_Analytics"
+                variant="tab"
+                className="!bg-transparent !p-2 lg:!p-3 "
+              >
                 Data Science & Analytics
               </VerticalTabsTrigger>
-              <VerticalTabsTrigger value="Digital_Marketing" variant="tab" className="!bg-transparent !py-3">
+              <VerticalTabsTrigger value="Digital_Marketing" variant="tab" className="!bg-transparent !p-2 lg:!p-3 ">
                 Digital Marketing
               </VerticalTabsTrigger>
-              <VerticalTabsTrigger value="Cloud_Computing" variant="tab" className="!bg-transparent !py-3">
+              <VerticalTabsTrigger value="Cloud_Computing" variant="tab" className="!bg-transparent !p-2 lg:!p-3 ">
                 Cloud Computing
               </VerticalTabsTrigger>
-              <VerticalTabsTrigger value="Networking_IT_Infrastructure" variant="tab" className="!bg-transparent !py-3">
+              <VerticalTabsTrigger
+                value="Networking_IT_Infrastructure"
+                variant="tab"
+                className="!bg-transparent !p-2 lg:!p-3 "
+              >
                 Networking & IT Infrastructure{" "}
               </VerticalTabsTrigger>
             </VerticalTabsList>

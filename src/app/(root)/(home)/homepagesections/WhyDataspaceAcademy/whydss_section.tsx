@@ -1,10 +1,14 @@
+"use client"
 import Image from "next/image"
+import dynamic from "next/dynamic"
+
 import React from "react"
 import Button from "@/components/ui/button"
 import { Container } from "@/components/ui/Container"
 import { Section } from "@/components/ui/Section"
 import DataspaceCertification from "./DataspaceCertification"
 import WhatWePromise from "./WhatWePromise"
+const ReactPlayer = dynamic(() => import("react-player"), { ssr: false })
 
 const WhyChooseDatapaceAcademy = () => {
   return (
@@ -17,17 +21,22 @@ const WhyChooseDatapaceAcademy = () => {
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore Lorem
           ipsum dolor sit amet, consectetur adipiscing elit.
         </p>
-        <Button size="large" variant={"default"} className="my-4">
+        <Button size="large" variant={"default"} className="my-8 sm:my-4 ">
           Get in touch
         </Button>
       </div>
       <div className="ml-auto self-center">
-        <Image
-          src={"/images/video.png"}
-          className="self-center"
-          alt="DataSpace Academy Video"
+        <ReactPlayer
+          playIcon={
+            <Image width={50} height={50} alt="Play button" style={{ maxWidth: "80px" }} src="/images/play-1.png" />
+          }
+          light="/images/video.png"
+          url="/videos/get-started.mp4" // Replace with your video URL
+          controls={true}
           width={350}
-          height={350}
+          height={250}
+          style={{ border: "1px solid " }}
+          className=" !rounded-xl "
         />
       </div>
     </>
@@ -46,7 +55,7 @@ const WhyDss = () => {
         <div className="mx-auto flex flex-col sm:flex-row  ">
           <WhyChooseDatapaceAcademy />
         </div>
-        <div className="">
+        <div className="py-4">
           <WhatWePromise />
         </div>
         <div className="">

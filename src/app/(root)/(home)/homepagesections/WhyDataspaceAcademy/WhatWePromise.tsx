@@ -30,7 +30,7 @@ const AnimatedLine: React.FC<{ startX: number; endX: number; maxWidth: number }>
 const PromiseCard: React.FC<PromiseCardProps> = ({ heading, imageUrl, imageAlt, paragraph }) => {
   return (
     <div className="relative !mx-auto flex !content-center justify-center">
-      <div className="relative mt-20 max-w-[240px] rounded-md bg-gradient-to-r from-[#0077E5] to-[#9DFF74] p-[1px]">
+      <div className="relative mt-8 max-w-[240px] rounded-md bg-gradient-to-r from-[#0077E5] to-[#9DFF74] p-[1px]">
         <div className="relative flex items-center justify-center rounded-md bg-[#020C15]">
           <div className="absolute left-1/2 top-8 -translate-x-1/2 -translate-y-full">
             <div className="rounded bg-gradient-to-r from-[#0077E5] to-[#9DFF74] p-[1px]">

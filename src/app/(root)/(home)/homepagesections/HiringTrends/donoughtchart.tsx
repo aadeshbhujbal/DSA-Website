@@ -20,8 +20,8 @@ const DonutChart = () => {
           data={data}
           cx="50%"
           cy="50%"
-          innerRadius={100}
-          outerRadius={150}
+          innerRadius={90}
+          outerRadius={130}
           fill="#8884d8"
           paddingAngle={2}
           dataKey="value"
@@ -31,12 +31,12 @@ const DonutChart = () => {
           ))}
         </Pie>
         <text x="50%" y="50%" textAnchor="middle" dominantBaseline="middle" fontSize="0.9em">
-          <tspan x="50%" dy="-3em">
+          <tspan x="50%" dy="-3.5em">
             Sectors Hiring in
           </tspan>
         </text>
         <text x="50%" y="50%" textAnchor="middle" dominantBaseline="middle" fontSize="2em" fontWeight="bold">
-          <tspan x="50%" dy="-0.3em">
+          <tspan x="50%" dy="-0.5em">
             2024
           </tspan>
         </text>
@@ -45,24 +45,23 @@ const DonutChart = () => {
           layout="horizontal"
           verticalAlign="bottom"
           align="center"
-          iconSize={19}
-          wrapperStyle={{ borderRadius: "5px" }}
+          iconSize={16}
+          wrapperStyle={{ borderRadius: "3px", margin: "0 auto" }}
           content={({ payload }) =>
             (payload ?? []).map((entry, index) => (
-              <span key={`item-${index}`} style={{ paddingRight: "20px" }}>
+              <span key={`item-${index}`} style={{ paddingRight: "20px", display: "flex-row", alignItems: "center" }}>
                 <span
                   style={{
                     display: "inline-block",
-                    width: "19px",
+                    width: "16px",
                     transform: "translateY(3px)",
-                    height: "19px",
-                    borderRadius: "6px",
+                    height: "16px",
+                    borderRadius: "4px",
                     marginRight: "5px",
-
                     backgroundColor: entry.color,
                   }}
                 ></span>
-                <span style={{ paddingLeft: "0px", color: entry.color }}>{entry.value}</span>
+                <span style={{ paddingLeft: "0px", color: entry.color, fontSize: "14px" }}>{entry.value}</span>
               </span>
             ))
           }

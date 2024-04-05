@@ -4,8 +4,38 @@ import { Logo } from "./FooterLogo"
 import { SocialMedia } from "./SocialMedia"
 import { Container } from "../../ui/Container"
 import { FadeIn } from "../../ui/FadeIn"
+import Image from "next/image"
 
 const navigation = [
+  {
+    title: "Categories",
+    links: [
+      {
+        title: "Cybersecurity Courses",
+        href: "/Certification In Ethical Hacking",
+      },
+      {
+        title: "Data Science Courses",
+        href: "/Diploma in Cyber Security",
+      },
+      {
+        title: "Programming Courses",
+        href: "/Machine Learning Using Python",
+      },
+      {
+        title: "Networking & Cloud Computing Courses",
+        href: "/Certification In Data Science",
+      },
+      {
+        title: "Diploma Courses",
+        href: "/Certified Ethical Hacker V12",
+      },
+      {
+        title: "Degree Courses",
+        href: "/Certif",
+      },
+    ],
+  },
   {
     title: "Quick Links",
     links: [
@@ -14,37 +44,9 @@ const navigation = [
       { title: "Blogs", href: "/blogs" },
       { title: "Jobs", href: "/jobs" },
       { title: "Events", href: "/events" },
+      { title: "Live Schedules", href: "/Live Schedules" },
     ],
   },
-  {
-    title: "TOP SELLING COURSES",
-    links: [
-      {
-        title: "Certification In Ethical Hacking",
-        href: "/Certification In Ethical Hacking",
-      },
-      {
-        title: "Diploma in Cyber Security",
-        href: "/Diploma in Cyber Security",
-      },
-      {
-        title: "Machine Learning Using Python",
-        href: "/Machine Learning Using Python",
-      },
-      {
-        title: "Certification In Data Science",
-        href: "/Certification In Data Science",
-      },
-      {
-        title: "Certified Ethical Hacker V12",
-        href: "/Certified Ethical Hacker V12",
-      },
-    ],
-  },
-  // {
-  //   title: "Connect",
-  //   links: socialMediaProfiles,
-  // },
 ]
 function GooglePlayIcon(props: SVGProps<SVGSVGElement>) {
   return (
@@ -108,15 +110,13 @@ const reachus = [
 function Navigation() {
   return (
     <nav>
-      <ul className="grid w-full max-w-full grid-cols-2 gap-1 sm:grid-cols-2">
+      <ul className="grid w-full max-w-full grid-cols-1 gap-1 sm:grid-cols-2">
         {navigation.map((section) => (
           <li key={section.title}>
-            <div className="font-display title_2 text-sm font-semibold tracking-wider text-[#CCCCCC]">
-              {section.title}
-            </div>
-            <ul className="mt-4 text-sm text-[#FFFFFF]">
+            <h5 className="font-display h5 py-3 !font-medium tracking-wider text-[#CCCCCC]">{section.title}</h5>
+            <ul className=" text-sm text-[#FFFFFF]">
               {section.links.map((link) => (
-                <li key={link.title} className="mt-4">
+                <li key={link.title} className="mt-2">
                   <Link href={link.href} className="transition hover:text-[#006CE8]">
                     {link.title}
                   </Link>
@@ -133,13 +133,13 @@ function Navigation() {
 function ReachUs() {
   return (
     <nav>
-      <p className="font-display title_2 text-sm font-semibold text-[#CCCCCC]">Reach Us</p>
+      <h5 className="h5 py-3 !font-medium text-[#CCCCCC]">Reach Us</h5>
       <ul className="grid w-full max-w-full grid-cols-2 gap-8 sm:grid-cols-2">
         {reachus.map((section) => (
           <li key={section.title} className="">
-            <ul className="mt-4 text-sm text-[#FFFFFF]">
+            <ul className=" text-sm text-[#FFFFFF]">
               {section.links.map((link) => (
-                <li key={link.title} className="mt-4 ">
+                <li key={link.title} className="mt-2 ">
                   <Link href={link.href} className="transition hover:text-[#006CE8]">
                     {link.title}
                   </Link>
@@ -155,27 +155,31 @@ function ReachUs() {
 
 export function Footer() {
   return (
-    <Container className="mt-4 bg-black ">
-      <div className=" mx-auto">
+    <Container className=" w-full bg-black !py-8 ">
+      <div className=" mx-auto max-w-full">
         <FadeIn>
-          <div className="space-y-8 px-4 py-0 sm:px-6 lg:space-y-16">
-            <div className="grid grid-cols-1 gap-2 lg:grid-cols-3">
+          <div className="space-y-4 px-4 py-0 sm:px-6 lg:space-y-8">
+            <div className="flex justify-between md:flex-row">
+              <Link href="/" aria-label="Home">
+                <Logo className="h-8" fillOnHover />
+              </Link>
               <div className="">
-                <Link href="/" aria-label="Home">
-                  <Logo className="h-8" fillOnHover />
-                </Link>
-                <SocialMedia className={"mt-6 justify-center"} invert />
-                <p className="mt-4 text-sm text-[#cccccc]">
-                  Download our Learning App:
-                  <Link href="https://play.google.com/store/search?q=dataspace%20academy&c=apps" target="_blank">
-                    {" "}
-                    <GooglePlayIcon />
-                  </Link>
-                </p>
+                <Image width={100} height={100} src={"/images/bsi-1.svg"} alt={""} />
               </div>
+
+              {/* <p className="mt-4 text-sm text-[#cccccc]">
+                Download our Learning App:
+                <Link href="https://play.google.com/store/search?q=dataspace%20academy&c=apps" target="_blank">
+                  {" "}
+                  <GooglePlayIcon />
+                </Link>
+              </p> */}
+            </div>
+            <div className="flex flex-col md:flex-row ">
               <div className="w-full max-w-full">
                 <div className="">
                   {/* <NewsletterForm /> */}
+
                   <Navigation />
                 </div>
               </div>
@@ -183,12 +187,39 @@ export function Footer() {
                 <div className="">
                   {/* <NewsletterForm /> */}
                   <ReachUs />
+                  <SocialMedia className={"justify-left mt-6"} invert />
                 </div>
               </div>
 
               {/* <p className="text-sm text-neutral-700">
               DataSpace Academy{new Date().getFullYear()}
             </p> */}
+            </div>
+            <hr className="border-t-0.5 border-primary/70" color="#red" />
+            <div className="flex flex-col justify-between md:flex-row">
+              <div className="flex flex-col gap-3 sm:gap-0 md:flex-row">
+                <Link href={"/privacy-policy"} className="small-regular text-white">
+                  Privacy Policy &nbsp;|
+                </Link>
+                <Link href={"/terms-conditions"} className="small-regular text-white  sm:px-1.5">
+                  Terms & Conditions |
+                </Link>
+
+                <Link href={"/cancellation-Policies"} className="small-regular text-white">
+                  Cancellation / Refund Policies
+                </Link>
+              </div>
+              <div className="">
+                <p className="small-regular pt-4 text-white   sm:pt-0">
+                  {" "}
+                  @{new Date().getFullYear()} &nbsp;
+                  <Link className=" underline sm:pb-0" href="/">
+                    DataSpace Academy
+                  </Link>{" "}
+                  <br className=" sm:hidden" />
+                  All Rights Reserved.
+                </p>
+              </div>
             </div>
           </div>
         </FadeIn>

@@ -53,3 +53,10 @@ export interface SkillupProps {
   course_Duration: string
   course_Link: string
 }
+
+export interface VoiceFromStudentsProps {
+  light: string
+  url: string
+  h5: string
+  p: string
+}

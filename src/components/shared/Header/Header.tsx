@@ -5,9 +5,8 @@ import { Container } from "@/components/ui/Container"
 import { FadeIn } from "@/components/ui/FadeIn"
 import { navigationHomeDesktop } from "@/constants"
 // import { AllCourse } from "./AllCourse"
-import  HeaderLogo  from "./HeaderLogo"
+import HeaderLogo from "./HeaderLogo"
 import { DesktopHamMenu } from "./rightmenu2/DesktopHamMenu"
-
 
 const DesktopNavigationMenu = () => {
   const pathname = usePathname()
@@ -22,7 +21,7 @@ const DesktopNavigationMenu = () => {
             href={item.route}
             key={item.route}
             className={`${
-              isActive ? "text-link self-center align-middle font-bold" : "text-black"
+              isActive ? "self-center align-middle font-bold text-link" : "text-black"
             } relative block w-fit self-center align-middle text-black after:absolute after:block after:h-[3px] after:w-full after:origin-center after:scale-x-0 after:rounded-md	after:bg-[#006CE8] after:transition after:duration-300 after:content-[''] hover:text-[] after:hover:scale-x-100`}
           >
             {item.label}
@@ -35,7 +34,7 @@ const DesktopNavigationMenu = () => {
 
 const NavigationHomeDesktop = () => {
   return (
-    <div className="flex flex-row justify-between gap-8 self-center py-6 align-middle">
+    <div className="hidden justify-between gap-8 self-center py-6 align-middle  lg:flex lg:flex-row">
       <DesktopNavigationMenu />
       {/* <div className="justift-between text-center ">
                   <AllCourse />
@@ -51,7 +50,7 @@ const NavigationHomeDesktop = () => {
 function Header1({ className }: { className?: string }) {
   return (
     <>
-      <Container className=" sticky  mt-3 rounded-t-3xl bg-[#ffff]">
+      <Container className=" !noise-bg sticky mt-3 rounded-t-xl !bg-white/80 !p-0 shadow-md">
         <div className=" mx-auto">
           <FadeIn>
             <div className="space-y-8 px-4  sm:px-6 lg:space-y-16">

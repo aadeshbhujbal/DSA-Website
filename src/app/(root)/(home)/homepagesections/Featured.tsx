@@ -8,7 +8,7 @@ import { Section } from "@/components/ui/Section"
 const Featured = () => {
   return (
     <Section>
-      <Container className="max-w-screen-2xl !pt-0">
+      <Container className="max-w-screen-2xl md:!pt-12 lg:!pt-4">
         <h2 className="h4 pb-4 text-center !font-medium text-black">We got featured!</h2>
         <div className=" mx-auto flex flex-col justify-center lg:flex-row  lg:gap-16">
           {" "}

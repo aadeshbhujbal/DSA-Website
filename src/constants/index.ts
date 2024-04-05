@@ -6,6 +6,7 @@ import {
   NavigationHome,
   SkillupProps,
   TrendingPrograms,
+  VoiceFromStudentsProps,
 } from "@/types"
 
 export const navigationHomeDesktop: NavigationHome[] = [
@@ -127,61 +128,37 @@ export const hiringCompanies: HiringCompanies[] = [
 
 export const industryExperts: IndustryExperts[] = [
   {
-    trainer_Image: "/images/trainer.png",
+    trainer_Image: "/images/instructors/bipul.png",
     trainer_Name: "Davinder Singh",
     trainer_Designation: "Cyber Security Analyst",
     trainer_linkinUrl: "/",
   },
   {
-    trainer_Image: "/images/trainer.png",
+    trainer_Image: "/images/instructors/deepangshu.png",
     trainer_Name: "Davinder Singh",
     trainer_Designation: "Cyber Security Analyst",
     trainer_linkinUrl: "/",
   },
   {
-    trainer_Image: "/images/trainer.png",
+    trainer_Image: "/images/instructors/manjeet.png",
     trainer_Name: "Davinder Singh",
     trainer_Designation: "Cyber Security Analyst",
     trainer_linkinUrl: "/",
   },
   {
-    trainer_Image: "/images/trainer.png",
+    trainer_Image: "/images/instructors/raunak.png",
     trainer_Name: "Davinder Singh",
     trainer_Designation: "Cyber Security Analyst",
     trainer_linkinUrl: "/",
   },
   {
-    trainer_Image: "/images/trainer.png",
+    trainer_Image: "/images/instructors/soumya-maity.png",
     trainer_Name: "Davinder Singh",
     trainer_Designation: "Cyber Security Analyst",
     trainer_linkinUrl: "/",
   },
   {
-    trainer_Image: "/images/trainer.png",
-    trainer_Name: "Davinder Singh",
-    trainer_Designation: "Cyber Security Analyst",
-    trainer_linkinUrl: "/",
-  },
-  {
-    trainer_Image: "/images/trainer.png",
-    trainer_Name: "Davinder Singh",
-    trainer_Designation: "Cyber Security Analyst",
-    trainer_linkinUrl: "/",
-  },
-  {
-    trainer_Image: "/images/trainer.png",
-    trainer_Name: "Davinder Singh",
-    trainer_Designation: "Cyber Security Analyst",
-    trainer_linkinUrl: "/",
-  },
-  {
-    trainer_Image: "/images/trainer.png",
-    trainer_Name: "Davinder Singh",
-    trainer_Designation: "Cyber Security Analyst",
-    trainer_linkinUrl: "/",
-  },
-  {
-    trainer_Image: "/images/trainer.png",
+    trainer_Image: "/images/instructors/sutanu.png",
     trainer_Name: "Davinder Singh",
     trainer_Designation: "Cyber Security Analyst",
     trainer_linkinUrl: "/",
@@ -315,5 +292,37 @@ export const skillupCourses: SkillupProps[] = [
     course_Name: "Course Name or Title  Course Name or Title",
     course_Duration: "12 Jan, 2024",
     course_Link: "/",
+  },
+]
+export const voiceFromStudents: VoiceFromStudentsProps[] = [
+  {
+    light: "/images/videothumb.png",
+    url: "/videos/get-started.mp4",
+    h5: "Vikash Agarwal",
+    p: "Enrolling in courses here has been one of the best decisions Ive made for my career. The instructors are incredibly knowledgeable and passionate, making learning enjoyable and effective. The platforms user-friendly interface and diverse course offerings have helped me acquire valuable skills that have boosted my confidence and opened up new opportunities. Im grateful for the support and guidance provided every step of the way!",
+  },
+  {
+    light: "/images/videothumb.png",
+    url: "/videos/get-started.mp4",
+    h5: "Vikash Agarwal",
+    p: "Enrolling in courses here has been one of the best decisions Ive made for my career. The instructors are incredibly knowledgeable and passionate, making learning enjoyable and effective. The platforms user-friendly interface and diverse course offerings have helped me acquire valuable skills that have boosted my confidence and opened up new opportunities. Im grateful for the support and guidance provided every step of the way!",
+  },
+  {
+    light: "/images/videothumb.png",
+    url: "/videos/get-started.mp4",
+    h5: "Vikash Agarwal",
+    p: "Enrolling in courses here has been one of the best decisions Ive made for my career. The instructors are incredibly knowledgeable and passionate, making learning enjoyable and effective. The platforms user-friendly interface and diverse course offerings have helped me acquire valuable skills that have boosted my confidence and opened up new opportunities. Im grateful for the support and guidance provided every step of the way!",
+  },
+  {
+    light: "/images/videothumb.png",
+    url: "/videos/get-started.mp4",
+    h5: "Vikash Agarwal",
+    p: "Enrolling in courses here has been one of the best decisions Ive made for my career. The instructors are incredibly knowledgeable and passionate, making learning enjoyable and effective. The platforms user-friendly interface and diverse course offerings have helped me acquire valuable skills that have boosted my confidence and opened up new opportunities. Im grateful for the support and guidance provided every step of the way!",
+  },
+  {
+    light: "/images/videothumb.png",
+    url: "/videos/get-started.mp4",
+    h5: "Vikash Agarwal",
+    p: "Enrolling in courses here has been one of the best decisions Ive made for my career. The instructors are incredibly knowledgeable and passionate, making learning enjoyable and effective. The platforms user-friendly interface and diverse course offerings have helped me acquire valuable skills that have boosted my confidence and opened up new opportunities. Im grateful for the support and guidance provided every step of the way!",
   },
 ]

@@ -14,6 +14,13 @@ const Lms = () => {
           learning experience.
         </p>
         <div className="mx-auto flex flex-col md:flex-row 2xl:max-w-screen-2xl">
+          <Image
+            className="mx-auto w-full max-w-2xl py-8 "
+            src={"/images/LMS1.png"}
+            width={400}
+            height={400}
+            alt="DataSpace Learning Management System"
+          />
           <div className="mx-auto  self-center ">
             <ul className="tick-icon-list">
               <li>
@@ -42,13 +49,6 @@ const Lms = () => {
               Start Learning
             </Button>
           </div>
-          <Image
-            className="mx-auto w-full max-w-2xl py-8 "
-            src={"/images/LMS1.png"}
-            width={400}
-            height={400}
-            alt="DataSpace Learning Management System"
-          />
         </div>
       </Container>
     </Section>

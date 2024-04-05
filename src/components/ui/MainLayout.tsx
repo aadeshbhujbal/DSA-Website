@@ -4,6 +4,7 @@ import { usePathname } from "next/navigation"
 import React, { useEffect, useState } from "react"
 
 import { Footer } from "../shared/Footer/Footer"
+import Header1 from "../shared/Header/Header"
 
 function MainLayoutInner({ children }: { children: React.ReactNode }) {
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
@@ -28,11 +29,11 @@ function MainLayoutInner({ children }: { children: React.ReactNode }) {
   return (
     <MotionConfig transition={shouldReduceMotion ? { duration: 0 } : undefined}>
       {" "}
-      {/* <header className="!bg-black ">
+      <header className="!bg-black ">
         <div className=" !fixed inset-x-0 top-0 !z-40 bg-[#000000]">
           <Header1 className="" />
         </div>
-      </header> */}
+      </header>
       <motion.div layout className=" relative isolate flex w-full flex-col">
         <main className="w-full flex-auto">{children}</main>
       </motion.div>
