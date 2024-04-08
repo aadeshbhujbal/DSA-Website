@@ -12,11 +12,11 @@ const navigation = [
     links: [
       {
         title: "Cybersecurity Courses",
-        href: "/Certification In Ethical Hacking",
+        href: "/courses/cybersecurity/master-program-in-cybersecurity",
       },
       {
         title: "Data Science Courses",
-        href: "/Diploma in Cyber Security",
+        href: "/courses/data-science",
       },
       {
         title: "Programming Courses",
@@ -201,11 +201,11 @@ export function Footer() {
                 <Link href={"/privacy-policy"} className="small-regular text-white">
                   Privacy Policy &nbsp;|
                 </Link>
-                <Link href={"/terms-conditions"} className="small-regular text-white  sm:px-1.5">
+                <Link href={"/terms&conditions"} className="small-regular text-white  sm:px-1.5">
                   Terms & Conditions |
                 </Link>
 
-                <Link href={"/cancellation-Policies"} className="small-regular text-white">
+                <Link href={"/return-policies"} className="small-regular text-white">
                   Cancellation / Refund Policies
                 </Link>
               </div>
