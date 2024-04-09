@@ -11,6 +11,7 @@ span,
 label,
 input {
   font-family: var(--font_satoshi) !important;
+  scroll-behavior: smooth;
 }
 h1,
 h2,
@@ -23,6 +24,7 @@ h6 {
 video {
   border-radius: 10px;
 }
+
 .react-player__preview {
   border-radius: 10px !important;
 }
@@ -146,7 +148,7 @@ video {
   }
 
   .body-medium {
-    @apply text-[18px] font-medium leading-[140%];
+    @apply text-[20px] font-medium leading-[140%];
   }
 
   .small-semibold {
@@ -377,5 +379,8 @@ video {
   .button__bar li button:focus {
     background-color: #0077e5;
     outline: 0;
+  }
+  .courses_background {
+    background: linear-gradient(180deg, #f1fbff 0%, rgba(241, 251, 255, 0) 100%);
   }
 }

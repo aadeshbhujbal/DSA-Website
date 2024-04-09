@@ -7,6 +7,8 @@ interface ButtonProps extends VariantProps {
   type?: "button" | "submit" | "reset"
   disabled?: boolean
   ariaLabel?: string
+  onClick?: () => void
+  target?: "_blank" | "_self" | "_parent" | "_top"
 }
 
 const Button: React.FC<ButtonProps> = ({
@@ -20,6 +22,8 @@ const Button: React.FC<ButtonProps> = ({
   type = "button",
   disabled = false,
   ariaLabel,
+  target = "_self",
+  onClick,
   ...rest
 }: ButtonProps) => {
   const baseClasses =
@@ -32,6 +36,7 @@ const Button: React.FC<ButtonProps> = ({
     type: type,
     disabled: disabled,
     "aria-label": ariaLabel || (typeof children === "string" ? children : undefined),
+    onClick: onClick, // Pass onClick prop
     ...rest,
   }
 
@@ -39,7 +44,7 @@ const Button: React.FC<ButtonProps> = ({
     return <div {...buttonProps}>{children}</div>
   } else if (href) {
     return (
-      <Link href={href} {...buttonProps} target="_blank">
+      <Link href={href} {...buttonProps} target={target}>
         {children}
       </Link>
     )

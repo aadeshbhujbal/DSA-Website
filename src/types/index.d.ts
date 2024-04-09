@@ -23,6 +23,7 @@ export interface IndustryExperts {
   className?: string
 }
 export interface OurProgramCardProps {
+  id?: number
   className?: string
   program_Name: string
   program_description: string
@@ -30,6 +31,7 @@ export interface OurProgramCardProps {
   icons?: JSX.Element
   hoverColor: string | undefined
   animate?: boolean
+  courses?: object
 }
 
 export interface LearnersReview {

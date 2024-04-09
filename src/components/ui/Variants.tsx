@@ -7,7 +7,7 @@ export interface VariantProps {
   className?: string
   href?: string
   children?: React.ReactNode
-  target?: boolean
+
   asDiv?: boolean
   style?: React.CSSProperties
   placeholder?: string

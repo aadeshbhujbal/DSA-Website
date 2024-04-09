@@ -1,0 +1,42 @@
+<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect width="24" height="24" fill="#2C2C2C"/>
+<g id="Section 1">
+<path d="M-2671 -3837C-2671 -3838.11 -2670.1 -3839 -2669 -3839H17982C17983.1 -3839 17984 -3838.1 17984 -3837V20628C17984 20629.1 17983.1 20630 17982 20630H-2669C-2670.1 20630 -2671 20629.1 -2671 20628V-3837Z" fill="#404040"/>
+<path d="M-2669 -3838H17982V-3840H-2669V-3838ZM17983 -3837V20628H17985V-3837H17983ZM17982 20629H-2669V20631H17982V20629ZM-2670 20628V-3837H-2672V20628H-2670ZM-2669 20629C-2669.55 20629 -2670 20628.6 -2670 20628H-2672C-2672 20629.7 -2670.66 20631 -2669 20631V20629ZM17983 20628C17983 20628.6 17982.6 20629 17982 20629V20631C17983.7 20631 17985 20629.7 17985 20628H17983ZM17982 -3838C17982.6 -3838 17983 -3837.55 17983 -3837H17985C17985 -3838.66 17983.7 -3840 17982 -3840V-3838ZM-2669 -3840C-2670.66 -3840 -2672 -3838.66 -2672 -3837H-2670C-2670 -3837.55 -2669.55 -3838 -2669 -3838V-3840Z" fill="white" fill-opacity="0.1"/>
+<g id="Cybersecurity Master page">
+<g clip-path="url(#clip0_1396_28624)">
+<rect x="-140" y="-1763" width="1728" height="10338" rx="10" fill="white"/>
+<rect id="Rectangle 24" x="-140" y="-421" width="1728" height="1280" fill="url(#paint0_linear_1396_28624)"/>
+<g id="Rectangle 13" filter="url(#filter0_d_1396_28624)">
+<rect x="-40" y="-189" width="488" height="502" rx="10" fill="white"/>
+<rect x="-39.5" y="-188.5" width="487" height="501" rx="9.5" stroke="white"/>
+</g>
+<g id="Group 6423">
+<g id="Iconsax/Linear/diagram">
+<path id="Vector" d="M2 2V19C2 20.66 3.34 22 5 22H22" stroke="black" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="Vector_2" d="M5 17L9.59 11.64C10.35 10.76 11.7 10.7 12.52 11.53L13.47 12.48C14.29 13.3 15.64 13.25 16.4 12.37L21 7" stroke="black" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+</g>
+</g>
+</g>
+</g>
+</g>
+<defs>
+<filter id="filter0_d_1396_28624" x="-52" y="-193" width="512" height="526" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+<feOffset dy="8"/>
+<feGaussianBlur stdDeviation="6"/>
+<feComposite in2="hardAlpha" operator="out"/>
+<feColorMatrix type="matrix" values="0 0 0 0 0.243194 0 0 0 0 0.393831 0 0 0 0 0.566667 0 0 0 0.23 0"/>
+<feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_1396_28624"/>
+<feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_1396_28624" result="shape"/>
+</filter>
+<linearGradient id="paint0_linear_1396_28624" x1="724" y1="-421" x2="724" y2="859" gradientUnits="userSpaceOnUse">
+<stop stop-color="#F1FBFF"/>
+<stop offset="1" stop-color="#F1FBFF" stop-opacity="0"/>
+</linearGradient>
+<clipPath id="clip0_1396_28624">
+<rect x="-140" y="-1763" width="1728" height="10338" rx="10" fill="white"/>
+</clipPath>
+</defs>
+</svg>

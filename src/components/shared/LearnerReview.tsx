@@ -4,21 +4,32 @@ import { Card } from "@/components/ui/card"
 import { Container } from "@/components/ui/Container"
 import { InfiniteMoving } from "@/components/ui/InfiniteMoving"
 import { Section } from "@/components/ui/Section"
-import { learnersReviewLowerCarousel, learnersReviewUpperCarousel } from "@/constants"
 
-const LearnerReview = () => {
+interface Learner {
+  learner_Name: string
+  learner_Image: string
+  learner_Position?: string // Make it optional
+  learner_review: string
+}
+
+interface Props {
+  learnersReviewLowerCarousel: Learner[]
+  learnersReviewUpperCarousel: Learner[]
+}
+
+const LearnerReview: React.FC<Props> = ({ learnersReviewLowerCarousel, learnersReviewUpperCarousel }) => {
   const id = useId()
   return (
-    <Section className=" p-0 bg-grid-black/[0.05]">
+    <Section className="p-0 bg-grid-black/[0.05]">
       <Container className="!p-0">
         <h2 className="h4 pt-8 text-center !font-medium text-black lg:pt-0">Trusted by learners around the world</h2>
-        <div className="  noise-bg relative flex w-full flex-col  items-center justify-center gap-2 overflow-hidden rounded-md  py-4 antialiased ">
+        <div className="noise-bg relative flex w-full flex-col items-center justify-center gap-2 overflow-hidden rounded-md py-4 antialiased">
           <InfiniteMoving direction="right" speed="slow" className="">
             {learnersReviewUpperCarousel.map((item, index) => {
               const isEven = index % 2 === 0 // Check if index is even
               return (
                 <Card
-                  className={` w-[320px] p-4 sm:!w-[520px] ${isEven ? "border-none bg-black font-medium !text-white" : ""}`}
+                  className={`w-[320px] p-4 sm:!w-[520px] ${isEven ? "border-none bg-black font-medium !text-white" : ""}`}
                   key={`${id}-${item.learner_Name}`}
                 >
                   <div className="flex flex-row items-center gap-2">
@@ -33,7 +44,8 @@ const LearnerReview = () => {
                     </div>
                     <div className="basis-5/6">
                       <h5 className={`h5 !font-medium ${isEven ? " text-white " : ""}`}>{item.learner_Name}</h5>
-                      <p className="p base-regular">{item.learner_Position}</p>
+                      <p className="p base-regular">{item.learner_Position || ""}</p>{" "}
+                      {/* Accessing optional property */}
                     </div>
                   </div>
 
@@ -64,7 +76,8 @@ const LearnerReview = () => {
                     </div>
                     <div className="basis-5/6">
                       <h5 className={`h5 !font-medium ${isEven ? " text-white " : ""}`}>{item.learner_Name}</h5>
-                      <p className="p base-regular">{item.learner_Position}</p>
+                      <p className="p base-regular">{item.learner_Position || ""}</p>{" "}
+                      {/* Accessing optional property */}
                     </div>
                   </div>
 
