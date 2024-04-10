@@ -2,8 +2,8 @@ import clsx from "clsx"
 import React from "react"
 
 export interface VariantProps {
-  variant?: "primary" | "secondary" | "default" | "destructive" | "ghost" | "link" | "outline" | "tab"
-  size?: "small" | "medium" | "large" | "default" | "icon" | undefined
+  variant?: "primary" | "secondary"|"normal" | "default" | "destructive" | "ghost" | "link" | "outline" | "tab"
+  size?: "small" | "medium"|"normal" | "large" | "default" | "icon" | undefined
   className?: string
   href?: string
   children?: React.ReactNode
@@ -19,6 +19,7 @@ export const Variants = ({ variant, size }: { variant?: VariantProps["variant"];
   const variantClasses = {
     primary: "bg-primary text-primary-foreground hover:bg-primary/90",
     default: "bg-primary text-primary-foreground hover:bg-primary/90",
+    normal: "bg-primary hover:bg-white  ",
     destructive: "bg-destructive text-destructive-foreground hover:bg-destructive/90",
     outline: "border border-input bg-background hover:bg-accent hover:text-accent-foreground",
     secondary: "bg-secondary text-secondary-foreground hover:bg-secondary/80",
@@ -29,6 +30,7 @@ export const Variants = ({ variant, size }: { variant?: VariantProps["variant"];
 
   const sizeClasses = {
     default: "h-10 px-4 py-2",
+    normal: "w-full",
     small: "h-9 rounded-md px-3 text-sm",
     medium: "text-base h-11 rounded-lg px-8",
     large: "text-lg rounded-lg px-20 h-11 ",

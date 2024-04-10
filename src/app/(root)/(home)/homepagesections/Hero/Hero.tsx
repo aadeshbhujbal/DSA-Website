@@ -36,7 +36,7 @@ export default function Hero() {
             <TrendingPrograms />
 
             <HiringCompanies />
-            <Rating />
+            <Rating header={true}/>
           </BackgroundGradientAnimation>
         </div>
       </Container>
