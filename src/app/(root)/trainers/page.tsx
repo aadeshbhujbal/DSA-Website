@@ -53,7 +53,7 @@ const Trainers = () => {
                             key={category.id}
                             value={category.id}
                             className="mx-0 text-sm md:mx-2 lg:text-base xl:mx-6"
-                            
+                            variant="trainertab"
                           >
                             {category.title}
                           </TabsTrigger>

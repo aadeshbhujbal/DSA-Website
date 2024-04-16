@@ -13,16 +13,23 @@ const TabsList = React.forwardRef<
     variant?: Variant;
   }
 >(({ className, variant, ...props }, ref) => (
-  <TabsPrimitive.List
-    ref={ref}
-    className={cn(
-      variant === "secondary"
-      ? "inline-flex w-full h-20 items-center justify-between rounded-md  p-1 text-muted-foreground "
-      : "inline-flex w-full h-10 items-center justify-between rounded-md  p-1 text-muted-foreground border-b-2 border-gray-300",
+<TabsPrimitive.List
+  ref={ref}
+  className={cn(
+   
+    variant === "secondary"
+      ? "h-0 inline-flex w-full items-center justify-between rounded-md p-1 text-muted-foreground"
+      : variant === "referandearnpagetab"
+      ? " h-90 inline-flex w-full items-center justify-center rounded-md p-7 text-muted-foreground"
+      : variant === "trainertab"
+      ? "h-60 border-b-2 border-gray-300 inline-flex w-full items-center justify-between rounded-md p-1 text-muted-foreground"
+      : "",   
       className
-    )}
-    {...props}
-  />
+  )}
+  {...props}
+/>
+
+
 ))
 TabsList.displayName = TabsPrimitive.List.displayName
 
@@ -36,8 +43,10 @@ const TabsTrigger = React.forwardRef<
     ref={ref}
     className={cn(
       variant === "secondary"
-      ? "inline-flex items-center justify-center whitespace-nowrap rounded-md px-4 py-1.5 text-sm font-medium ring-offset-background transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 data-[state=active]:bg-background data-[state=active]:text-foreground data-[state=active]:shadow-sm bg-black"
-      : "inline-flex items-center justify-center whitespace-nowrap rounded-md px-4 py-1.5 text-sm font-medium ring-offset-background transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 data-[state=active]:bg-black data-[state=active]:text-white data-[state=active]:shadow-sm" // this one used in trainer's profile tab 
+      ? "inline-flex items-center justify-evenly whitespace-nowrap rounded-md px-4 py-1.5 text-sm font-medium ring-offset-background transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 data-[state=active]:bg-background data-[state=active]:text-foreground data-[state=active]:shadow-sm bg-black"
+      : variant === "referandearnpagetab"
+      ? "inline-flex  justify-evenly whitespace-nowrap rounded-md px-4 py-1.5 text-sm from-neutral-100 ring-offset-background transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 data-[state=active]:bg-white [data-state=active]:shadow-lg data-[state=active]:text-gray-400 data-[state=active]:shadow-sm" 
+      : "inline-flex items-center justify-evenly whitespace-nowrap rounded-md px-4 py-1.5 text-sm font-medium ring-offset-background transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 data-[state=active]:bg-black data-[state=active]:text-white data-[state=active]:shadow-sm" // this one used in trainer's profile tab 
       ,
       className
     )}
