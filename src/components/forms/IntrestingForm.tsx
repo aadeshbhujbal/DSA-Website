@@ -141,7 +141,6 @@ const IntrestingForm: React.FC = () => {
                     className=" border-![#EBEBEB]!outline-none  w-full border-2 bg-black  text-white !ring-offset-0 placeholder:text-[#EBEBEB] focus:border-link focus:!outline-none focus-visible:!outline-none focus-visible:ring-0"
                     size="medium"
                     variant="ghost"
-                    {...field}
                   />
                   <FormMessage />
                 </FormItem>

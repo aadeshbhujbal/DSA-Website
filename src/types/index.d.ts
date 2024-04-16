@@ -57,8 +57,26 @@ export interface SkillupProps {
 }
 
 export interface VoiceFromStudentsProps {
+  id?: any
   light: string
   url: string
   h5: string
   p: string
+}
+
+interface TrainerCarouselProps {
+  id?: any
+  imageSrc: any
+  imageAlt: string
+  trainerName: string
+  trainerDesignation: string
+  trainerDescription: string
+  trainerProfileUrl: string
+  trainerLinkedInUrl: string
+}
+
+interface FaqItemProps {
+  id?: any
+  title: string
+  content: string
 }

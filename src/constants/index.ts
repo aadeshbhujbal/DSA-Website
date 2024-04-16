@@ -296,30 +296,35 @@ export const skillupCourses: SkillupProps[] = [
 ]
 export const voiceFromStudents: VoiceFromStudentsProps[] = [
   {
+    id: "1",
     light: "/images/videothumb.png",
     url: "/videos/get-started.mp4",
     h5: "Vikash Agarwal",
     p: "Enrolling in courses here has been one of the best decisions Ive made for my career. The instructors are incredibly knowledgeable and passionate, making learning enjoyable and effective. The platforms user-friendly interface and diverse course offerings have helped me acquire valuable skills that have boosted my confidence and opened up new opportunities. Im grateful for the support and guidance provided every step of the way!",
   },
   {
+    id: "2",
     light: "/images/videothumb.png",
     url: "/videos/get-started.mp4",
     h5: "Vikash Agarwal",
     p: "Enrolling in courses here has been one of the best decisions Ive made for my career. The instructors are incredibly knowledgeable and passionate, making learning enjoyable and effective. The platforms user-friendly interface and diverse course offerings have helped me acquire valuable skills that have boosted my confidence and opened up new opportunities. Im grateful for the support and guidance provided every step of the way!",
   },
   {
+    id: "3",
     light: "/images/videothumb.png",
     url: "/videos/get-started.mp4",
     h5: "Vikash Agarwal",
     p: "Enrolling in courses here has been one of the best decisions Ive made for my career. The instructors are incredibly knowledgeable and passionate, making learning enjoyable and effective. The platforms user-friendly interface and diverse course offerings have helped me acquire valuable skills that have boosted my confidence and opened up new opportunities. Im grateful for the support and guidance provided every step of the way!",
   },
   {
+    id: "4",
     light: "/images/videothumb.png",
     url: "/videos/get-started.mp4",
     h5: "Vikash Agarwal",
     p: "Enrolling in courses here has been one of the best decisions Ive made for my career. The instructors are incredibly knowledgeable and passionate, making learning enjoyable and effective. The platforms user-friendly interface and diverse course offerings have helped me acquire valuable skills that have boosted my confidence and opened up new opportunities. Im grateful for the support and guidance provided every step of the way!",
   },
   {
+    id: "5",
     light: "/images/videothumb.png",
     url: "/videos/get-started.mp4",
     h5: "Vikash Agarwal",

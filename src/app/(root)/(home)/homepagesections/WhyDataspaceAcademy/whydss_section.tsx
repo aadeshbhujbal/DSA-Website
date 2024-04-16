@@ -25,7 +25,7 @@ const WhyChooseDatapaceAcademy = () => {
           Get in touch
         </Button>
       </div>
-      <div className="ml-auto self-center">
+      <div className="self-starat sm:ml-auto sm:self-center">
         <ReactPlayer
           playIcon={
             <Image width={50} height={50} alt="Play button" style={{ maxWidth: "80px" }} src="/images/play-1.png" />
@@ -33,7 +33,7 @@ const WhyChooseDatapaceAcademy = () => {
           light="/images/video.png"
           url="/videos/get-started.mp4" // Replace with your video URL
           controls={true}
-          width={350}
+          width={320}
           height={250}
           style={{ border: "1px solid " }}
           className=" !rounded-xl "

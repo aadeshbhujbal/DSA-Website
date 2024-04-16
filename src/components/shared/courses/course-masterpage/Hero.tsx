@@ -46,7 +46,7 @@ const Hero: React.FC<HeroProps> = ({
                 ></Image>
                 <p>{rating}</p>
               </div>
-              <Button className="max-w-[250px] md:max-w-[350px]" variant={"default"} size="large" href={buttonLink}>
+              <Button className="max-w-[250px]  md:max-w-[350px]" variant={"default"} size="large" href={buttonLink}>
                 {buttonText}
               </Button>
               <div className="mt-4 flex  gap-4 text-white">

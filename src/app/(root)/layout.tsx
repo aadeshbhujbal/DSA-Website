@@ -13,6 +13,7 @@ const clashgrotesk = CustomFont({
   variable: "--font-clashgrotesk",
   src: "./fonts/ClashGrotesk-Variable.woff2",
 })
+
 const satoshi = CustomFont({
   preload: true,
   display: "swap",

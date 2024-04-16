@@ -166,6 +166,9 @@ video {
   .subtle-semibold {
     @apply text-[12px] font-semibold leading-[140%];
   }
+  .subtle-regular {
+    @apply text-[12px] font-normal leading-[140%];
+  }
 
   .tiny-medium {
     @apply text-[10px] font-medium leading-[140%];
@@ -382,5 +385,9 @@ video {
   }
   .courses_background {
     background: linear-gradient(180deg, #f1fbff 0%, rgba(241, 251, 255, 0) 100%);
+  }
+  .swiper-pagination .swiper-pagination-bullet-active{
+    width: 20px !important;
+    border-radius: 20px !important;
   }
 }
