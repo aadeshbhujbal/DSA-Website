@@ -4,11 +4,13 @@ import React, { useEffect } from "react"
 
 import Featured from "@/app/(root)/(home)/homepagesections/Featured"
 import WhyDss from "@/app/(root)/(home)/homepagesections/WhyDataspaceAcademy/whydss_section"
+import HeroForm from "@/components/forms/courseForm/HeroForm"
 import ConfusedaboutCourse from "@/components/shared/courses/course-masterpage/CondusedAboutCourse"
+import Faqs from "@/components/shared/courses/course-masterpage/Faqs"
 import Hero from "@/components/shared/courses/course-masterpage/Hero"
-import TrainerCarousel from "@/components/shared/TrainerCarousel"
 import UpskillCourses from "@/components/shared/courses/course-masterpage/upskill"
 import LearnerReview from "@/components/shared/LearnerReview"
+import TrainerCarousel from "@/components/shared/TrainerCarousel"
 import VoicesFromStudents from "@/components/shared/VoicesFromStudents"
 import { Card } from "@/components/ui/card"
 import {
@@ -22,8 +24,6 @@ import CybersecuritryCourses from "./CybersecuritryCourses"
 
 import ToolsCybersecurity from "./ToolsCybersecurity"
 import Whycybersecurity from "./whycybersecurity"
-import Faqs from "@/components/shared/courses/course-masterpage/Faqs"
-import HeroForm from "@/components/forms/courseForm/HeroForm"
 const handleSmoothScroll = (event: any) => {
   event.preventDefault()
   const targetElement = document.querySelector(event.target.getAttribute("href"))
@@ -70,9 +70,7 @@ const Page = () => {
         buttonLink="#cybersecuritryCourses"
         rating={"4.8/5 Rating Program (1267 reviews)"}
       >
-        <Card>
-          <HeroForm />
-        </Card>
+        <HeroForm />
       </Hero>
       <Whycybersecurity />
       <CybersecuritryCourses id="cybersecuritryCourses" />

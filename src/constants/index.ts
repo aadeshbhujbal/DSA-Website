@@ -1,5 +1,6 @@
 import {
   EventsProps,
+  FaqItemProps,
   HiringCompanies,
   IndustryExperts,
   LearnersReview,
@@ -329,5 +330,39 @@ export const voiceFromStudents: VoiceFromStudentsProps[] = [
     url: "/videos/get-started.mp4",
     h5: "Vikash Agarwal",
     p: "Enrolling in courses here has been one of the best decisions Ive made for my career. The instructors are incredibly knowledgeable and passionate, making learning enjoyable and effective. The platforms user-friendly interface and diverse course offerings have helped me acquire valuable skills that have boosted my confidence and opened up new opportunities. Im grateful for the support and guidance provided every step of the way!",
+  },
+]
+
+export const ReferalFaqs: FaqItemProps[] = [
+  {
+    id: 1,
+    title: "Q1. What is covered with Cybersecurity program?    ",
+    content: "Yes. It adheres to the WAI-ARIA design pattern.",
+  },
+  {
+    id: 2,
+    title: "Q2. What is the cost of this program?",
+    content: "Yes. It comes with default styles that matches the other components' aesthetic.",
+  },
+  {
+    id: 3,
+    title: "Q3. Is this program suitable for those who are new to cybersecurity field?",
+    content: "Yes. It's animated by default, but you can disable it if you prefer.",
+  },
+
+  {
+    id: 4,
+    title: "Q5. Are there any offline components to this program?",
+    content: "Yes. It adheres to the WAI-ARIA design pattern.",
+  },
+  {
+    id: 5,
+    title: "Q6. What is the cost of this program?",
+    content: "Yes. It comes with default styles that matches the other components' aesthetic.",
+  },
+  {
+    id: 6,
+    title: "Q4. What type of certificate will I receive after completing of the program? ",
+    content: "Yes. It's animated by default, but you can disable it if you prefer.",
   },
 ]
