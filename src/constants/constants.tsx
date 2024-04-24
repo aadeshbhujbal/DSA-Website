@@ -17,7 +17,7 @@ export const ourPrograms: OurProgramCardProps[] = [
     program_Name: "Cyber Security",
     program_description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.",
-    program_link: "courses/cybersecurity/master-program-in-cybersecurity",
+    program_link: "courses/cybersecurity/",
     hoverColor: "#f52b02",
     icons: <CybersecurityIcon title="Best Selling" titleId="best-selling-title" />,
     courses: [

@@ -16,7 +16,7 @@ const Faqs: React.FC<FaqsProps> = ({ faqs }) => {
         <Accordion type="single" collapsible className="flex w-full flex-wrap">
           {faqs.map((faq, index) => (
             <div key={index} className="w-full p-2 md:w-1/2">
-              <AccordionItem value={`item-${index}`} className="w-full rounded-2xl border px-4">
+              <AccordionItem value={`item-${index}`} className="w-full rounded-lg border px-4">
                 <AccordionTrigger>{faq.title}</AccordionTrigger>
                 <AccordionContent>{faq.content}</AccordionContent>
               </AccordionItem>

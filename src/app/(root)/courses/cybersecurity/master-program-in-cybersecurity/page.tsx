@@ -1,98 +1,57 @@
-"use client"
-import Image from "next/image"
-import React, { useEffect } from "react"
-
-import Featured from "@/app/(root)/(home)/homepagesections/Featured"
-import WhyDss from "@/app/(root)/(home)/homepagesections/WhyDataspaceAcademy/whydss_section"
+import React from "react"
 import HeroForm from "@/components/forms/courseForm/HeroForm"
-import ConfusedaboutCourse from "@/components/shared/courses/course-masterpage/CondusedAboutCourse"
-import Faqs from "@/components/shared/courses/course-masterpage/Faqs"
-import Hero from "@/components/shared/courses/course-masterpage/Hero"
-import UpskillCourses from "@/components/shared/courses/course-masterpage/upskill"
-import LearnerReview from "@/components/shared/LearnerReview"
-import TrainerCarousel from "@/components/shared/TrainerCarousel"
-import VoicesFromStudents from "@/components/shared/VoicesFromStudents"
-import { Card } from "@/components/ui/card"
+import Benefits from "@/components/shared/courses/course-detail/Benefits"
+import CourseDescription from "@/components/shared/courses/course-detail/CourseDescription"
+import HeroCourse from "@/components/shared/courses/course-detail/HeroCourse"
+import ProgramOverview from "@/components/shared/courses/course-detail/ProgramOverview"
+import SkillsYouWillGather from "@/components/shared/courses/course-detail/SkillsYouWillGather"
+import Wanttoknowmore from "@/components/shared/courses/course-detail/Wanttoknowmore"
 import {
-  cybersecuritylearnersReviewLowerCarousel,
-  cybersecuritylearnersReviewUpperCarousel,
-  CybersecurityMasterpageFaqs,
-  CybersecurityTrainers,
-  cybersecurityvoiceFromStudents,
-} from "@/constants/courses/cybersecuritycourses"
-import CybersecuritryCourses from "./CybersecuritryCourses"
+  benefitsData,
+  courseDescriptionData,
+  CybersecurityCurriculumData,
+  HeroData,
+  ProgramOverviewData,
+  skillsData,
+} from "@/constants/courses/cybersecuritycourses/masterprogram"
+import CourseCurriculum from "@/components/shared/courses/course-detail/CourseCurriculum"
 
-import ToolsCybersecurity from "./ToolsCybersecurity"
-import Whycybersecurity from "./whycybersecurity"
-const handleSmoothScroll = (event: any) => {
-  event.preventDefault()
-  const targetElement = document.querySelector(event.target.getAttribute("href"))
-  if (targetElement) {
-    targetElement.scrollIntoView({ behavior: "smooth" })
-  }
-}
-
-const Page = () => {
-  useEffect(() => {
-    const link = document.querySelector('a[href="#cybersecuritryCourses"]')
-    if (link) {
-      link.addEventListener("click", handleSmoothScroll)
-
-      return () => {
-        link.removeEventListener("click", handleSmoothScroll)
-      }
-    }
-  }, [])
-  const handleButtonClick = () => {
-    // Handle button click functionality
-  }
-  const imageFilenames = [
-    "Burpsuite.png",
-    "hashcat.png",
-    "Metaspolit.png",
-    "Nessus.png",
-    "nmap.png",
-    "nikto.png",
-    "Nuclei.png",
-    "Shodan.png",
-  ]
-
+const page = () => {
   return (
-    <>
-      <Hero
-        background={"black"}
-        backgroundImage="https://example.com/background.jpg"
-        heading="Get The Best Cybersecurity
-        Courses at One Place"
-        subheading="Build your future with our popular cybersecurity programs."
-        paragraph="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
-        buttonText="Explore Programs"
-        buttonLink="#cybersecuritryCourses"
-        rating={"4.8/5 Rating Program (1267 reviews)"}
-      >
+    <div>
+      <HeroCourse HeroData={HeroData}>
+        {" "}
         <HeroForm />
-      </Hero>
-      <Whycybersecurity />
-      <CybersecuritryCourses id="cybersecuritryCourses" />
-      <ToolsCybersecurity imageFilenames={imageFilenames} />
-      <ConfusedaboutCourse
-        title="Confused about which course to take?"
-        description="Embark on an exhilarating journey in 2024 by diving into ethical hacking. Unlock career opportunities, become a digital guardian, and contribute to a global community of cyber defenders."
-        buttonText="Get free Career Counselling"
-        // onButtonClick={handleButtonClick}
+      </HeroCourse>
+      <CourseDescription courseDescriptionData={courseDescriptionData} />
+      <ProgramOverview
+        title="Program Overview"
+        description="The MASTER Program in Cybersecurity is an all-in-one cybersecurity program that will help you to land up with your dream job in cybersecurity. The advanced program will cover training on:"
+        items={ProgramOverviewData}
+        videoUrl="/videos/get-started.mp4"
+        addOnsLink="#"
+        videoPlaceholder="/images/video.png"
       />
-      <TrainerCarousel trainerDetails={CybersecurityTrainers} />
-      <WhyDss />
-      <LearnerReview
-        learnersReviewLowerCarousel={cybersecuritylearnersReviewLowerCarousel}
-        learnersReviewUpperCarousel={cybersecuritylearnersReviewUpperCarousel}
+      <Wanttoknowmore
+        buttonText="Download Brochure"
+        downloadBrochureLink="https://dataspaceacademy.com/public/datascience/DataScience.pdf"
       />
-      <VoicesFromStudents slides={cybersecurityvoiceFromStudents} />
-      <UpskillCourses />
-      <Featured />
-      <Faqs faqs={CybersecurityMasterpageFaqs} />
-    </>
+      <SkillsYouWillGather skills={skillsData} />
+      <Benefits
+        benefitsData={benefitsData}
+        heading="Cybersecurity master program benefits"
+        salaryTitle=" Salary Range of a Cybersecurity Expert in India"
+        salaryPara=" In India, the salary range for ethical hackers can vary based on factors such as experience, location,
+              industry, and certifications."
+      />
+      <CourseCurriculum
+        curriculumData={CybersecurityCurriculumData}
+        assignments={20}
+        hours={20}
+        skills={50}
+      ></CourseCurriculum>
+    </div>
   )
 }
 
-export default Page
+export default page

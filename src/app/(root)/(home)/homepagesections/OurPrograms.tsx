@@ -73,7 +73,7 @@ const OurPrograms = () => {
         yOffset={0}
         interactive
       />
-      <Container className="relative z-10  py-14 ">
+      <Container className="relative z-10   py-14 ">
         <h2 className="h4 my-2 text-center !font-medium text-white">Explore our programs</h2>
         <div className="mx-auto mt-4 flex flex-wrap justify-center gap-4 align-middle md:mt-8  md:gap-6 2xl:max-w-screen-2xl">
           {ourPrograms.map((item) => {

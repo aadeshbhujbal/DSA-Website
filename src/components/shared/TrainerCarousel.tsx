@@ -15,7 +15,7 @@ import "swiper/css/pagination"
 const TrainerCarousel: React.FC<{ trainerDetails: TrainerCarouselProps[] }> = ({ trainerDetails }) => {
   return (
     <Section className=" !pt-0 bg-grid-black/[0.05]">
-      <Container className="!p-0 ">
+      <Container className="!max-w-full !p-0 ">
         <h2 className="h4  pt-2 text-center !font-medium text-black lg:py-6">
           Get interactive classes by industry experts
         </h2>

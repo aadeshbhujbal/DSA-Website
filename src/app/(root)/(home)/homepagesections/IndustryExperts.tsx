@@ -12,7 +12,7 @@ const IndustryExperts = () => {
   const id = useId()
   return (
     <Section className=" p-0 bg-grid-black/[0.05]">
-      <Container className="!p-0 ">
+      <Container className="!max-w-full  !p-0">
         <h2 className="h4  pt-8 text-center !font-medium text-black lg:pt-0">
           Get interactive classes by industry experts
         </h2>

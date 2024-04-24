@@ -1,11 +1,11 @@
-import { Container } from "@/components/ui/Container"
-import Button from "@/components/ui/button"
 import Image from "next/image"
+import Button from "@/components/ui/button"
+import { Container } from "@/components/ui/Container"
 
 const UpskillCourses = () => {
   return (
     <>
-      <Container className="!bg-black !pb-0">
+      <Container className="!max-w-full !bg-black !pb-0">
         <div className="mx-auto flex flex-col justify-items-start md:flex-row md:gap-6 2xl:max-w-7xl">
           <div className="basis-2/3 ">
             <h4 className="h6 py-4 !font-medium text-white">

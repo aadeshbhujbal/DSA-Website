@@ -7,8 +7,8 @@ import React from "react"
 const WheretoStart = () => {
   return (
     <>
-      <Section className=" grid_with_linear_gradient hidden !p-0 md:block">
-        <Container className="mx-auto max-w-screen-xl ">
+      <Section className=" grid_with_linear_gradient hidden !p-0 !py-16  md:block">
+        <Container className="mx-auto max-w-screen-xl 2xl:max-w-screen-lg ">
           <div className="coufused-start-bg mx-auto flex flex-row">
             <div className="basis-4/6 self-center px-20 py-11">
               <h2 className="h4 py-2 text-left !font-medium text-white">Confused about where to start?</h2>

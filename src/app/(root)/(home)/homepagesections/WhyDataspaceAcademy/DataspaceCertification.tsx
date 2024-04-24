@@ -9,7 +9,7 @@ const DataspaceCertification = () => {
       {" "}
       <h2 className="h4 my-4 text-left !font-medium text-white">Get industry relevant certificate</h2>
       <div className="flex flex-col gap-16  md:flex-row ">
-        <div className=" max-w-[400px]  rounded-lg bg-gradient-to-br from-[#0077E5] from-10%  via-black to-black p-4 lg:w-auto lg:!max-w-[900px]">
+        <div className=" max-w-[400px]  rounded-lg bg-gradient-to-br from-[#0077E5]   via-black to-black p-4 lg:w-auto lg:!max-w-[900px]">
           <Image
             src={"/images/certificate.png"}
             alt={"certificate"}

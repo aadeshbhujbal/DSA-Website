@@ -20,7 +20,7 @@ export default function Hero() {
         yOffset={26}
         interactive
       />
-      <Container className="relative z-10 !p-0 font-bold text-black">
+      <Container className="relative z-10 !max-w-full !p-0 font-bold text-black">
         <div className="bg-gradient-to-b from-white/80 to-white/20 bg-clip-text pb-0 text-transparent">
           <BackgroundGradientAnimation>
             <AnimatedTextH1

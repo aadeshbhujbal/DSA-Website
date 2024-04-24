@@ -21,7 +21,7 @@ const LearnerReview: React.FC<Props> = ({ learnersReviewLowerCarousel, learnersR
   const id = useId()
   return (
     <Section className="p-0 bg-grid-black/[0.05]">
-      <Container className="!p-0">
+      <Container className="!max-w-full !p-0">
         <h2 className="h4 pt-8 text-center !font-medium text-black lg:pt-0">Trusted by learners around the world</h2>
         <div className="noise-bg relative flex w-full flex-col items-center justify-center gap-2 overflow-hidden rounded-md py-4 antialiased">
           <InfiniteMoving direction="right" speed="slow" className="">

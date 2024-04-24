@@ -50,10 +50,10 @@ const NavigationHomeDesktop = () => {
 function Header1({ className }: { className?: string }) {
   return (
     <>
-      <Container className=" !noise-bg sticky mt-3 rounded-t-xl !bg-white/80 !p-0 shadow-md">
-        <div className=" mx-auto">
+      <Container className="!noise-bg sticky mt-3 !max-w-full  rounded-t-xl !bg-white/80 !py-0 shadow-md">
+        <div className="!mx-auto !max-w-screen-2xl">
           <FadeIn>
-            <div className="space-y-8 px-4  sm:px-6 lg:space-y-16">
+            <div className="space-y-8 px-4  sm:px-6 lg:space-y-16 ">
               <div className=" flex flex-row justify-between">
                 <div className="py-6">
                   <Link href="/" aria-label="Home">

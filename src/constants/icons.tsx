@@ -330,3 +330,14 @@ export const NoiseBg = (props: SVGProps<SVGSVGElement>) => (
     </g>
   </svg>
 )
+
+export const BookIcon: React.FC<InitialProps> = ({ title, titleId, fillColor = "#41BF0B", ...props }) => {
+  return (
+    <svg xmlns="http://www.w3.org/2000/svg" width={21} height={21} fill="none" {...props}>
+      <path
+        fill="#000"
+        d="M15.161 2.9H5.84a1.2 1.2 0 0 0-1.2 1.2v12.8a1.2 1.2 0 0 0 1.2 1.2h9.321a1.2 1.2 0 0 0 1.2-1.2V4.1a1.2 1.2 0 0 0-1.2-1.2Zm-2.893.8h1.77v3.704l-.605-.592a.4.4 0 0 0-.56 0l-.605.592V3.7Zm3.293 13.2a.4.4 0 0 1-.4.4H5.84a.4.4 0 0 1-.4-.4V4.1a.4.4 0 0 1 .4-.4h5.628v4.655a.4.4 0 0 0 .68.286l1.005-.984 1.006.984a.4.4 0 0 0 .68-.286V3.7h.32a.4.4 0 0 1 .4.4l.002 12.8Zm-1.746-3.535a.4.4 0 0 1-.4.4H7.586a.4.4 0 1 1 0-.8h5.829a.4.4 0 0 1 .4.4Zm0 1.942a.4.4 0 0 1-.4.4H7.586a.4.4 0 1 1 0-.8h5.829a.4.4 0 0 1 .4.4Z"
+      />
+    </svg>
+  )
+}

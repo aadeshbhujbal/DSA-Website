@@ -123,7 +123,7 @@ video {
 
   /* Paragraph Styles */
   .p {
-    @apply text-base font-normal leading-[150%] tracking-normal md:text-lg lg:text-xl;
+    @apply text-base font-normal leading-[150%] tracking-normal md:text-lg ;
   }
 
   /* Span Styles */
@@ -148,7 +148,7 @@ video {
   }
 
   .body-medium {
-    @apply text-[20px] font-medium leading-[140%];
+    @apply text-[18px] font-medium leading-[140%];
   }
 
   .small-semibold {
@@ -389,5 +389,21 @@ video {
   .swiper-pagination .swiper-pagination-bullet-active{
     width: 20px !important;
     border-radius: 20px !important;
+  }
+  .herobackground{
+  background-size: cover;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+
+  }
+  .want_to_know_more_shadow{
+    box-shadow: 0px -8px 20px 0px rgba(0, 0, 0, 0.06);
+  }
+  .bg-gradient-radial {
+    background-image: radial-gradient(50% 50% at 50% 50%, #05192E 0%, #03080D 100%);
+  }
+  .recharts-label-list{
+    font-size:12px !important;
+    font-color: #000 !important;
   }
 }

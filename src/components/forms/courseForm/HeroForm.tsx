@@ -18,7 +18,7 @@ import { countryData } from "../FormComponents/countries"
 import { stateData } from "../FormComponents/state"
 type FormData = z.infer<typeof HeroFormSchema>
 
-const isDevelopment = process.env.NODE_ENV === "production"
+const isDevelopment = process.env.NODE_ENV === "development"
 
 const MockReCAPTCHA: React.FC<{ onChange: (token: string) => void }> = ({ onChange }) => {
   const handleCaptchaChange = () => {
@@ -199,7 +199,7 @@ const HeroForm: React.FC = () => {
                       >
                         {/* SelectTrigger component */}
                         <SelectTrigger className="!w-30 border-![#EBEBEB] w-full border-2 bg-white text-black outline-none !ring-offset-link placeholder:text-black focus:!outline-none focus:ring-0  focus-visible:border-link focus-visible:!outline-none focus-visible:ring-0 2xl:!h-12">
-                          <SelectValue placeholder=" +91" className="!w-30 ">
+                          <SelectValue placeholder=" +91" className="!w-30 !font-satoshi ">
                             {selectedCountryFlag && selectedCountryFlag} {selectedCountry && `(${selectedCountry})`}
                           </SelectValue>
                         </SelectTrigger>
@@ -290,7 +290,7 @@ const HeroForm: React.FC = () => {
               </div>
             </div>
             <ReCAPTCHAComponent
-              sitekey="YOUR_SITE_KEY" // Replace with your ReCaptcha site key
+              sitekey="JOASDOMOSADASDOASD" // Replace with your ReCaptcha site key
               onChange={onCaptchaChange}
             />
 

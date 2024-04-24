@@ -80,3 +80,68 @@ interface FaqItemProps {
   title: string
   content: string
 }
+
+interface HeroProps {
+  backgroundImage: string
+  heading: string
+  background?: string
+
+  subheading: string
+  paragraph: string
+  buttonText: string
+  buttonLink: string
+  brochureText: string
+  brochureLink: string
+  rating: string
+}
+
+interface BenefitsDataProps {
+  title: string
+  salary: string
+  industries: string
+}
+
+interface ProgramOverviewProps {
+  title: string
+  description: string
+  items: { title: string; id: string; content: string }[]
+  videoUrl: string
+  addOnsLink: string
+  videoPlaceholder: string
+}
+
+interface CourseDescriptionProps {
+  durationText: string
+  duration: string
+  placementSupportText: string
+  placementSupport: string
+  easyEMIText: string
+  easyEMI: string
+  classModeText: string
+  classMode: string
+  extraBenefitsText: string
+  extraBenefits: string
+}
+interface CourseCurriculumProps {
+  durationText: string
+  duration: string
+  placementSupportText: string
+  placementSupport: string
+  easyEMIText: string
+  easyEMI: string
+  classModeText: string
+  classMode: string
+  extraBenefitsText: string
+  extraBenefits: string
+}
+
+interface Submodule {
+  title: string
+  subtitle?: string[]
+}
+
+interface CourseModule {
+  module: string
+  type: "module" | "test"
+  submodule?: Submodule[]
+}
