@@ -21,6 +21,8 @@ const TabsList = React.forwardRef<
       ? "h-0 inline-flex w-full items-center justify-between rounded-md p-1 text-muted-foreground"
       : variant === "referandearnpagetab"
       ? " h-90 inline-flex w-full items-center justify-center rounded-md p-7 text-muted-foreground"
+      : variant === "testimonialpagetab"
+      ? " h-90 inline-flex w-full items-center justify-center rounded-md p-7 text-muted-foreground"
       : variant === "trainertab"
       ? "h-60 border-b-2 border-gray-300 inline-flex w-full items-center justify-between rounded-md p-1 text-muted-foreground"
       : "",   
@@ -45,7 +47,9 @@ const TabsTrigger = React.forwardRef<
       variant === "secondary"
       ? "inline-flex items-center justify-evenly whitespace-nowrap rounded-md px-4 py-1.5 text-sm font-medium ring-offset-background transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 data-[state=active]:bg-background data-[state=active]:text-foreground data-[state=active]:shadow-sm bg-black"
       : variant === "referandearnpagetab"
-      ? "inline-flex  justify-evenly whitespace-nowrap rounded-md px-4 py-1.5 text-sm from-neutral-100 ring-offset-background transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 data-[state=active]:bg-white [data-state=active]:shadow-lg data-[state=active]:text-gray-400 data-[state=active]:shadow-sm" 
+      ? "inline-flex  justify-evenly whitespace-nowrap rounded-md px-4 py-1.5 text-sm from-neutral-100 ring-offset-background transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 data-[state=active]:bg-white [data-state=active]:shadow-lg data-[state=active]:text-gray-400 data-[state=active]:shadow-sm " 
+      : variant ==="testimonialpagetab"
+      ? "inline-flex  justify-evenly whitespace-nowrap rounded-md px-4 py-1.5 text-sm from-neutral-100 ring-offset-background transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 data-[state=active]:bg-red-400 [data-state=active]:shadow-lg data-[state=active]:text-red-400 data-[state=active]:shadow-sm  data-[state=active]:border-b-gray-800"
       : "inline-flex items-center justify-evenly whitespace-nowrap rounded-md px-4 py-1.5 text-sm font-medium ring-offset-background transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 data-[state=active]:bg-black data-[state=active]:text-white data-[state=active]:shadow-sm" // this one used in trainer's profile tab 
       ,
       className

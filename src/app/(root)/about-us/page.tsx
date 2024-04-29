@@ -30,7 +30,7 @@ const AboutUs = () => {
       </div>
     <section>
       <Container>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-x-2 gap-y-8 lg:px-10 pb-10">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-x-4 gap-y-8 lg:px-10 pb-10">
           <div className="flex justify-center">
           <Image
                 src={"/images/our-mission.png"}
@@ -49,7 +49,7 @@ const AboutUs = () => {
           </div>
         </div>
         <div className="py-8">
-          <div className="flex justify-center items-center">
+          <div className="flex justify-center items-center text-center">
             <p className="h2">Meet Our Top Management Team</p>
           </div>
           <div className="flex justify-evenly">
@@ -100,8 +100,8 @@ const AboutUs = () => {
 
         </div>
 
-        <div className="flex flex-col gap-4 ">
-          <div className="flex justify-center">
+        <div className="flex flex-col gap-4 px-6">
+          <div className="flex justify-center text-center">
             <p className="h2">Award And Recognitions</p>
           </div>
 
