@@ -72,7 +72,7 @@ const page = () => {
         salaryPara=" In India, the salary range for ethical hackers can vary based on factors such as experience, location,
               industry, and certifications."
       />
-      <CourseCurriculum curriculumData={CybersecurityCurriculumData} assignments={20} hours={20} skills={50} />
+      {/* <CourseCurriculum curriculumData={CybersecurityCurriculumData} assignments={20} hours={20} skills={50} /> */}
       <ToolsCybersecurity imageFilenames={imageFilenames} />
       <HandsonProject projects={CybersecurityHandsOnProjectData} />
       <TrainerCarousel trainerDetails={CybersecurityTrainers} />
