@@ -77,11 +77,11 @@ const WhatWePromise: React.FC = () => {
       setLineEndX(lastCardRect.left)
       // Adjust maximum width based on viewport width
       if (viewportWidth <= 1660) {
-        setMaxWidth(800)
+        setMaxWidth(1000)
       } else if (viewportWidth <= 1440) {
         setMaxWidth(700)
       } else {
-        setMaxWidth(1000)
+        setMaxWidth(1100)
       }
     }
   }, [firstCardRef.current, lastCardRef.current, viewportWidth])

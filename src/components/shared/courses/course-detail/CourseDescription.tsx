@@ -10,13 +10,13 @@ interface courseDescription {
 
 const CourseDescription: React.FC<courseDescription> = ({ courseDescriptionData }) => {
   return (
-    <Section className="course_description1 !p-0">
-      <Container className=" relative -inset-y-32 rounded-md bg-[#f5f5f5] !p-0 !shadow-xl sm:-inset-y-12 lg:max-w-[1200px] 2xl:max-w-screen-2xl">
+    <Section className="course_description1 !m-4 !p-0 sm:!m-0">
+      <Container className=" relative -inset-y-36 rounded-md bg-[#f5f5f5] !p-0 !shadow-xl sm:-inset-y-12 sm:max-w-[520px] md:!max-w-5xl lg:!max-w-[1200px] 2xl:!max-w-[1400px]">
         {courseDescriptionData.map((item) => {
           const id = uuidv4()
           return (
             <div
-              className="course_description flex flex-wrap justify-evenly py-6 text-black lg:flex-row"
+              className="course_description flex  flex-wrap justify-evenly py-6 text-black  lg:flex-row"
               key={`${id}-${item.duration}`}
             >
               <div className="my-3 basis-2/4 text-center sm:my-0 md:basis-auto">

@@ -32,7 +32,6 @@ const herobackground: Herobackground = {
   backgroundSize: "cover",
   backgroundAttachment: "fixed",
   backgroundRepeat: "no-repeat",
-  Height: "100%",
 }
 const HeroCourse: React.FC<HeroCourseProps> = ({ HeroData, children }) => {
   const inlineStyles = {
@@ -43,7 +42,7 @@ const HeroCourse: React.FC<HeroCourseProps> = ({ HeroData, children }) => {
   return (
     <>
       <Section className="!p-0">
-        <div className=" !flex  h-full " style={inlineStyles}>
+        <div className=" !flex  h-[160vh] sm:h-[130vh]  lg:!h-auto" style={inlineStyles}>
           <Container className=" self-center">
             <div className="flex flex-col md:gap-8 lg:flex-row lg:py-16 ">
               <div className=" !basis-3/5 self-center  text-white ">
@@ -57,7 +56,7 @@ const HeroCourse: React.FC<HeroCourseProps> = ({ HeroData, children }) => {
                     {}
                   </p>
                 </div>
-                <div className="flex gap-4">
+                <div className="flex flex-col gap-4 sm:flex-row">
                   {" "}
                   <Button
                     className="max-w-[250px] md:max-w-[350px] 2xl:text-lg "
@@ -81,7 +80,7 @@ const HeroCourse: React.FC<HeroCourseProps> = ({ HeroData, children }) => {
                   />
                 </div>
 
-                <div className="mt-4 flex  gap-4  text-white lg:my-6">
+                <div className="my-8 flex gap-4 text-white  sm:my-0  sm:mt-4 lg:my-6">
                   <span className="h6 self-center text-xl 2xl:text-2xl">
                     DataSpace <br /> Academy Reviews
                   </span>
@@ -90,7 +89,7 @@ const HeroCourse: React.FC<HeroCourseProps> = ({ HeroData, children }) => {
                     width={130}
                     height={100}
                     alt={HeroData[0]?.rating || ""}
-                    className="w-auto max-w-[155px] 2xl:max-w-96"
+                    className=" w-auto max-w-[155px] 2xl:max-w-96"
                   />
                 </div>
               </div>

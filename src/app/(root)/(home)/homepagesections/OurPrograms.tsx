@@ -69,7 +69,7 @@ const OurPrograms = () => {
   return (
     <Section className=" relative !py-0">
       <GridPattern
-        className="gradient-dark-background absolute inset-0 z-[-10] size-full  fill-[#0142ac27] stroke-[#e0e5f20a] text-black"
+        className="gradient-dark-background absolute inset-0 -z-10 size-full  fill-[#0142ac27] stroke-[#e0e5f20a] text-black"
         yOffset={0}
         interactive
       />

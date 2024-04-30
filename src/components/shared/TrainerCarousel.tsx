@@ -8,7 +8,6 @@ import { Container } from "@/components/ui/Container"
 import { Section } from "@/components/ui/Section"
 import { RightChevron } from "@/constants/icons"
 import { TrainerCarouselProps } from "@/types"
-
 import "swiper/css"
 import "swiper/css/pagination"
 

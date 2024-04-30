@@ -27,7 +27,7 @@ export const ourPrograms: OurProgramCardProps[] = [
         duration: "1 Month",
         programLevel: "Beginners Level Program",
         chip: "Limited Seats",
-        route: "master-program-in-cybersecurity/diploma-in-cyber-security",
+        route: "cybersecurity/master-program-in-cybersecurity/",
         description:
           "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.",
         qualification: "12th Pass / Diploma",
@@ -38,7 +38,7 @@ export const ourPrograms: OurProgramCardProps[] = [
         duration: "5 Month",
         programLevel: "Beginners Level Program",
         chip: "Best Seller",
-        route: "courses/cybersecurity/master-program-in-cybersecurity/cybersecurity-essentials-program",
+        route: "cybersecurity/master-program-in-cybersecurity",
         description:
           "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.",
         qualification: "12th Pass / Diploma",
@@ -49,7 +49,7 @@ export const ourPrograms: OurProgramCardProps[] = [
         duration: "1 Month",
         programLevel: "Intermediate Level Program",
         chip: "Best Seller",
-        route: "courses/cybersecurity/master-program-in-cybersecurity/diploma-in-cyber-security",
+        route: "cybersecurity/master-program-in-cybersecurity/",
         description:
           "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.",
         qualification: "12th Pass / Diploma",
@@ -60,7 +60,7 @@ export const ourPrograms: OurProgramCardProps[] = [
         duration: "6 Month",
         programLevel: "Intermediate Level Program",
         chip: "Limited Seats",
-        route: "courses/cybersecurity/master-program-in-cybersecurity/cybersecurity-essentials-program",
+        route: "/cybersecurity/master-program-in-cybersecurity",
         description:
           "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.",
         qualification: "12th Pass / Diploma",
@@ -71,7 +71,7 @@ export const ourPrograms: OurProgramCardProps[] = [
         duration: "1 Month",
         programLevel: "Beginners Level Program",
         chip: "Limited Seats",
-        route: "courses/cybersecurity/master-program-in-cybersecurity/diploma-in-cyber-security",
+        route: "cybersecurity/master-program-in-cybersecurity/diploma-in-cyber-security",
         description:
           "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.",
         qualification: "12th Pass / Diploma",
@@ -82,7 +82,7 @@ export const ourPrograms: OurProgramCardProps[] = [
         duration: "12 Month",
         programLevel: "Beginners Level Program",
         chip: "Best Seller",
-        route: "courses/cybersecurity/master-program-in-cybersecurity/cybersecurity-essentials-program",
+        route: "cybersecurity/master-program-in-cybersecurity/cybersecurity-essentials-program",
         description:
           "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.",
         qualification: "12th Pass / Diploma",

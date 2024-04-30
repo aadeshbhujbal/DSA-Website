@@ -18,9 +18,9 @@ const ProgramOverview: React.FC<ProgramOverviewProps> = ({
   videoPlaceholder,
 }) => {
   return (
-    <Section className="!pt-0">
+    <Section className="-mt-24 !pt-0 sm:mt-0">
       <Container className="!pt-0">
-        <div className="flex flex-row">
+        <div className="flex flex-col md:flex-row">
           <div className="basis-3/5">
             <h2 className="h4 pb-4 text-left !font-medium text-black">{title}</h2>
             <p className="base-medium p max-w-xl">{description}</p>

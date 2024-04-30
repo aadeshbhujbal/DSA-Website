@@ -140,8 +140,27 @@ interface Submodule {
   subtitle?: string[]
 }
 
-interface CourseModule {
+export interface CourseModule {
   module: string
-  type: "module" | "test"
+  type?: "module" | "test"
   submodule?: Submodule[]
+}
+interface Project {
+  title: string
+  description: string
+  imageUrl: string
+  tools: string[]
+}
+
+interface Program {
+  title: string
+  subtitle?: string
+  duration?: string
+  level?: string
+  points: string[]
+}
+
+interface ProgramBenefitProps {
+  mainProgram: Program
+  addOnBenefits: Program[]
 }

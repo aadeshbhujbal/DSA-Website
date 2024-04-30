@@ -20,7 +20,7 @@ const config = {
         sm: "2rem",
         lg: "2rem",
         xl: "3rem",
-        "2xl": "0",
+        "2xl": "2",
       },
     },
 

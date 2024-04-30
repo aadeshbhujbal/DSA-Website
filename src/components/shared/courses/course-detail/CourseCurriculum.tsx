@@ -12,15 +12,14 @@ interface CurriculumItemProps {
   skills?: number
   curriculumData: CourseModule[]
 }
+
 const CourseCurriculum: React.FC<CurriculumItemProps> = ({ curriculumData, hours, assignments, skills }) => {
   return (
     <Section className="courses_background !p-0">
       <Container className="text-black">
-        {" "}
         <h2 className="h4 py-2 text-left !font-medium text-black">Curriculum designed by experts</h2>
-        <div className="flex  flex-col gap-4 self-center md:flex-row lg:gap-6 2xl:gap-12">
+        <div className="flex flex-col gap-4 self-center md:flex-row lg:gap-6 2xl:gap-12">
           <div className="basis-8/12">
-            {" "}
             <Card className=" mb-2 flex flex-row justify-between gap-2 rounded-md px-6 py-2 shadow-lg">
               <div className="flex items-center gap-2">
                 <BookIcon /> <span>{hours}+ Hours of learning</span>
@@ -30,7 +29,6 @@ const CourseCurriculum: React.FC<CurriculumItemProps> = ({ curriculumData, hours
                 <span> {assignments}+ Assignments & Projects</span>
               </div>
               <div className="flex items-center gap-2">
-                {" "}
                 <BookIcon />
                 <span> {skills}+ Skills & Tools</span>
               </div>
