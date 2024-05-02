@@ -63,7 +63,7 @@ const AllCourse: React.FC<{ programs: OurProgramCardProps[] }> = ({ programs }) 
                 </>
               )}{" "}
               {activeProgram &&
-                activeProgram.courses.map((course) => (
+                activeProgram.courses?.map((course) => (
                   <div key={course.id} className="py-2 hover:text-link ">
                     <a href={course.route}>{course.name}</a>
                   </div>
