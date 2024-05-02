@@ -1,9 +1,8 @@
-"use client"
-import React, { useEffect } from "react"
+import React from "react"
 import Featured from "@/app/(root)/(home)/homepagesections/Featured"
 import WhyDss from "@/app/(root)/(home)/homepagesections/WhyDataspaceAcademy/whydss_section"
 import HeroForm from "@/components/forms/courseForm/HeroForm"
-import WhoCanJoin from "@/components/shared/courses/course-detail/WhoCanJoin"
+
 import ConfusedaboutCourse from "@/components/shared/courses/course-masterpage/CondusedAboutCourse"
 import Faqs from "@/components/shared/courses/course-masterpage/Faqs"
 import HeroCourseMaster from "@/components/shared/courses/course-masterpage/HeroCourseMaster"
@@ -18,32 +17,15 @@ import {
   CybersecurityTrainers,
   cybersecurityvoiceFromStudents,
 } from "@/constants/courses/cybersecuritycourses"
+
 import CybersecuritryCourses from "../../../../components/shared/courses/course-masterpage/CybersecuritryCourses"
 import ToolsCybersecurity from "../../../../components/shared/courses/course-masterpage/ToolsCybersecurity"
 import Whycybersecurity from "../../../../components/shared/courses/course-masterpage/whycybersecurity"
-import { CybersecurityWhoCanJoinData } from "@/constants/courses/cybersecuritycourses/masterprogram"
-const handleSmoothScroll = (event: any) => {
-  event.preventDefault()
-  const targetElement = document.querySelector(event.target.getAttribute("href"))
-  if (targetElement) {
-    targetElement.scrollIntoView({ behavior: "smooth" })
-  }
-}
 
 const Page = () => {
-  useEffect(() => {
-    const link = document.querySelector('a[href="#cybersecuritryCourses"]')
-    if (link) {
-      link.addEventListener("click", handleSmoothScroll)
-
-      return () => {
-        link.removeEventListener("click", handleSmoothScroll)
-      }
-    }
-  }, [])
-  const handleButtonClick = () => {
-    // Handle button click functionality
-  }
+  // const handleButtonClick = () => {
+  //   // Handle button click functionality
+  // }
   const imageFilenames = [
     "Burpsuite.png",
     "hashcat.png",

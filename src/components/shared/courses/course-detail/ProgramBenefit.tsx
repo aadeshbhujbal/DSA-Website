@@ -1,30 +1,52 @@
+"use client"
 import Image from "next/image"
-import React from "react"
+import React, { useEffect } from "react"
 import { Container } from "@/components/ui/Container"
 import { Section } from "@/components/ui/Section"
 import { Program } from "@/types"
 
+const handleSmoothScroll = (event: any) => {
+  event.preventDefault()
+  const targetElement = document.querySelector(event.target.getAttribute("href"))
+  if (targetElement) {
+    targetElement.scrollIntoView({ behavior: "smooth" })
+  }
+}
+
 interface ProgramBenefitProps {
   mainProgram: Program
   addOnBenefits: Program[]
+  id?: string
 }
 
-const ProgramBenefit: React.FC<ProgramBenefitProps> = ({ mainProgram, addOnBenefits }) => {
+const ProgramBenefit: React.FC<ProgramBenefitProps> = ({ mainProgram, addOnBenefits, id }) => {
   const hrStyle: React.CSSProperties = {
     background: "linear-gradient(90deg, #FFF 0%, rgba(255, 255, 255, 0.00) 85.78%)",
     height: "1px",
     width: "100%",
   }
+  useEffect(() => {
+    const link = document.querySelector(`a[href="#${id}"]`)
+    if (link) {
+      link.addEventListener("click", handleSmoothScroll)
+
+      return () => {
+        link.removeEventListener("click", handleSmoothScroll)
+      }
+    }
+  }, [id])
 
   return (
     <Section className="bg-black">
       <Container className="!py-0">
-        <h2 className="h4 pb-4 pt-6 text-center !font-medium text-white md:my-3 ">Program Benefits</h2>
+        <h2 id={id} className="h4 pb-4 pt-6 text-center !font-medium text-white md:my-3 ">
+          Program Benefits
+        </h2>
 
         <div className="grid grid-cols-1 gap-4 md:grid-cols-2">
           <div className="">
             <h3 className="h5 py-2 text-white">Main Program </h3>
-            <div className="mt-4 rounded-lg border !border-[#97ACCB] bg-gradient-to-b from-[#004165] via-[#061A25] to-[#000814] p-4">
+            <div className="mt-4 rounded-lg border !border-[#97ACCB] bg-gradient-to-b from-[#004165] via-[#061A25] to-[#000814] p-4 lg:min-h-[598px] 2xl:min-h-[540px]">
               <div className="rounded-lg bg-gradient-to-b from-blue-500 to-transparent p-4">
                 <h4 className="h4 py-4 text-white">{mainProgram.title}</h4>
                 {mainProgram.duration && (
@@ -47,7 +69,7 @@ const ProgramBenefit: React.FC<ProgramBenefitProps> = ({ mainProgram, addOnBenef
             {addOnBenefits.map((benefit, index) => (
               <div
                 key={index}
-                className="bg-gradient my-4 rounded-lg border !border-[#63748D] from-[#030F16] via-[#020D16] to-[#000814] p-4 !pr-0"
+                className="bg-gradient my-4 rounded-lg border !border-[#63748D] from-[#030F16] via-[#020D16] to-[#000814] p-4 !pr-0 "
               >
                 <div className="flex justify-between self-center   ">
                   <h4 className="h5 py-4 text-white">

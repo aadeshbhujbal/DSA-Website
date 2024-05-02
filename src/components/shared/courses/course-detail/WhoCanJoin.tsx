@@ -14,7 +14,7 @@ interface SkillsProps {
 
 const WhoCanJoin: React.FC<SkillsProps> = ({ whocanJoin }) => {
   return (
-    <Section className="bg-black">
+    <Section className="bg-black !pb-0">
       <Container className="md:!py-0 ">
         <h2 className="h4 my-3  pb-4 text-center !font-medium text-white">Who Can Join </h2>
         <div className="grid grid-cols-1 gap-8 md:grid-cols-2  ">

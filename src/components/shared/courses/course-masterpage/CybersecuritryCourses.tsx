@@ -1,24 +1,40 @@
+"use client"
 import Image from "next/image"
-import React from "react"
+import React, { useEffect } from "react"
 import Button from "@/components/ui/button"
 import { Card } from "@/components/ui/card"
 import { ChipwithLink } from "@/components/ui/ChipWithLink"
 import { Container } from "@/components/ui/Container"
 import { Section } from "@/components/ui/Section"
 import { ourPrograms } from "@/constants/constants"
-
+const handleSmoothScroll = (event: any) => {
+  event.preventDefault()
+  const targetElement = document.querySelector(event.target.getAttribute("href"))
+  if (targetElement) {
+    targetElement.scrollIntoView({ behavior: "smooth" })
+  }
+}
 const CybersecuritryCourses: React.FC<{ id?: string }> = ({ id }) => {
   const cyberSecurityProgram = ourPrograms.find((program) => program.id === 2)
   const cyberSecurityCourses = (cyberSecurityProgram?.courses ?? []) as any[]
   const colors = ["#ff9933", "#f52b02", "#00d1b9", "#b200f2", "#3977D4"]
+  useEffect(() => {
+    const link = document.querySelector(`a[href="#${id}"]`)
+    if (link) {
+      link.addEventListener("click", handleSmoothScroll)
+
+      return () => {
+        link.removeEventListener("click", handleSmoothScroll)
+      }
+    }
+  }, [id])
 
   return (
     <Section className="courses_background !p-0">
+      <div id={id}></div>
       <Container className="text-black">
         {" "}
-        <h2 id={id} className="h4 py-2 text-center !font-medium text-black">
-          Explore the best cybersecurity courses
-        </h2>
+        <h2 className="h4 py-2 text-center !font-medium text-black">Explore the best cybersecurity courses</h2>
         <p className="mx-auto pb-6 text-center sm:pb-6 md:max-w-2xl 3xl:max-w-6xl">
           Embark on an exhilarating journey in 2023 by diving into ethical hacking. Unlock career opportunities, become
           a digital guardian, and contribute to a global community of cyber defenders.

@@ -18,6 +18,11 @@ import { countryData } from "../FormComponents/countries"
 import { stateData } from "../FormComponents/state"
 type FormData = z.infer<typeof HeroFormSchema>
 
+interface HeroFormProps {
+  title?: string
+  subtitle?: string
+}
+
 const isDevelopment = process.env.NODE_ENV === "development"
 
 const MockReCAPTCHA: React.FC<{ onChange: (token: string) => void }> = ({ onChange }) => {
@@ -35,7 +40,7 @@ const MockReCAPTCHA: React.FC<{ onChange: (token: string) => void }> = ({ onChan
 
 const ReCAPTCHAComponent = isDevelopment ? MockReCAPTCHA : ReCAPTCHA
 
-const HeroForm: React.FC = () => {
+const HeroForm: React.FC<HeroFormProps> = ({ title, subtitle }) => {
   const currentPathname = usePathname()
   const lastSlug = currentPathname.split("/").pop() || ""
   const [isSubmitting, setIsSubmitting] = useState(false)
@@ -131,12 +136,16 @@ const HeroForm: React.FC = () => {
   }
 
   return (
-    <Section className="relative rounded-lg bg-white !p-0">
-      <Container className="relative z-10 mx-auto !p-8  ">
+    <Section className="relative !rounded-lg border !bg-white !p-0 !shadow-2xl">
+      <Container className="relative z-10 mx-auto !p-8   ">
         {/* Title and description */}
         <div className="relative">
-          <h2 className="h4 my-0 pl-4 text-left !font-medium text-black 2xl:text-4xl">Get In touch </h2>
-          <p className="mx-auto my-4 mt-0 pl-4 md:max-w-5xl 2xl:text-xl 3xl:max-w-6xl">Talk to our Career Experts </p>
+          <h2 className="h4 my-0 pl-4 text-left !font-medium text-black 2xl:text-4xl">
+            {title ? title : "Get In touch"}
+          </h2>
+          <p className="mx-auto my-4 mt-0 pl-4 md:max-w-5xl 2xl:text-xl 3xl:max-w-6xl">
+            {subtitle ? subtitle : "Talk to our Career Experts"}{" "}
+          </p>
           <div className="absolute  top-0 h-full w-1.5" style={{ backgroundColor: "#ff9933" }}></div>
         </div>
 

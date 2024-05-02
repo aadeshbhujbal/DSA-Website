@@ -1,4 +1,3 @@
-"use client"
 import React from "react"
 import Lms from "@/app/(root)/(home)/homepagesections/Lms"
 import WhyDss from "@/app/(root)/(home)/homepagesections/WhyDataspaceAcademy/whydss_section"
@@ -9,9 +8,11 @@ import CourseCurriculum from "@/components/shared/courses/course-detail/CourseCu
 import CourseDescription from "@/components/shared/courses/course-detail/CourseDescription"
 import HandsonProject from "@/components/shared/courses/course-detail/HandsonProject"
 import HeroCourse from "@/components/shared/courses/course-detail/HeroCourse"
+import ProgramBenefit from "@/components/shared/courses/course-detail/ProgramBenefit"
 import ProgramOverview from "@/components/shared/courses/course-detail/ProgramOverview"
 import SkillsYouWillGather from "@/components/shared/courses/course-detail/SkillsYouWillGather"
 import Wanttoknowmore from "@/components/shared/courses/course-detail/Wanttoknowmore"
+import WhoCanJoin from "@/components/shared/courses/course-detail/WhoCanJoin"
 import Faqs from "@/components/shared/courses/course-masterpage/Faqs"
 import ToolsCybersecurity from "@/components/shared/courses/course-masterpage/ToolsCybersecurity"
 import LearnerReview from "@/components/shared/LearnerReview"
@@ -31,8 +32,6 @@ import {
   ProgramOverviewData,
   skillsData,
 } from "@/constants/courses/cybersecuritycourses/masterprogram"
-import WhoCanJoin from "@/components/shared/courses/course-detail/WhoCanJoin"
-import ProgramBenefit from "@/components/shared/courses/course-detail/ProgramBenefit"
 
 const page = () => {
   const imageFilenames = [
@@ -57,7 +56,7 @@ const page = () => {
         description="The MASTER Program in Cybersecurity is an all-in-one cybersecurity program that will help you to land up with your dream job in cybersecurity. The advanced program will cover training on:"
         items={ProgramOverviewData}
         videoUrl="/videos/get-started.mp4"
-        addOnsLink="#"
+        addOnsLink="#program-benefit"
         videoPlaceholder="/images/video.png"
       />
       <Wanttoknowmore
@@ -72,7 +71,7 @@ const page = () => {
         salaryPara=" In India, the salary range for ethical hackers can vary based on factors such as experience, location,
               industry, and certifications."
       />
-      {/* <CourseCurriculum curriculumData={CybersecurityCurriculumData} assignments={20} hours={20} skills={50} /> */}
+      <CourseCurriculum curriculumData={CybersecurityCurriculumData} assignments={20} hours={20} skills={50} />
       <ToolsCybersecurity imageFilenames={imageFilenames} />
       <HandsonProject projects={CybersecurityHandsOnProjectData} />
       <TrainerCarousel trainerDetails={CybersecurityTrainers} />
@@ -85,6 +84,7 @@ const page = () => {
       />
       <WhoCanJoin whocanJoin={CybersecurityWhoCanJoinData} />
       <ProgramBenefit
+        id="program-benefit"
         mainProgram={CybersecurityMainProgramBenefitsData}
         addOnBenefits={CybersecurityaddOnBenefitsData}
       />

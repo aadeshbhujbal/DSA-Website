@@ -7,6 +7,8 @@ import { navigationHomeDesktop } from "@/constants"
 // import { AllCourse } from "./AllCourse"
 import HeaderLogo from "./HeaderLogo"
 import { DesktopHamMenu } from "./rightmenu2/DesktopHamMenu"
+import AllCourse from "./AllCourse"
+import { ourPrograms } from "@/constants/constants"
 
 const DesktopNavigationMenu = () => {
   const pathname = usePathname()
@@ -35,10 +37,10 @@ const DesktopNavigationMenu = () => {
 const NavigationHomeDesktop = () => {
   return (
     <div className="hidden justify-between gap-8 self-center py-6 align-middle  lg:flex lg:flex-row">
-      <DesktopNavigationMenu />
       {/* <div className="justift-between text-center ">
-                  <AllCourse />
-                </div> */}
+        <AllCourse />
+      </div> */}
+      <DesktopNavigationMenu />
       <div className=" self-center align-middle">
         <DesktopHamMenu />
       </div>
@@ -55,11 +57,15 @@ function Header1({ className }: { className?: string }) {
           <FadeIn>
             <div className="space-y-8 px-4  sm:px-6 lg:space-y-16 ">
               <div className=" flex flex-row justify-between">
-                <div className="py-6">
+                <div className="flex flex-row gap-12 py-6">
                   <Link href="/" aria-label="Home">
                     <HeaderLogo className="size-8" fillOnHover />
                   </Link>
+                  <div className="hidden lg:block">
+                    <AllCourse programs={ourPrograms} />{" "}
+                  </div>
                 </div>
+
                 <NavigationHomeDesktop />
               </div>
             </div>

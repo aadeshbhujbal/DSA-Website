@@ -42,8 +42,8 @@ const HeroCourse: React.FC<HeroCourseProps> = ({ HeroData, children }) => {
   return (
     <>
       <Section className="!p-0">
-        <div className=" !flex  h-[160vh] sm:h-[130vh]  lg:!h-auto" style={inlineStyles}>
-          <Container className=" self-center">
+        <div className=" !flex  h-[160vh] sm:h-[130vh] md:h-[140vh]  lg:!h-auto" style={inlineStyles}>
+          <Container className=" lg:self-center">
             <div className="flex flex-col md:gap-8 lg:flex-row lg:py-16 ">
               <div className=" !basis-3/5 self-center  text-white ">
                 <h1 className="h2 my-3  !font-medium lg:!text-6xl 2xl:text-7xl ">{HeroData[0]?.heading || ""}</h1>
@@ -80,7 +80,7 @@ const HeroCourse: React.FC<HeroCourseProps> = ({ HeroData, children }) => {
                   />
                 </div>
 
-                <div className="my-8 flex gap-4 text-white  sm:my-0  sm:mt-4 lg:my-6">
+                <div className="my-8 flex gap-4 text-white  lg:my-6">
                   <span className="h6 self-center text-xl 2xl:text-2xl">
                     DataSpace <br /> Academy Reviews
                   </span>

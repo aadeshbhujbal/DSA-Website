@@ -42,7 +42,7 @@ const HeroCourseMaster: React.FC<HeroProps> = ({
     background,
   }
   return (
-    <Section className="!p-0">
+    <Section className="!scroll-smooth !p-0">
       <div className=" !flex  h-full " style={inlineStyles}>
         <Container className=" self-center">
           <div className="flex flex-col md:gap-8 lg:flex-row lg:py-16 ">
@@ -55,14 +55,15 @@ const HeroCourseMaster: React.FC<HeroProps> = ({
                 <p className="base-medium my-3 2xl:text-xl ">{rating}</p>
               </div>
               <Button
-                className="max-w-[250px] md:max-w-[350px] 2xl:text-lg "
+                className="max-w-[250px] !scroll-smooth md:max-w-[350px] 2xl:text-lg "
                 variant={"default"}
                 size="large"
                 href={buttonLink}
               >
                 {buttonText}
               </Button>
-              <div className="mt-4 flex  gap-4  text-white lg:my-6">
+              <div className="my-8 flex gap-4 text-white   lg:my-6">
+                {" "}
                 <span className="h6 self-center text-xl 2xl:text-2xl">
                   DataSpace <br /> Academy Reviews
                 </span>

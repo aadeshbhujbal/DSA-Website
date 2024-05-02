@@ -1,4 +1,4 @@
-import { Program } from "@/types"
+import { CourseModule, Program } from "@/types"
 
 export const HeroData = [
   {
@@ -138,16 +138,13 @@ export const CybersecurityHandsOnProjectData = [
     tools: ["/images/power-bi.png", "/images/excel.png", "/images/tableau.png"],
   },
 ]
-export const CybersecurityCurriculumData = [
+export const CybersecurityCurriculumData: CourseModule[] = [
   {
     module: "Module 1",
     type: "module",
     submodule: [
       {
-        title: "Introduction to ",
-      },
-      {
-        title: "Network Security",
+        title: "Introduction to Network Security",
       },
       {
         title: "Web Application Security",
@@ -159,7 +156,7 @@ export const CybersecurityCurriculumData = [
     type: "module",
     submodule: [
       {
-        title: " to Cybersecurity",
+        title: "Introduction to Cybersecurity",
         subtitle: ["Introduction to cyber threats", "Types of cyber attacks", "Importance of cybersecurity"],
       },
       {
@@ -194,7 +191,7 @@ export const CybersecurityCurriculumData = [
     type: "module",
     submodule: [
       {
-        title: "Introdction to Cy",
+        title: "Introduction to Cybersecurity",
         subtitle: ["Introduction to cyber threats", "Types of cyber attacks", "Importance of cybersecurity"],
       },
       {
@@ -204,6 +201,119 @@ export const CybersecurityCurriculumData = [
         title: "Web Application Security",
       },
     ],
+  },
+  // Additional modules and assignments
+  {
+    module: "Module 5",
+    type: "module",
+    submodule: [
+      {
+        title: "Data Encryption Techniques",
+        subtitle: ["Symmetric encryption", "Asymmetric encryption", "Hash functions"],
+      },
+      {
+        title: "Wireless Security",
+        subtitle: ["Wi-Fi security protocols", "Bluetooth security", "RFID security"],
+      },
+    ],
+  },
+  {
+    module: "Assignment 1",
+    type: "test",
+  },
+  {
+    module: "Module 6",
+    type: "module",
+    submodule: [
+      {
+        title: "Incident Response and Disaster Recovery",
+        subtitle: ["Creating incident response plans", "Business continuity planning", "Disaster recovery strategies"],
+      },
+      {
+        title: "Cloud Security",
+        subtitle: [
+          "Cloud computing security challenges",
+          "Securing cloud-based applications",
+          "Data protection in the cloud",
+        ],
+      },
+    ],
+  },
+  {
+    module: "Assignment 2",
+    type: "test",
+  },
+  {
+    module: "Module 7",
+    type: "module",
+    submodule: [
+      {
+        title: "Ethical Hacking",
+        subtitle: ["Penetration testing", "Vulnerability assessment", "Social engineering"],
+      },
+      {
+        title: "Mobile Security",
+        subtitle: ["Mobile device management", "App security", "Mobile malware detection"],
+      },
+    ],
+  },
+  {
+    module: "Assignment 3",
+    type: "test",
+  },
+  {
+    module: "Module 8",
+    type: "module",
+    submodule: [
+      {
+        title: "Security Governance",
+        subtitle: ["Risk management", "Compliance frameworks", "Security policies and procedures"],
+      },
+      {
+        title: "IoT Security",
+        subtitle: ["Securing IoT devices", "Privacy concerns", "IoT security best practices"],
+      },
+    ],
+  },
+  {
+    module: "Assignment 4",
+    type: "test",
+  },
+  {
+    module: "Module 9",
+    type: "module",
+    submodule: [
+      {
+        title: "Cybersecurity Laws and Regulations",
+        subtitle: ["GDPR", "HIPAA", "PCI DSS"],
+      },
+      {
+        title: "Blockchain Security",
+        subtitle: ["Consensus mechanisms", "Smart contract security", "Privacy in blockchain"],
+      },
+    ],
+  },
+  {
+    module: "Assignment 5",
+    type: "test",
+  },
+  {
+    module: "Module 10",
+    type: "module",
+    submodule: [
+      {
+        title: "Emerging Threats and Trends",
+        subtitle: ["AI-driven attacks", "Quantum computing threats", "Biometric security"],
+      },
+      {
+        title: "Social Media Security",
+        subtitle: ["Privacy settings", "Identity theft prevention", "Social engineering on social media"],
+      },
+    ],
+  },
+  {
+    module: "Assignment 6",
+    type: "test",
   },
 ]
 

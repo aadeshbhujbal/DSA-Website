@@ -1,3 +1,4 @@
+"use client"
 import Image from "next/image"
 import React from "react"
 import { Autoplay, Navigation, Pagination } from "swiper/modules"
@@ -57,8 +58,8 @@ const HandsonProject: React.FC<HandsonProjectProps> = ({ projects }) => {
                     width={200}
                     height={200}
                   />
-                  <h5 className="h5  max-w-64 !font-medium">{project.title}</h5>
-                  <p className="py-4 lg:h-56">{project.description}</p>
+                  <h5 className="h5  max-w-64 !font-medium lg:h-20 2xl:h-16">{project.title}</h5>
+                  <p className="py-4 lg:h-72 2xl:h-60 3xl:h-52">{project.description}</p>
                   <p className="mt-4 font-bold">Tools Covered</p>
                   <div className="mt-4 flex justify-start">
                     {project.tools.map((tool, index) => (

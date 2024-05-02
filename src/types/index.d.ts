@@ -31,7 +31,7 @@ export interface OurProgramCardProps {
   icons?: JSX.Element
   hoverColor: string | undefined
   animate?: boolean
-  courses?: object
+  courses: Course[]
 }
 
 export interface LearnersReview {

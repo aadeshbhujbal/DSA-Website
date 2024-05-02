@@ -11,7 +11,7 @@ span,
 label,
 input {
   font-family: var(--font_satoshi) !important;
-  scroll-behavior: smooth;
+  scroll-behavior: smooth !important;
 }
 h1,
 h2,
@@ -412,11 +412,43 @@ video {
     padding-left: 0; 
   }
   .point-icon-list li {
-    padding-left: 24px; 
+    padding-left: 20px; 
     background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' fill='%2341BF0B'%3E%3Ccircle opacity='0.5' cx='8' cy='8' r='8' fill='%2341BF0B'/%3E%3Ccircle cx='8' cy='8' r='4' fill='%2341BF0B'/%3E%3C/svg%3E");
     background-repeat: no-repeat;
-    background-size: 20px; /* Set the size of the icon */
-    background-position: top 5px left; 
+    background-size: 14px; /* Set the size of the icon */
+    background-position: top 6px left; 
     margin-bottom: 12px; 
+    margin-left:10px
+    
+}
+.no-list {
+  list-style-type: disc; /* Remove default list-style */
+  padding: 10px; 
+  list-style-position: inside;
+}
+.no-list li {
+  padding-left: 0px; 
+  background-image: none;
+ 
+  margin-bottom: 6px; 
+}
+@media screen and (max-width: 1535px) {
+
+  .column1 {
+    position: sticky !important;
+        overflow: hidden !important;
+    position: -webkit-sticky !important;
+     height: 100% !important;
+  }
+}
+@media screen and (min-width: 1536px) {
+
+  .column1 {
+    position: sticky !important;
+    top: calc(10% - 050px);
+    overflow: hidden !important;
+    position: -webkit-sticky !important;
+     height: 100% !important;
+  }
 }
 }

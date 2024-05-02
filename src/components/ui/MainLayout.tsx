@@ -34,7 +34,7 @@ function MainLayoutInner({ children }: { children: React.ReactNode }) {
           <Header1 className="" />
         </div>
       </header>
-      <motion.div layout className=" relative isolate mt-24 flex w-full flex-col overflow-hidden">
+      <motion.div layout className=" relative isolate mt-14 flex w-full flex-col overflow-hidden">
         <main className="w-full flex-auto">{children}</main>
       </motion.div>
       <motion.div
