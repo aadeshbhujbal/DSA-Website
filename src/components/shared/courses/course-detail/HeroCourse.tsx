@@ -42,11 +42,13 @@ const HeroCourse: React.FC<HeroCourseProps> = ({ HeroData, children }) => {
   return (
     <>
       <Section className="!p-0">
-        <div className=" !flex  h-[160vh] sm:h-[130vh] md:h-[140vh]  lg:!h-auto" style={inlineStyles}>
+        <div className=" !flex  h-[140vh] sm:h-[130vh] md:h-[140vh]  lg:!h-auto" style={inlineStyles}>
           <Container className=" lg:self-center">
             <div className="flex flex-col md:gap-8 lg:flex-row lg:py-16 ">
               <div className=" !basis-3/5 self-center  text-white ">
-                <h1 className="h2 my-3  !font-medium lg:!text-6xl 2xl:text-7xl ">{HeroData[0]?.heading || ""}</h1>
+                <h1 className="h2 my-3 pt-8  !font-medium sm:pt-0 lg:!text-6xl 2xl:text-7xl ">
+                  {HeroData[0]?.heading || ""}
+                </h1>
 
                 <p className="base-medium my-3 max-w-4xl 2xl:my-6 2xl:text-2xl">{HeroData[0]?.paragraph || ""}</p>
                 <div className="my-3 flex flex-row gap-2 2xl:my-4">

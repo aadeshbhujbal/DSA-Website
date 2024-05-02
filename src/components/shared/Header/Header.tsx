@@ -61,9 +61,7 @@ function Header1({ className }: { className?: string }) {
                   <Link href="/" aria-label="Home">
                     <HeaderLogo className="size-8" fillOnHover />
                   </Link>
-                  <div className="hidden lg:block">
-                    <AllCourse programs={ourPrograms} />{" "}
-                  </div>
+                  <div className="hidden lg:block">{/* <AllCourse programs={ourPrograms} />{" "} */}</div>
                 </div>
 
                 <NavigationHomeDesktop />
