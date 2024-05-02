@@ -7,6 +7,7 @@ import { navigationHomeDesktop } from "@/constants"
 // import { AllCourse } from "./AllCourse"
 import HeaderLogo from "./HeaderLogo"
 import { DesktopHamMenu } from "./rightmenu2/DesktopHamMenu"
+import AllCourse from "./AllCourse"
 import { ourPrograms } from "@/constants/constants"
 
 const DesktopNavigationMenu = () => {
@@ -60,7 +61,9 @@ function Header1({ className }: { className?: string }) {
                   <Link href="/" aria-label="Home">
                     <HeaderLogo className="size-8" fillOnHover />
                   </Link>
-                  <div className="hidden lg:block">{/* <AllCourse programs={ourPrograms} />{" "} */}</div>
+                  <div className="hidden lg:block">
+                    <AllCourse programs={ourPrograms} />{" "}
+                  </div>
                 </div>
 
                 <NavigationHomeDesktop />
