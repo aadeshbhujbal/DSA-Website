@@ -40,7 +40,7 @@ const Testimonials = () => {
                     {category.id === "1" ? (
                       // Render all testimonials if "All" tab is selected
                       Testimonialslist.map(testimonial => (
-                        <div key={testimonial.id} className="bg-white max-w-[600px] rounded-lg shadow-xl ">
+                        <div key={testimonial.id} className="bg-white max-w-[600px] h-auto rounded-lg shadow-xl ">
                           <div className="flex flex-col gap-3 px-4 py-6">
                             <p>{testimonial.story}</p>
                             <p className="font-extrabold">- {testimonial.name}</p>

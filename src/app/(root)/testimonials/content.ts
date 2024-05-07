@@ -43,7 +43,7 @@ const TestimonialstabcategoryList: TestimonialsTabCategory[] = [
     {
         id: "1",
         categoryId: "2",
-        story: "CyberSecurity EdTech has transformed the way I approach language learning. With access to immersive language apps and virtual conversation partners, I've been able to make significant progress in mastering new languages. I'm amazed by the effectiveness of these tools in improving my fluency and confidence levels. Thanks to EdTech, I feel more prepared to communicate effectively in a globalized world.",
+        story: "CyberSecurity EdTech has transformed the way I approach language learning. With access to immersive language apps and virtual conversation partners, I've been able to make significant progress in mastering new languages. I'm amazed by the effectiveness of these tools in improving my fluency and confidence levels. Thanks to EdTech, I feel more prepared to communicate effectively in a globalized world. CyberSecurity EdTech has transformed the way I approach language learning. With access to immersive language apps and virtual conversation partners, I've been able to make significant progress in mastering new languages. I'm amazed by the effectiveness of these tools in improving my fluency and confidence levels. Thanks to EdTech, I feel more prepared to communicate effectively in a globalized world.",
         name : "Cybersecurity"
     },
     {
