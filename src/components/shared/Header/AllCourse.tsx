@@ -21,7 +21,7 @@ const AllCourse: React.FC<{ programs: OurProgramCardProps[] }> = ({ programs }) 
   }
 
   return (
-    <div className="">
+    <div className="hidden lg:block">
       <Dialog>
         <DialogTrigger asChild>
           <Button variant="primary" size="medium">
@@ -43,7 +43,7 @@ const AllCourse: React.FC<{ programs: OurProgramCardProps[] }> = ({ programs }) 
                     href={program.program_link}
                     key={program.id}
                     onMouseEnter={() => handleProgramHover(program)}
-                    className={` flex flex-row justify-between p-1.5 2xl:p-2 ${activeProgram && activeProgram.id === program.id ? "border-l-4 border-link bg-gradient-to-r from-[#fbfbfb] to-transparent  text-link" : ""}`}
+                    className={`  flex flex-row justify-between p-1.5 2xl:p-2 ${activeProgram && activeProgram.id === program.id ? "hover-animation border-l-4 border-link bg-gradient-to-r from-[#fbfbfb] to-transparent  text-link" : ""}`}
                   >
                     {program.program_Name}
                     <ChevronRight

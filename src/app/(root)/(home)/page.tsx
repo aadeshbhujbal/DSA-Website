@@ -14,11 +14,20 @@ import WheretoStart from "./homepagesections/WhereToStart/WheretoStart"
 import WhyDss from "./homepagesections/WhyDataspaceAcademy/whydss_section"
 import LearnerReview from "../../../components/shared/LearnerReview"
 import VoicesFromStudents from "../../../components/shared/VoicesFromStudents"
+import GetInTouch from "@/components/shared/GetInTouch"
+import Button from "@/components/ui/button"
 
 export default function Home() {
   return (
     <FadeIn>
-      <Hero />
+      <GetInTouch
+        buttonComponent={
+          <Button size="large" variant="primary" className="my-4">
+            zHi
+          </Button>
+        }
+      ></GetInTouch>
+      {/* <Hero />
       <OurPrograms />
       <WheretoStart />
       <HiringTrends />
@@ -34,7 +43,7 @@ export default function Home() {
       <Featured />
       <IntrestingForm />
       <SkillupCourses />
-      <DownloadApp />
+      <DownloadApp /> */}
     </FadeIn>
   )
 }

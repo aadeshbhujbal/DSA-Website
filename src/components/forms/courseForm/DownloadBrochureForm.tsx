@@ -8,15 +8,7 @@ import * as z from "zod"
 import Button from "@/components/ui/button"
 import { Checkbox } from "@/components/ui/checkbox"
 import { Container } from "@/components/ui/Container"
-import {
-  Dialog,
-  DialogContent,
-  DialogDescription,
-  DialogFooter,
-  DialogHeader,
-  DialogTitle,
-  DialogTrigger,
-} from "@/components/ui/dialog"
+import { Dialog, DialogContent, DialogDescription, DialogTitle, DialogTrigger } from "@/components/ui/dialog"
 import { Form, FormField, FormItem, FormMessage } from "@/components/ui/form"
 import Input from "@/components/ui/input"
 import { Section } from "@/components/ui/Section"
@@ -25,6 +17,7 @@ import { TickIcon } from "@/constants/icons"
 import { HeroFormSchema } from "@/functions/validations"
 import { countryData } from "../FormComponents/countries"
 import { stateData } from "../FormComponents/state"
+import ThankYou from "@/components/shared/ThankYou"
 
 type FormData = z.infer<typeof HeroFormSchema>
 interface DownloadBrochureProps {
@@ -148,7 +141,7 @@ const DownloadBrochure: React.FC<DownloadBrochureProps> = ({ buttonComponent, pd
         setSubmitted(false)
         setCanSubmit(true) // Enable submission after 5 seconds
         setShowThankYou(false) // Hide the thank you message
-      }, 4000)
+      }, 80000)
     } else {
       setIsSubmitting(false)
     }
@@ -163,10 +156,12 @@ const DownloadBrochure: React.FC<DownloadBrochureProps> = ({ buttonComponent, pd
   return (
     <Dialog>
       <DialogTrigger asChild>{buttonComponent}</DialogTrigger>
-      <DialogContent className="sm:max-w-[425px]">
-        {showThankYou ? (
-          <ThankYouMessage />
-        ) : (
+      {showThankYou ? (
+        <DialogContent className="!p-0 sm:max-w-[850px]">
+          <ThankYou heading="Thank You For Contactiong " paragraph="We Will Reach Out  Soon" />{" "}
+        </DialogContent>
+      ) : (
+        <DialogContent className="sm:max-w-[425px]">
           <Section className="relative rounded-lg bg-white !p-0">
             <Container className="relative z-10 mx-auto !p-0  ">
               {/* Title and description */}
@@ -373,19 +368,11 @@ const DownloadBrochure: React.FC<DownloadBrochureProps> = ({ buttonComponent, pd
                 </form>
               </Form>
             </Container>
-          </Section>
-        )}
-      </DialogContent>
+          </Section>{" "}
+        </DialogContent>
+      )}
     </Dialog>
   )
 }
 
 export default DownloadBrochure
-const ThankYouMessage: React.FC = () => {
-  return (
-    <div className="text-center">
-      <h2 className="text-xl font-semibold">Thank You!</h2>
-      <p className="mt-2">Your submission was successful.</p>
-    </div>
-  )
-}

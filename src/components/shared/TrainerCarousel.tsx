@@ -8,11 +8,11 @@ import { Card } from "@/components/ui/card"
 import { Container } from "@/components/ui/Container"
 import { Section } from "@/components/ui/Section"
 import { RightChevron } from "@/constants/icons"
-import { TrainerCarouselProps } from "@/types"
+import { Trainers } from "@/types"
 import "swiper/css"
 import "swiper/css/pagination"
 
-const TrainerCarousel: React.FC<{ trainerDetails: TrainerCarouselProps[] }> = ({ trainerDetails }) => {
+const TrainerCarousel: React.FC<{ trainerDetails: Trainers[] }> = ({ trainerDetails }) => {
   return (
     <Section className=" !pt-0 bg-grid-black/[0.05]">
       <Container className="!max-w-full !p-0 ">
@@ -45,22 +45,22 @@ const TrainerCarousel: React.FC<{ trainerDetails: TrainerCarouselProps[] }> = ({
                     <Card className="!m-8 flex max-w-4xl  flex-col gap-4 rounded-lg border-none p-6 shadow-lg sm:flex-row lg:!mx-auto">
                       <div className="self-center">
                         <Image
-                          src={trainer.imageSrc}
-                          alt={trainer.imageAlt}
+                          src={trainer.trainer_Image}
+                          alt={`${trainer.trainer_Name} - "Industry Experts"`}
                           width={360}
                           height={360}
                           className=" w-full max-w-60 md:w-auto"
                         />
                       </div>
                       <div className="">
-                        <h4 className="h5  !font-medium text-black">{trainer.trainerName}</h4>
-                        <p className="small-regular text-[#404040]">{trainer.trainerDesignation}</p>
-                        <p className="base-regular py-3">{trainer.trainerDescription}</p>
+                        <h4 className="h5  !font-medium text-black">{trainer.trainer_Name}</h4>
+                        <p className="small-regular text-[#404040]">{trainer.trainer_Designation}</p>
+                        <p className="base-regular py-3">{trainer.trainer_Bio}</p>
                         <div className=" flex flex-col gap-4 sm:flex-row">
                           <div className="">
                             <Button
                               className="rounded-md border-link"
-                              href={trainer.trainerProfileUrl}
+                              href={trainer.slug}
                               target="_blank"
                               size={"default"}
                               variant={"outline"}
@@ -78,8 +78,8 @@ const TrainerCarousel: React.FC<{ trainerDetails: TrainerCarouselProps[] }> = ({
                               height={45}
                             />
                             <div className="small-regular slef-center">
-                              Explore {trainer.trainerName} <br /> on{" "}
-                              <Link className="text-link underline" href={trainer.trainerLinkedInUrl}>
+                              Explore {trainer.trainer_Name} <br /> on{" "}
+                              <Link className="text-link underline" href={trainer.trainer_linkinUrl}>
                                 Linked In
                               </Link>{" "}
                             </div>

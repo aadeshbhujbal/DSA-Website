@@ -9,8 +9,12 @@ import HeaderLogo from "./HeaderLogo"
 import { DesktopHamMenu } from "./rightmenu2/DesktopHamMenu"
 import AllCourse from "./AllCourse"
 import { ourPrograms } from "@/constants/constants"
+import MobileMenu from "./MobileMenu"
+interface MenuProps {
+  className?: string // Make className an optional prop
+}
 
-const DesktopNavigationMenu = () => {
+export const DesktopNavigationMenu: React.FC<MenuProps> = ({ className }) => {
   const pathname = usePathname()
 
   return (
@@ -24,7 +28,7 @@ const DesktopNavigationMenu = () => {
             key={item.route}
             className={`${
               isActive ? "self-center align-middle font-bold text-link" : "text-black"
-            } relative block w-fit self-center align-middle text-black after:absolute after:block after:h-[3px] after:w-full after:origin-center after:scale-x-0 after:rounded-md	after:bg-[#006CE8] after:transition after:duration-300 after:content-[''] hover:text-[] after:hover:scale-x-100`}
+            } relative block w-fit self-center align-middle text-black after:absolute after:block after:h-[3px] after:w-full after:origin-center after:transition after:duration-300	hover:text-[] after:hover:scale-x-100 lg:after:scale-x-0 lg:after:rounded-md lg:after:bg-[#006CE8] lg:after:content-[''] ${className}`}
           >
             {item.label}
           </Link>
@@ -57,16 +61,17 @@ function Header1({ className }: { className?: string }) {
           <FadeIn>
             <div className="space-y-8 px-4  sm:px-6 lg:space-y-16 ">
               <div className=" flex flex-row justify-between">
-                <div className="flex flex-row gap-12 py-6">
-                  <Link href="/" aria-label="Home">
+                <div className="flex flex-row  justify-between gap-12 py-6">
+                  <Link href="/" aria-label="Home" className="">
                     <HeaderLogo className="size-8" fillOnHover />
                   </Link>
-                  <div className="hidden lg:block">
-                    <AllCourse programs={ourPrograms} />{" "}
+                  <div className="">
+                    <AllCourse programs={ourPrograms} />
                   </div>
                 </div>
 
                 <NavigationHomeDesktop />
+                <MobileMenu />
               </div>
             </div>
           </FadeIn>

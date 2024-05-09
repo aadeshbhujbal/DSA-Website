@@ -2,7 +2,6 @@ import {
   EventsProps,
   FaqItemProps,
   HiringCompanies,
-  IndustryExperts,
   LearnersReview,
   NavigationHome,
   SkillupProps,
@@ -124,45 +123,6 @@ export const hiringCompanies: HiringCompanies[] = [
     src: "/HiringPartners/vmware.png",
     alt: "Top Hiring Companies - vmware ",
     title: "Top Hiring Companies - vmware ",
-  },
-]
-
-export const industryExperts: IndustryExperts[] = [
-  {
-    trainer_Image: "/images/instructors/bipul.png",
-    trainer_Name: "Davinder Singh",
-    trainer_Designation: "Cyber Security Analyst",
-    trainer_linkinUrl: "/",
-  },
-  {
-    trainer_Image: "/images/instructors/deepangshu.png",
-    trainer_Name: "Davinder Singh",
-    trainer_Designation: "Cyber Security Analyst",
-    trainer_linkinUrl: "/",
-  },
-  {
-    trainer_Image: "/images/instructors/manjeet.png",
-    trainer_Name: "Davinder Singh",
-    trainer_Designation: "Cyber Security Analyst",
-    trainer_linkinUrl: "/",
-  },
-  {
-    trainer_Image: "/images/instructors/raunak.png",
-    trainer_Name: "Davinder Singh",
-    trainer_Designation: "Cyber Security Analyst",
-    trainer_linkinUrl: "/",
-  },
-  {
-    trainer_Image: "/images/instructors/soumya-maity.png",
-    trainer_Name: "Davinder Singh",
-    trainer_Designation: "Cyber Security Analyst",
-    trainer_linkinUrl: "/",
-  },
-  {
-    trainer_Image: "/images/instructors/sutanu.png",
-    trainer_Name: "Davinder Singh",
-    trainer_Designation: "Cyber Security Analyst",
-    trainer_linkinUrl: "/",
   },
 ]
 

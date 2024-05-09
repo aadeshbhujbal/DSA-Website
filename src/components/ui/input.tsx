@@ -6,10 +6,12 @@ interface InputProps {
   id?: any
   defaultValue?: any
   type?: string
+  value?: any
+  placeholder?: string
 }
 
 const Input = React.forwardRef<HTMLInputElement, VariantProps & InputProps>(
-  ({ className, variant = "default", size = "default", placeholder, ...props }, ref) => {
+  ({ className, variant = "default", size = "default", placeholder, value, ...props }, ref) => {
     return (
       <input
         className={cn(
@@ -20,6 +22,7 @@ const Input = React.forwardRef<HTMLInputElement, VariantProps & InputProps>(
         ref={ref}
         placeholder={placeholder}
         {...props}
+        value={value}
       />
     )
   }

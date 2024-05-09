@@ -1,4 +1,4 @@
-import { FaqItemProps, LearnersReview, TrainerCarouselProps, VoiceFromStudentsProps } from "@/types"
+import { FaqItemProps, LearnersReview, TrainerCarouselProps, Trainers, VoiceFromStudentsProps } from "@/types"
 
 export const cybersecuritylearnersReviewUpperCarousel: LearnersReview[] = [
   {
@@ -124,39 +124,51 @@ export const ConfusedAboutCourses: VoiceFromStudentsProps[] = [
   },
 ]
 
-export const CybersecurityTrainers: TrainerCarouselProps[] = [
+export const CybersecurityTrainers: Trainers[] = [
   {
-    id: 1,
-    imageSrc: "/images/instructor.png",
-    imageAlt: "DavinderSingh",
-    trainerName: "DavinderSingh",
-    trainerDesignation: "Senior Cyber Security Analyst",
-    trainerDescription:
-      "CEH Certified, Qualys Guard VM Certification 2019, DevSecOps Trained, DAST & SAST Handling client end to end from taking requirements till providing end report post-false-positive analysis of over 200 applications. Advance Knowledge of professional tools for Network, Source Code Analysis and Web Application Testing. Providing remediations to the clients for the vulnerable issues found during the auditing of the website & Coordinating with the development team for issues closure.",
-    trainerProfileUrl: "/",
-    trainerLinkedInUrl: "/",
+    id: "1",
+    slug: "davinder-singh",
+    trainer_Image: "/images/instructor.png",
+    trainer_Name: "Davinder Singh",
+    trainer_Designation: "Cyber Security Analyst",
+    trainer_linkinUrl: "/",
+    trainer_Bio:
+      "Dedicated and results-driven Lead Network Analyst & Cloud Support Engineer with over multiple of progressive experience in architecting, implementing, and optimizing robust network infrastructures and cloud solutions. Known for exceptional problem-solving abilities and a deep understanding of networking protocols and cloud technologies. Proven track record of successfully leading cross-functional teams to deliver innovative solutions that enhance efficiency, reliability, and security. Passionate about staying at the forefront of technological advancements and driving organizational growth through strategic IT initiatives.",
+    tabs: {
+      awards: ["Soumya Maity's Award 1", " Soumya Maity's Award 2"],
+      skills: ["Soumya Maity's Skill 1", "Soumya Maity's Skill 2"],
+      toolsknown: ["Soumya Maity's Tool 1", "Soumya Maity's Tool 2"],
+    },
   },
   {
-    id: 2,
-    imageSrc: "/images/instructor.png",
-    imageAlt: "DavinderSingh",
-    trainerName: "Bipul nath",
-    trainerDesignation: "Senior Cyber Security Analyst",
-    trainerDescription:
-      "CEH Certified, Qualys Guard VM Certification 2019, DevSecOps Trained, DAST & SAST Handling client end to end from taking requirements till providing end report post-false-positive analysis of over 200 applications. Advance Knowledge of professional tools for Network, Source Code Analysis and Web Application Testing. Providing remediations to the clients for the vulnerable issues found during the auditing of the website & Coordinating with the development team for issues closure.",
-    trainerProfileUrl: "/trainer",
-    trainerLinkedInUrl: "/",
+    id: "1",
+    slug: "davinder-singh",
+    trainer_Image: "/images/instructor.png",
+    trainer_Name: "Davinder Singh",
+    trainer_Designation: "Cyber Security Analyst",
+    trainer_linkinUrl: "/",
+    trainer_Bio:
+      "Dedicated and results-driven Lead Network Analyst & Cloud Support Engineer with over multiple of progressive experience in architecting, implementing, and optimizing robust network infrastructures and cloud solutions. Known for exceptional problem-solving abilities and a deep understanding of networking protocols and cloud technologies. Proven track record of successfully leading cross-functional teams to deliver innovative solutions that enhance efficiency, reliability, and security. Passionate about staying at the forefront of technological advancements and driving organizational growth through strategic IT initiatives.",
+    tabs: {
+      awards: ["Soumya Maity's Award 1", " Soumya Maity's Award 2"],
+      skills: ["Soumya Maity's Skill 1", "Soumya Maity's Skill 2"],
+      toolsknown: ["Soumya Maity's Tool 1", "Soumya Maity's Tool 2"],
+    },
   },
   {
-    id: 3,
-    imageSrc: "/images/instructor.png",
-    imageAlt: "DavinderSingh",
-    trainerName: "Deepangshu",
-    trainerDesignation: "Senior Cyber Security Analyst",
-    trainerDescription:
-      "CEH Certified, Qualys Guard VM Certification 2019, DevSecOps Trained, DAST & SAST Handling client end to end from taking requirements till providing end report post-false-positive analysis of over 200 applications. Advance Knowledge of professional tools for Network, Source Code Analysis and Web Application Testing. Providing remediations to the clients for the vulnerable issues found during the auditing of the website & Coordinating with the development team for issues closure.",
-    trainerProfileUrl: "/",
-    trainerLinkedInUrl: "/",
+    id: "1",
+    slug: "davinder-singh",
+    trainer_Image: "/images/instructor.png",
+    trainer_Name: "Davinder Singh",
+    trainer_Designation: "Cyber Security Analyst",
+    trainer_linkinUrl: "/",
+    trainer_Bio:
+      "Dedicated and results-driven Lead Network Analyst & Cloud Support Engineer with over multiple of progressive experience in architecting, implementing, and optimizing robust network infrastructures and cloud solutions. Known for exceptional problem-solving abilities and a deep understanding of networking protocols and cloud technologies. Proven track record of successfully leading cross-functional teams to deliver innovative solutions that enhance efficiency, reliability, and security. Passionate about staying at the forefront of technological advancements and driving organizational growth through strategic IT initiatives.",
+    tabs: {
+      awards: ["Soumya Maity's Award 1", " Soumya Maity's Award 2"],
+      skills: ["Soumya Maity's Skill 1", "Soumya Maity's Skill 2"],
+      toolsknown: ["Soumya Maity's Tool 1", "Soumya Maity's Tool 2"],
+    },
   },
 ]
 

@@ -450,5 +450,15 @@ video {
     position: -webkit-sticky !important;
      height: 100% !important;
   }
+
+}
+
+.hover-animation {
+  transition: background-color 0.5s ease, opacity 0.5s ease; /* Add transition for background color and opacity */
+}
+
+.hover-animation:hover {
+  background-color: #f9f9f9; /* Adjust background color on hover */
+  opacity: 0.8; /* Adjust opacity on hover */
 }
 }

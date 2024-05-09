@@ -1,11 +1,12 @@
 "use client"
 import React from "react"
 import { Container } from "@/components/ui/Container"
+
 import { Section } from "@/components/ui/Section"
 import { VerticalTabs, VerticalTabsList, VerticalTabsTrigger } from "@/components/ui/VerticalTabs"
 import tabs from "./content"
 
-const PrivacyPolicy = () => {
+const Termscondition = () => {
   const [selectedTab, setSelectedTab] = React.useState("cybersecurity")
   const handleTabClick = (index: React.SetStateAction<string>) => {
     setSelectedTab(index)
@@ -27,12 +28,13 @@ const PrivacyPolicy = () => {
       <Container>
         <div className="flex flex-col ">
           <div>
-            <h6 className="h3 !font-mediumbold">Privacy & Policy</h6>
+            <h6 className="h3 !font-mediumbold">Terms & Conditions</h6>
           </div>
           <div className="my-10 max-w-7xl  md:my-10 lg:my-16 ">
             <VerticalTabs defaultValue="1" className="flex w-full flex-col !p-0 md:flex-row">
               <div className="w-full md:w-[250px]">
-                <VerticalTabsList className="custom-scrollbar  flex h-16 !w-full scroll-mb-3.5 flex-row !items-start gap-1  overflow-scroll  bg-transparent sm:h-auto md:flex-col  md:gap-4 lg:max-w-60  ">
+                {" "}
+                <VerticalTabsList className="custom-scrollbar  flex h-16 w-full scroll-mb-3.5 flex-row !items-start gap-1 overflow-scroll bg-transparent  sm:h-auto md:flex-col  md:gap-4 lg:max-w-60 ">
                   {tabs.map((tab) => (
                     <VerticalTabsTrigger
                       key={tab.key}
@@ -47,7 +49,7 @@ const PrivacyPolicy = () => {
                 </VerticalTabsList>
               </div>
 
-              <div className="h-[calc(90vh-16rem)] overflow-y-auto p-4 md:w-2/3 " id="right-panel-container">
+              <div className="h-[calc(90vh-16rem)] overflow-y-auto md:w-2/3 " id="right-panel-container">
                 {tabs.map((tab) => (
                   <div id={`section-${tab.key}`} className="md:mb-8" key={tab.key}>
                     <h2 className="pb-2 text-2xl font-bold text-black md:pb-4">{tab.label}</h2>
@@ -63,4 +65,4 @@ const PrivacyPolicy = () => {
   )
 }
 
-export default PrivacyPolicy
+export default Termscondition

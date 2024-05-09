@@ -15,12 +15,32 @@ export interface HiringCompanies {
   alt: string
   title?: string
 }
-export interface IndustryExperts {
+interface TrainerTabs {
+  awards: string[]
+  skills: string[]
+  toolsknown: string[]
+}
+export interface Trainers {
+  id?: string
+  slug?: string
   trainer_Image: Url
   trainer_Name: string
   trainer_Designation: string
   trainer_linkinUrl: string
+  trainer_Bio?: string
+  tabs: TrainerTabs
+
   className?: string
+}
+interface TrainerCarouselProps {
+  id?: any
+  imageSrc: any
+  imageAlt: string
+  trainerName: string
+  trainerDesignation: string
+  trainerDescription: string
+  trainerProfileUrl: string
+  trainerLinkedInUrl: string
 }
 export interface OurProgramCardProps {
   id?: number
@@ -62,17 +82,6 @@ export interface VoiceFromStudentsProps {
   url: string
   h5: string
   p: string
-}
-
-interface TrainerCarouselProps {
-  id?: any
-  imageSrc: any
-  imageAlt: string
-  trainerName: string
-  trainerDesignation: string
-  trainerDescription: string
-  trainerProfileUrl: string
-  trainerLinkedInUrl: string
 }
 
 interface FaqItemProps {

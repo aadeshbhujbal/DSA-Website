@@ -2,7 +2,7 @@ import clsx from "clsx"
 import React from "react"
 
 export interface VariantProps {
-  variant?: "primary" | "secondary" | "default" | "destructive" | "ghost" | "link" | "outline" | "tab"
+  variant?: "primary" | "secondary" | "default" | "destructive" | "ghost" | "link" | "outline" | "tab" | "tab2"
   size?: "small" | "medium" | "large" | "default" | "icon" | undefined
   className?: string
   href?: string
@@ -25,6 +25,7 @@ export const Variants = ({ variant, size }: { variant?: VariantProps["variant"];
     ghost: " bg-transparent ",
     link: "text-primary underline-offset-4 hover:underline",
     tab: " !bg-background !py-3 !text-black rounded data-[state=active]:!bg-black rounded-lg w-full data-[state=active]:!text-white data-[state=active]:shadow-sm",
+    tab2: " text-black !bg-none data-[state=active]:!bg-[#fbfbfb] data-[state=active]:!text-link data-[state=active]:border-l-4 data-[state=active]:border-link  ",
   }
 
   const sizeClasses = {

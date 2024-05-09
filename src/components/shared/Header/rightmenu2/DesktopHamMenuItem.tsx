@@ -19,7 +19,10 @@ const variants = {
     },
   },
 }
-const DesktopNavigationHamburgerMenu = () => {
+interface MenuProps {
+  className?: string // Make className an optional prop
+}
+export const DesktopNavigationHamburgerMenu: React.FC<MenuProps> = ({ className }) => {
   const pathname = usePathname()
 
   return (
@@ -32,8 +35,8 @@ const DesktopNavigationHamburgerMenu = () => {
             href={item.route}
             key={item.route}
             className={`${
-              isActive ? "text-link self-center align-middle font-bold" : "text-black"
-            } relative block w-fit self-center align-middle text-black after:absolute after:block after:h-[3px] after:w-full after:origin-center after:scale-x-0 after:rounded-md	after:bg-[#006CE8] after:transition after:duration-300 after:content-[''] hover:text-[] after:hover:scale-x-100`}
+              isActive ? "self-center align-middle font-bold text-link" : "text-black"
+            } relative block w-fit self-center align-middle text-black after:absolute after:block after:h-[3px] after:w-full after:origin-center after:transition after:duration-300	hover:text-[] after:hover:scale-x-100 lg:after:scale-x-0 lg:after:rounded-md lg:after:bg-[#006CE8] lg:after:content-[''] ${className}`}
           >
             {item.label}
           </Link>
@@ -48,8 +51,8 @@ export const DesktopHamMenuItem = () => {
     <motion.li
       variants={variants}
       whileTap={{ scale: 0.95 }}
-      className={`absolute right-6 top-24 w-40 rounded-xl bg-white p-4 drop-shadow-2xl `}    >
-    
+      className={`absolute right-6 top-24 w-40 rounded-xl bg-white p-4 drop-shadow-2xl `}
+    >
       {/* Accordion content */}
       <div className="flex flex-col gap-4 py-2">
         <DesktopNavigationHamburgerMenu />
