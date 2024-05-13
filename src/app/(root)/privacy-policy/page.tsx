@@ -7,7 +7,7 @@ import tabs from "./content"
 
 const PrivacyPolicy = () => {
   const [selectedTab, setSelectedTab] = React.useState("cybersecurity")
-  const handleTabClick = (index) => {
+  const handleTabClick = (index: React.SetStateAction<string>) => {
     setSelectedTab(index);
     const element = document.getElementById(`section-${index}`);
     if (element) {
