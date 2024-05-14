@@ -1,10 +1,9 @@
 import React from "react"
-import Rating from "../(home)/homepagesections/Hero/Rating"
-import { Container } from "@/components/ui/Container"
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
-import { FaqtabcategoryList } from "./content"
 import Faqs from "@/components/shared/courses/course-masterpage/Faqs"
+import { Container } from "@/components/ui/Container"
+
 import { CybersecurityMasterpageFaqs } from "@/constants/courses/cybersecuritycourses"
+import Rating from "../(home)/homepagesections/Hero/Rating"
 
 const Referandearn = () => {
   return (
