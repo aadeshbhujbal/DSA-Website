@@ -5,36 +5,9 @@ import React from "react"
 import ReactPlayer from "react-player"
 import Button from "@/components/ui/button"
 import { Container } from "@/components/ui/Container"
-import {
-  Dialog,
-  DialogContent,
-  DialogDescription,
-  DialogFooter,
-  DialogHeader,
-  DialogTitle,
-  DialogTrigger,
-} from "@/components/ui/dialog"
+
 import { Section } from "@/components/ui/Section"
 import Featured from "../(home)/homepagesections/Featured"
-export function DialogDemo() {
-  return (
-    <Dialog>
-      <DialogTrigger asChild>
-        <Button variant="outline">Edit Profile</Button>
-      </DialogTrigger>
-      <DialogContent className="sm:max-w-[425px]">
-        <DialogHeader>
-          <DialogTitle>Edit profile</DialogTitle>
-          <DialogDescription>Make changes to your profile here. Click save when youre done.</DialogDescription>
-        </DialogHeader>
-
-        <DialogFooter>
-          <Button type="submit">Save changes</Button>
-        </DialogFooter>
-      </DialogContent>
-    </Dialog>
-  )
-}
 
 const AboutUs = () => {
   return (

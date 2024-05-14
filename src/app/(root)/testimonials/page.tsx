@@ -50,8 +50,7 @@ const Testimonials = () => {
               <TabsContent key={category.id} value={category.id}>
                 <div className="grid grid-cols-1 gap-4 py-6 md:grid-cols-2 md:px-20 lg:grid-cols-3">
                   {category.id === "1"
-                    ? // Render all testimonials if "All" tab is selected
-                      Testimonialslist.map((testimonial) => (
+                    ? Testimonialslist.map((testimonial) => (
                         <Card key={testimonial.id} className="m-3 h-auto max-w-[600px] rounded-xl  bg-white shadow-xl ">
                           <div className="flex flex-col gap-3 px-4 py-6">
                             <p>{testimonial.story}</p>
@@ -59,8 +58,7 @@ const Testimonials = () => {
                           </div>
                         </Card>
                       ))
-                    : // Render testimonials filtered by category
-                      Testimonialslist.filter((testimonial) => testimonial.categoryId === category.id).map(
+                    : Testimonialslist.filter((testimonial) => testimonial.categoryId === category.id).map(
                         (testimonial) => (
                           <div key={testimonial.id} className="m-3  max-w-[600px] rounded-lg bg-white shadow-xl ">
                             <div className="flex flex-col gap-3 px-4 py-6">

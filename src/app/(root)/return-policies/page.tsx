@@ -7,7 +7,7 @@ const RefundPolicy = () => {
     <Section>
       <Container>
         <div className="flex flex-col gap-8 py-8">
-          <p className="h2">Refund Policy</p>
+          <p className="h2">Return / Refund Policy</p>
           <div className="flex flex-col gap-5">
             <p>
               At DataSpace Academy, we are committed to your satisfaction. If youre not completely delighted with your

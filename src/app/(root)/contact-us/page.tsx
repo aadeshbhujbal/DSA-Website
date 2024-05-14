@@ -8,25 +8,20 @@ import { useForm } from "react-hook-form"
 import { z } from "zod"
 import { countryData } from "@/components/forms/FormComponents/countries"
 import { stateData } from "@/components/forms/FormComponents/state"
+import ThankYou from "@/components/shared/ThankYou"
 import Button from "@/components/ui/button"
 import { Checkbox } from "@/components/ui/checkbox"
 import { Container } from "@/components/ui/Container"
+import { Dialog, DialogContent } from "@/components/ui/dialog"
 import { Form, FormField, FormItem, FormMessage } from "@/components/ui/form"
 import Input from "@/components/ui/input"
 import { Section } from "@/components/ui/Section"
-
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
-import { TickIcon } from "@/constants/icons"
+import { Textarea } from "@/components/ui/textarea"
 import { ContactFormSchema } from "@/functions/validations"
 import Rating from "../(home)/homepagesections/Hero/Rating"
-import { Textarea } from "@/components/ui/textarea"
-import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog"
-import ThankYou from "@/components/shared/ThankYou"
+
 type FormData = z.infer<typeof ContactFormSchema>
-interface GetInTouchProps {
-  buttonComponent: React.ReactNode
-  pdfLocation?: string
-}
 
 const isDevelopment = process.env.NODE_ENV === "development"
 
@@ -43,7 +38,7 @@ const MockReCAPTCHA: React.FC<{ onChange: (token: string) => void }> = ({ onChan
   return <div>Mock ReCAPTCHA</div>
 }
 const ReCAPTCHAComponent = isDevelopment ? MockReCAPTCHA : ReCAPTCHA
-const Contactus: React.FC<GetInTouchProps> = ({ buttonComponent, pdfLocation }) => {
+const Contactus = () => {
   const [showDialog, setShowDialog] = useState(false) // State to control dialog visibility
   const currentPathname = usePathname()
   const lastSlug = currentPathname.split("/").pop() || ""

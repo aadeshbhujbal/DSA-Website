@@ -12,7 +12,7 @@ const Faqs: React.FC<FaqsProps> = ({ faqs }) => {
   return (
     <Section className="!p-0">
       <Container>
-        <h2 className="h4 py-2 text-center !font-medium text-black">Any Doubts? Let’s Clear</h2>
+        <h2 className="h3 py-2 text-center !font-normal text-black">Any Doubts? Let’s Clear</h2>
         <Accordion type="single" collapsible className="flex w-full flex-wrap" defaultValue="0">
           {faqs.map((faq, index) => (
             <div key={index} className="w-full p-2 md:w-1/2">
