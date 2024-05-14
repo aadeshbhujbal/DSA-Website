@@ -105,8 +105,8 @@ interface VoicesFromStudentsProps {
 
 const VoicesFromStudents: React.FC<VoicesFromStudentsProps> = ({ slides }) => {
   return (
-    <Section className="!p-0">
-      <Container className="sm:!p-0">
+    <Section className="!p-0 ">
+      <Container className="!pb-4 sm:p-0">
         <h2 className="h4 my-4 px-8 pb-2 pt-4 text-center !font-medium text-black sm:px-0">Voices from Our Students</h2>
         <VoicesFromStudentsSlider slides={slides} />
       </Container>

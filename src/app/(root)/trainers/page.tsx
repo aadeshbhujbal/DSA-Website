@@ -1,4 +1,6 @@
-import React from "react"
+"use client"
+import React, { useRef } from "react"
+import GetInTouch from "@/components/shared/GetInTouch"
 import Button from "@/components/ui/button"
 import { Container } from "@/components/ui/Container"
 import { Section } from "@/components/ui/Section"
@@ -6,6 +8,15 @@ import { trainerDetails } from "@/constants/trainer"
 import { TrainerCard } from "../(home)/homepagesections/IndustryExperts"
 
 const page = () => {
+  // eslint-disable-next-line react-hooks/rules-of-hooks
+  const trainerCardRef = useRef<HTMLDivElement>(null)
+
+  const scrollToTrainerCard = () => {
+    if (trainerCardRef.current) {
+      trainerCardRef.current.scrollIntoView({ behavior: "smooth" })
+    }
+  }
+
   return (
     <Section className="!pt-0">
       <Container className=" w-full !max-w-full bg-black">
@@ -16,13 +27,13 @@ const page = () => {
             industry leaders to dynamic up-and-comers, each mentor is dedicated to fueling your success. Connect with a
             mentor who resonates with your goals and embark on an inspiring learning journey with us.
           </p>
-          <Button className="mx-auto  " variant="primary" size="large">
+          <Button className="mx-auto" variant="primary" size="large" onClick={scrollToTrainerCard}>
             Explore Our Trainers
           </Button>
         </div>
       </Container>
       <Container className="pt-16">
-        <div className="flex flex-wrap justify-center gap-12">
+        <div className="flex flex-wrap justify-center gap-12" ref={trainerCardRef}>
           <TrainerCard trainerDetails={trainerDetails} />
         </div>
 
@@ -35,9 +46,14 @@ const page = () => {
             </p>
           </div>
           <div className="w-full basis-1/3  self-center">
-            <Button className=" " variant="primary" size="large">
-              Join us Now
-            </Button>
+            <GetInTouch
+              isheading={false}
+              buttonComponent={
+                <Button size="large" variant="primary" className="my-4">
+                  Join us Now
+                </Button>
+              }
+            />
           </div>
         </div>
       </Container>

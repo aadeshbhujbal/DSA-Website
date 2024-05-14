@@ -38,7 +38,7 @@ export function DialogDemo() {
 
 const AboutUs = () => {
   return (
-    <Section>
+    <Section className="!pt-0">
       <Container className="!max-w-full !p-0">
         <div className="w-full !max-w-full bg-black">
           <div className="container flex max-w-screen-2xl  flex-col py-16 md:flex-row">

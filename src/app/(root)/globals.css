@@ -102,7 +102,7 @@ video {
   }
 
   .h2 {
-    @apply !font-clashgrotesk text-3xl font-normal leading-[130%] md:text-4xl lg:text-5xl 2xl:text-6xl;
+    @apply !font-clashgrotesk text-4xl font-normal leading-[130%] md:text-4xl lg:text-5xl 2xl:text-6xl;
   }
 
   .h3 {
@@ -123,7 +123,7 @@ video {
 
   /* Paragraph Styles */
   .p {
-    @apply text-base font-normal leading-[150%] tracking-normal md:text-lg ;
+    @apply text-sm font-normal leading-[150%] tracking-normal md:text-lg ;
   }
 
   /* Span Styles */

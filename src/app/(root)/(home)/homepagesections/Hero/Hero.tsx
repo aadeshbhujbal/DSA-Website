@@ -16,7 +16,7 @@ export default function Hero() {
   return (
     <Section className="relative !p-0">
       <GridPattern
-        className="absolute inset-0 z-[-10] mx-auto size-full items-center justify-center fill-[#edf2fc] stroke-neutral-950/5 text-black [mask-image:linear-gradient(to_right,transparent,white_10%,white_100%,transparent)]"
+        className="absolute inset-0 -z-10 mx-auto size-full items-center justify-center fill-[#edf2fc] stroke-neutral-950/5 text-black [mask-image:linear-gradient(to_right,transparent,white_10%,white_100%,transparent)]"
         yOffset={26}
         interactive
       />
@@ -24,7 +24,7 @@ export default function Hero() {
         <div className="bg-gradient-to-b from-white/80 to-white/20 bg-clip-text pb-0 text-transparent">
           <BackgroundGradientAnimation>
             <AnimatedTextH1
-              className="mt-36 max-w-3xl px-6 py-4 !pb-0 font-medium text-black sm:max-w-md sm:px-0 md:max-w-xl lg:mt-40 lg:max-w-3xl 2xl:mt-48 2xl:max-w-4xl"
+              className="mt-20 max-w-3xl px-6 py-4 !pb-0 font-medium text-black sm:max-w-md sm:px-0 md:max-w-xl lg:mt-24 lg:max-w-3xl 2xl:mt-32 2xl:max-w-4xl"
               text="Unlock High-Demand Tech Skills Effortlessly!"
             />
 

@@ -15,6 +15,7 @@ import {
 } from "@/constants/graph-data"
 import CustomAreaChart from "./CustomAreaChart"
 import DonutChart from "./donoughtchart"
+import GetInTouch from "@/components/shared/GetInTouch"
 
 export function HiringTrends(this: any) {
   return (
@@ -93,9 +94,14 @@ export function HiringTrends(this: any) {
               delving into the percentage of hiring within these domains, we can gain insights into the opportunities
               and dynamics driving the IT industry forward.
             </p>
-            <Button variant={"default"} href="" size="medium" className="mt-5 w-full  max-w-[250px]">
-              Get In Touch{" "}
-            </Button>
+            <GetInTouch
+              isheading={false}
+              buttonComponent={
+                <Button size="large" variant="primary" className="my-4">
+                  Join us Now
+                </Button>
+              }
+            />
           </div>
         </div>
       </Container>

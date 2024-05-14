@@ -49,6 +49,7 @@ const HeroForm: React.FC<HeroFormProps> = ({ title, subtitle }) => {
   const [selectedCountryFlag, setSelectedCountryFlag] = useState<string>("🇮🇳")
   const [selectedState, setSelectedState] = useState<string>("")
   const [captchaToken, setCaptchaToken] = useState<string>("")
+  const [showThankYou, setShowThankYou] = useState(false)
 
   const form = useForm<FormData>({
     resolver: zodResolver(HeroFormSchema),
@@ -137,7 +138,7 @@ const HeroForm: React.FC<HeroFormProps> = ({ title, subtitle }) => {
 
   return (
     <Section className="relative !rounded-lg border !bg-white !p-0 !shadow-2xl">
-      <Container className="relative z-10 mx-auto !p-8   ">
+      <Container className="relative z-10 mx-auto !p-6 md:p-8   ">
         {/* Title and description */}
         <div className="relative">
           <h2 className="h4 my-0 pl-4 text-left !font-medium text-black 2xl:text-4xl">

@@ -2,6 +2,7 @@ import Image from "next/image"
 import React from "react"
 import Button from "@/components/ui/button"
 import { TickIcon } from "@/constants/icons"
+import GetInTouch from "@/components/shared/GetInTouch"
 
 const DataspaceCertification = () => {
   return (
@@ -38,9 +39,15 @@ const DataspaceCertification = () => {
               Enroll free skill-up courses
             </li>
           </ul>
-          <Button size="large" variant={"default"} className="my-4">
-            Get in touch
-          </Button>
+
+          <GetInTouch
+            isheading={true}
+            buttonComponent={
+              <Button variant={"default"} href="" size="medium" className="mt-5 w-full  max-w-[250px]">
+                Get In Touch{" "}
+              </Button>
+            }
+          />
         </div>
       </div>
     </>

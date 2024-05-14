@@ -4,6 +4,7 @@ import React from "react"
 import Button from "@/components/ui/button"
 import { Container } from "@/components/ui/Container"
 import { Section } from "@/components/ui/Section"
+import GetInTouch from "@/components/shared/GetInTouch"
 
 const Featured = () => {
   return (
@@ -23,9 +24,14 @@ const Featured = () => {
               interested in cybersecurity as a career option. As country is creating a massive opportunity for
               enterprises to hire people for increasing the cybersecurity performance.{" "}
             </p>
-            <Button variant={"default"} href="" size="medium" className="mt-5 w-full  max-w-[250px]">
-              Get In Touch{" "}
-            </Button>
+            <GetInTouch
+              isheading={false}
+              buttonComponent={
+                <Button size="large" variant="primary" className="my-4">
+                  Join us Now
+                </Button>
+              }
+            />
           </div>
           <div className="basis-1/3 self-center">
             <div className="mx-auto flex max-w-sm  flex-wrap justify-center gap-8 py-6 sm:grid  sm:grid-cols-2">

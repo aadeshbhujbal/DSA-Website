@@ -42,10 +42,13 @@ const MockReCAPTCHA: React.FC<{ onChange: (token: string) => void }> = ({ onChan
 }
 interface GetInTouchProps {
   buttonComponent: React.ReactNode
+  title?: string
+  subtitle?: string
+  isheading?: boolean
 }
 const ReCAPTCHAComponent = isDevelopment ? MockReCAPTCHA : ReCAPTCHA
 
-const GetInTouch: React.FC<GetInTouchProps> = ({ buttonComponent, pdfLocation }) => {
+const GetInTouch: React.FC<GetInTouchProps> = ({ buttonComponent, subtitle, title, isheading }) => {
   const currentPathname = usePathname()
   const lastSlug = currentPathname.split("/").pop() || ""
   const [isSubmitting, setIsSubmitting] = useState(false)
@@ -145,20 +148,38 @@ const GetInTouch: React.FC<GetInTouchProps> = ({ buttonComponent, pdfLocation })
           <ThankYou heading="Thank You For Contactiong " paragraph="We Will Reach Out  Soon" />{" "}
         </DialogContent>
       ) : (
-        <DialogContent className="w-full max-w-screen-2xl !rounded-lg !border-link py-0 pl-0">
-          <Section className="relative w-full max-w-screen-2xl rounded-lg bg-white !p-0">
+        <DialogContent
+          className={` w-full max-w-screen-2xl !rounded-lg !border-link   ${isheading ? "!max-w-[400px] !p-6" : "!mr-10 md:py-0 md:pb-6 md:pl-0 lg:pb-0"}`}
+        >
+          <Section className={`relative w-full max-w-screen-2xl rounded-lg bg-white !p-0 `}>
             <Container className="max-w-screen relative z-10 mx-auto w-full !p-0 ">
               {/* Title and description */}
 
-              <div className="flex w-full max-w-full flex-col lg:flex-row ">
-                <div className=" flex  basis-1/2  items-center justify-center bg-black  ">
-                  <div className=" flex flex-col self-center align-middle">
-                    {" "}
-                    <h2 className="h2  text-white">Take The First Step</h2>
-                    <p className=" text-white">Register Here</p>
-                  </div>
-                </div>
-                <div className="mx-auto basis-1/2 place-content-center  p-24">
+              <div className={` w-full max-w-full  ${isheading ? "" : "flex flex-col md:flex-row"}`}>
+                {isheading ? (
+                  <>
+                    <div className="relative mt-4 max-w-[350px] ">
+                      <h2 className="h4 my-0 pl-4 text-left !font-medium text-black 2xl:text-4xl">
+                        {title ? title : "Get In touch"}
+                      </h2>
+                      <p className="mx-auto my-4 mt-0 pl-4 md:max-w-5xl 2xl:text-xl 3xl:max-w-6xl">
+                        {subtitle ? subtitle : "Talk to our Career Experts"}{" "}
+                      </p>
+                      <div className="absolute  top-0 h-full w-1.5" style={{ backgroundColor: "#ff9933" }}></div>
+                    </div>
+                  </>
+                ) : (
+                  <>
+                    <div className=" flex  basis-1/2  items-center justify-center rounded-lg bg-black px-4 py-16 md:rounded-none md:p-0 ">
+                      <div className=" flex flex-col self-center align-middle">
+                        {" "}
+                        <h2 className="h2  text-white">Take The First Step</h2>
+                        <p className=" text-white">Register Here</p>
+                      </div>
+                    </div>
+                  </>
+                )}
+                <div className={`mx-auto ${isheading ? "" : "basis-1/2 lg:p-24"}  place-content-center `}>
                   {/* Main form */}
                   <div className="mx-auto max-w-sm self-center">
                     <Form {...form}>

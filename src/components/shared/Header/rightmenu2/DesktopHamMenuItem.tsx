@@ -51,7 +51,7 @@ export const DesktopHamMenuItem = () => {
     <motion.li
       variants={variants}
       whileTap={{ scale: 0.95 }}
-      className={`absolute right-6 top-24 w-40 rounded-xl bg-white p-4 drop-shadow-2xl `}
+      className={`absolute right-6 top-24 w-40  rounded-xl  bg-white p-4 drop-shadow-2xl 2xl:right-24 3xl:right-36 `}
     >
       {/* Accordion content */}
       <div className="flex flex-col gap-4 py-2">

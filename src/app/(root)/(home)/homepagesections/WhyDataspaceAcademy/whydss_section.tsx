@@ -8,6 +8,7 @@ import { Container } from "@/components/ui/Container"
 import { Section } from "@/components/ui/Section"
 import DataspaceCertification from "./DataspaceCertification"
 import WhatWePromise from "./WhatWePromise"
+import GetInTouch from "@/components/shared/GetInTouch"
 const ReactPlayer = dynamic(() => import("react-player"), { ssr: false })
 
 const WhyChooseDatapaceAcademy = () => {
@@ -21,9 +22,15 @@ const WhyChooseDatapaceAcademy = () => {
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore Lorem
           ipsum dolor sit amet, consectetur adipiscing elit.
         </p>
-        <Button size="large" variant={"default"} className="my-8 sm:my-4 ">
-          Get in touch
-        </Button>
+
+        <GetInTouch
+          isheading={true}
+          buttonComponent={
+            <Button variant={"default"} href="" size="medium" className="mt-5 w-full  max-w-[250px]">
+              Get In Touch{" "}
+            </Button>
+          }
+        />
       </div>
       <div className="self-starat sm:ml-auto sm:self-center">
         <ReactPlayer
