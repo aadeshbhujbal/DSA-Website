@@ -5,11 +5,11 @@ import { Container } from "@/components/ui/Container"
 import { FadeIn } from "@/components/ui/FadeIn"
 import { navigationHomeDesktop } from "@/constants"
 // import { AllCourse } from "./AllCourse"
-import HeaderLogo from "./HeaderLogo"
-import { DesktopHamMenu } from "./rightmenu2/DesktopHamMenu"
-import AllCourse from "./AllCourse"
 import { ourPrograms } from "@/constants/constants"
+import AllCourse from "./AllCourse"
+import HeaderLogo from "./HeaderLogo"
 import MobileMenu from "./MobileMenu"
+import { DesktopHamMenu } from "./rightmenu2/DesktopHamMenu"
 interface MenuProps {
   className?: string // Make className an optional prop
 }

@@ -239,8 +239,8 @@ const Contactus = () => {
                           control={form.control}
                           name="country"
                           render={({ field }) => (
-                            <FormItem className={"!w-28 md:!w-36"}>
-                              <div className=" !w-28 md:!w-36">
+                            <FormItem className={"!w-28 "}>
+                              <div className=" !w-28 ">
                                 <Select
                                   onValueChange={(value: string) => {
                                     setSelectedCountry(value)

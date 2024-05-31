@@ -14,15 +14,16 @@ interface HandsonProjectProps {
 
 const HandsonProject: React.FC<HandsonProjectProps> = ({ projects }) => {
   return (
-    <Section className="!pt-0">
-      <Container className="  ">
+    <Section className="!max-w-full !pt-0">
+      <Container className=" !max-w-full  !p-0">
         <h2 className="h4  pt-2 text-center !font-medium text-black lg:py-6">Hands On Project</h2>
-        <div className="flex flex-row ">
+        <div className="flex max-w-full flex-row ">
           <Swiper
             loop={true}
             slidesPerView={"auto"}
+            centeredSlides={true}
             parallax={true}
-            spaceBetween={30}
+            spaceBetween={10}
             autoplay={{
               delay: 3000,
               disableOnInteraction: true,
@@ -44,13 +45,16 @@ const HandsonProject: React.FC<HandsonProjectProps> = ({ projects }) => {
                 slidesPerView: 2,
               },
               1024: {
-                slidesPerView: 4,
+                slidesPerView: 3.4,
+              },
+              1536: {
+                slidesPerView: 4.4,
               },
             }}
           >
             {projects.map((project, index) => (
               <SwiperSlide key={index}>
-                <Card className=" my-10 p-6" key={index}>
+                <Card className=" m-4 my-10 max-w-96 p-6" key={index}>
                   <Image
                     src={project.imageUrl}
                     className="my-2 mr-auto aspect-auto h-[60px] shadow-sm"
@@ -58,12 +62,12 @@ const HandsonProject: React.FC<HandsonProjectProps> = ({ projects }) => {
                     width={200}
                     height={200}
                   />
-                  <h5 className="h5  max-w-64 !font-medium lg:h-20 2xl:h-16">{project.title}</h5>
-                  <p className="py-4 lg:h-72 2xl:h-60 3xl:h-52">{project.description}</p>
-                  <p className="mt-4 font-bold">Tools Covered</p>
-                  <div className="mt-4 flex justify-start">
+                  <h5 className="h5  h-16 max-w-64 !font-medium  2xl:h-16">{project.title}</h5>
+                  <p className="p h-44 py-3 lg:h-44 2xl:h-56">{project.description}</p>
+                  <p className="mt-0 font-bold">Tools Covered</p>
+                  <div className="mt-2 flex justify-start">
                     {project.tools.map((tool, index) => (
-                      <Image key={index} src={tool} alt={tool} width={64} height={64} />
+                      <Image key={index} src={tool} alt={tool} width={52} height={52} />
                     ))}
                   </div>
                 </Card>

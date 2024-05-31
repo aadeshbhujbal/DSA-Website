@@ -7,6 +7,13 @@ import { ChipwithLink } from "@/components/ui/ChipWithLink"
 import { Container } from "@/components/ui/Container"
 import { Section } from "@/components/ui/Section"
 import { ourPrograms } from "@/constants/constants"
+
+interface CoursesProps {
+  id?: string
+  courseid?: any
+  title: string
+  description: string
+}
 const handleSmoothScroll = (event: any) => {
   event.preventDefault()
   const targetElement = document.querySelector(event.target.getAttribute("href"))
@@ -14,9 +21,9 @@ const handleSmoothScroll = (event: any) => {
     targetElement.scrollIntoView({ behavior: "smooth" })
   }
 }
-const CybersecuritryCourses: React.FC<{ id?: string }> = ({ id }) => {
-  const cyberSecurityProgram = ourPrograms.find((program) => program.id === 2)
-  const cyberSecurityCourses = (cyberSecurityProgram?.courses ?? []) as any[]
+const CoursesSubCategories: React.FC<CoursesProps> = ({ courseid, id, title, description }) => {
+  const SelectProgram = ourPrograms.find((program) => program.id === courseid)
+  const FilteredCourses = (SelectProgram?.courses ?? []) as any[]
   const colors = ["#ff9933", "#f52b02", "#00d1b9", "#b200f2", "#3977D4"]
   useEffect(() => {
     const link = document.querySelector(`a[href="#${id}"]`)
@@ -34,16 +41,13 @@ const CybersecuritryCourses: React.FC<{ id?: string }> = ({ id }) => {
       <div id={id}></div>
       <Container className="text-black">
         {" "}
-        <h2 className="h4 py-2 text-center !font-medium text-black">Explore the best cybersecurity courses</h2>
-        <p className="mx-auto pb-6 text-center sm:pb-6 md:max-w-2xl 3xl:max-w-6xl">
-          Embark on an exhilarating journey in 2023 by diving into ethical hacking. Unlock career opportunities, become
-          a digital guardian, and contribute to a global community of cyber defenders.
-        </p>
+        <h2 className="h4 py-2 text-center !font-medium text-black">{title}</h2>
+        <p className="p mx-auto pb-6 text-center sm:pb-6 md:max-w-2xl 3xl:max-w-6xl">{description}</p>
         <div
           className="mx-auto flex max-w-screen-xl flex-wrap justify-center gap-4
 "
         >
-          {cyberSecurityCourses.map((course, index) => {
+          {FilteredCourses.map((course, index) => {
             const colorIndex = index % colors.length
             const bgColor = colors[colorIndex]
             return (
@@ -115,4 +119,4 @@ const CybersecuritryCourses: React.FC<{ id?: string }> = ({ id }) => {
   )
 }
 
-export default CybersecuritryCourses
+export default CoursesSubCategories

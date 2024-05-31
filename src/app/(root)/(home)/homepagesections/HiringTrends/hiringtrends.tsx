@@ -1,5 +1,6 @@
 "use client"
 
+import GetInTouch from "@/components/shared/GetInTouch"
 import Button from "@/components/ui/button"
 
 import { Container } from "@/components/ui/Container"
@@ -15,24 +16,25 @@ import {
 } from "@/constants/graph-data"
 import CustomAreaChart from "./CustomAreaChart"
 import DonutChart from "./donoughtchart"
-import GetInTouch from "@/components/shared/GetInTouch"
 
 export function HiringTrends(this: any) {
   return (
     <Section className="!p-0">
       <Container className="max-w-screen-2xl">
-        <h2 className="h4 py-2 text-center !font-medium text-black">Why Start Today? Insights into IT Hiring Trends</h2>
-        <p className="mx-auto pb-6 text-center sm:pb-2 md:max-w-2xl 3xl:max-w-6xl">
-          Discover why starting your IT learning journey today is crucial. Gain insights into current employment trends
-          and projected growth by 2032, derived from recent industry reports, job market analysis, and surveys. Let us
-          guide you towards a successful career path in technology.
+        <h2 className="h4 py-2 text-center !font-medium text-black">
+          Start Today! Facts and Figures about IT Hiring Trends
+        </h2>
+        <p className="base-regular mx-auto pb-6 text-center sm:pb-2 md:max-w-2xl 3xl:max-w-6xl">
+          If we check the market stats, the global IT sector is expected to grow over $1,900 billion in the coming 10
+          years. This staggering rise will propel an upward graph in the hiring trends in all major sectors of the IT
+          domain such as Cybersecurity, Data Science, Networking, and so on.
         </p>
 
         <div className="mx-auto my-6 max-w-6xl rounded-2xl bg-gradient-to-b from-white to-transparent  p-4 shadow-upwards  md:p-12 ">
-          <h6 className="h6 !font-mediumbold">Categories</h6>
+          <h6 className="h6 font-medium">Categories</h6>
 
           <VerticalTabs defaultValue="cybersecurity" className="flex w-full flex-col !p-0 md:flex-row">
-            <VerticalTabsList className="custom-scrollbar  flex h-16 w-full scroll-mb-3.5 flex-row !items-start gap-1 overflow-scroll bg-transparent pt-4 sm:h-auto md:flex-col  md:gap-4  lg:max-w-60">
+            <VerticalTabsList className="custom-scrollbar no-scrollbar flex h-[70px] w-full scroll-mb-3.5 flex-row !items-start gap-1  overflow-scroll bg-transparent pt-4 sm:h-auto md:flex-col  md:gap-4  lg:max-w-60">
               <VerticalTabsTrigger value="cybersecurity" variant="tab" className="!bg-transparent !p-2 lg:!p-3 ">
                 Cybersecurity
               </VerticalTabsTrigger>
@@ -86,13 +88,14 @@ export function HiringTrends(this: any) {
           </div>
           <div className="mt-16 basis-1/2 self-center md:mt-0">
             {" "}
-            <h2 className="h5 py-2 !font-medium text-black">IT Domain Hiring Trends in Top Companies</h2>
+            <h2 className="h5 py-2 !font-medium text-black">Hiring Trends in Major IT Domains</h2>
             <p className="p base-regular">
-              In todays digital age, understanding the hiring trends within various IT domains is essential for both job
-              seekers and employers alike. From digital marketing to cybersecurity, data science, network and cloud
-              computing, and programming, each sector plays a critical role in shaping the technological landscape. By
-              delving into the percentage of hiring within these domains, we can gain insights into the opportunities
-              and dynamics driving the IT industry forward.
+              The IT sector is bustling with highly promising career opportunities. However, while choosing a IT domain,
+              aspiring professionals need to be mindful about the hiring trends in the multiple domains to figure out
+              the most potential domain for them. From Cybersecurity to Data Science to Digital Marketing to Cloud
+              Computing to Machine Learning- there is a diverse range of domains to choose from. Here is a chart on the
+              percentage of hiring within these domains that will assist you to assess the prospects in the specific
+              industries.
             </p>
             <GetInTouch
               isheading={false}

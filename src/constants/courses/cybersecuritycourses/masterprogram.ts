@@ -3,7 +3,7 @@ import { CourseModule, Program } from "@/types"
 export const HeroData = [
   {
     backgroundImage: "/images/herobg.png",
-    background: "black",
+    // background: "#fbfb89",
     heading: "Get The Best Cybersecurity Courses at One Place",
     subheading: "Build your future with our popular cybersecurity programs.",
     paragraph:
@@ -354,12 +354,24 @@ export const CybersecurityaddOnBenefitsData: Program[] = [
   {
     title: "Premium Masterclass ",
     subtitle: "*(+1 year Extra)",
-    points: [],
+    points: [
+      "Placement Guarantee (based on assessment and individual performance & attendance)",
+      "HR interview preparation",
+      "CEHv12 Certification",
+      "Technical Grooming",
+      "C.V. and LinkedIn profile optimisation",
+    ],
   },
   {
     title: "Effective communication & Personality Development ",
     subtitle: "*(3 Months)",
 
-    points: [],
+    points: [
+      "Placement Guarantee (based on assessment and individual performance & attendance)",
+      "HR interview preparation",
+      "CEHv12 Certification",
+      "Technical Grooming",
+      "C.V. and LinkedIn profile optimisation",
+    ],
   },
 ]

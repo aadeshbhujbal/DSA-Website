@@ -12,19 +12,21 @@ const DownloadApp = () => {
       <Container>
         <div className="mx-auto flex max-w-3xl flex-col gap-4 sm:gap-2 md:flex-row">
           <div className="self-center">
-            <h2 className="h4 my-4 text-left !font-medium text-black">Better experience with our mobile app</h2>
+            <h2 className="h4 my-4 text-left !font-medium text-black">
+              More convenient learning experience with DSA learning app
+            </h2>
             <ul className="my-4 grid gap-y-2">
               <li className="flex items-center ">
                 <TickIcon title="Easy apply for trending jobs" titleId="easyApply" className="mr-2" />
-                Easy apply for trending jobs
+                Easy learning on-the-go from anywhere
               </li>
               <li className="flex items-center ">
                 <TickIcon title="Get the best learning experience" titleId="learningExperience" className="mr-2" />
-                Get the best learning experience
+                Connect with mentors from anywhere
               </li>
               <li className="flex items-center ">
                 <TickIcon title="Enroll free skill-up courses" titleId="freeCourses" className="mr-2" />
-                Enroll free skill-up courses
+                Keep track of classes
               </li>
             </ul>
             <Button variant={"default"} size={"large"}>

@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 "use client"
 import { zodResolver } from "@hookform/resolvers/zod"
 import { usePathname } from "next/navigation"
@@ -5,6 +6,7 @@ import React, { useEffect, useState } from "react"
 import ReCAPTCHA from "react-google-recaptcha"
 import { useForm } from "react-hook-form"
 import * as z from "zod"
+import ThankYou from "@/components/shared/ThankYou"
 import Button from "@/components/ui/button"
 import { Checkbox } from "@/components/ui/checkbox"
 import { Container } from "@/components/ui/Container"
@@ -17,7 +19,6 @@ import { TickIcon } from "@/constants/icons"
 import { HeroFormSchema } from "@/functions/validations"
 import { countryData } from "../FormComponents/countries"
 import { stateData } from "../FormComponents/state"
-import ThankYou from "@/components/shared/ThankYou"
 
 type FormData = z.infer<typeof HeroFormSchema>
 interface DownloadBrochureProps {
@@ -26,6 +27,7 @@ interface DownloadBrochureProps {
 }
 
 const isDevelopment = process.env.NODE_ENV === "development"
+const siteKey = process.env.RECAPTCHA_SITE_KEY || "YOUR_DEFAULT_SITE_KEY"
 
 const MockReCAPTCHA: React.FC<{ onChange: (token: string) => void }> = ({ onChange }) => {
   const handleCaptchaChange = () => {
@@ -224,8 +226,8 @@ const DownloadBrochure: React.FC<DownloadBrochureProps> = ({ buttonComponent, pd
                       control={form.control}
                       name="country"
                       render={({ field }) => (
-                        <FormItem className={"!w-28 md:!w-36"}>
-                          <div className=" !w-28 md:!w-36">
+                        <FormItem className={"!w-28 "}>
+                          <div className=" !w-28 ">
                             <Select
                               onValueChange={(value: string) => {
                                 setSelectedCountry(value)
@@ -332,11 +334,7 @@ const DownloadBrochure: React.FC<DownloadBrochureProps> = ({ buttonComponent, pd
                       </div>
                     </div>
                   </div>
-                  <ReCAPTCHAComponent
-                    sitekey="JOASDOMOSADASDOASD" // Replace with your ReCaptcha site key
-                    onChange={onCaptchaChange}
-                  />
-
+                  <ReCAPTCHAComponent sitekey={siteKey} onChange={onCaptchaChange} />
                   {/* Submit button */}
                   <div className="w-full align-top ">
                     <Button

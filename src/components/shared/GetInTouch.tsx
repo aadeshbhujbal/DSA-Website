@@ -9,7 +9,7 @@ import ThankYou from "@/components/shared/ThankYou"
 import Button from "@/components/ui/button"
 import { Checkbox } from "@/components/ui/checkbox"
 import { Container } from "@/components/ui/Container"
-import { Dialog, DialogContent, DialogDescription, DialogTitle, DialogTrigger } from "@/components/ui/dialog"
+import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog"
 import { Form, FormField, FormItem, FormMessage } from "@/components/ui/form"
 import Input from "@/components/ui/input"
 import { Section } from "@/components/ui/Section"
@@ -225,8 +225,8 @@ const GetInTouch: React.FC<GetInTouchProps> = ({ buttonComponent, subtitle, titl
                             control={form.control}
                             name="country"
                             render={({ field }) => (
-                              <FormItem className={"!w-28 md:!w-36"}>
-                                <div className=" !w-28 md:!w-36">
+                              <FormItem className={"!w-28 "}>
+                                <div className=" !w-28 ">
                                   <Select
                                     onValueChange={(value: string) => {
                                       setSelectedCountry(value)

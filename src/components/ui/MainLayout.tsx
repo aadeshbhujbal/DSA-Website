@@ -1,7 +1,7 @@
 "use client"
 import { motion, MotionConfig, useReducedMotion } from "framer-motion"
 import { usePathname } from "next/navigation"
-import React, { useEffect, useState } from "react"
+import React, { useState } from "react"
 
 import { Footer } from "../shared/Footer/Footer"
 import Header1 from "../shared/Header/Header"

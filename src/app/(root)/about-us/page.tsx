@@ -42,7 +42,7 @@ const AboutUs = () => {
                 url="/videos/get-started.mp4" // Replace with your video URL
                 controls={true}
                 width={320}
-                height={250}
+                height={220}
                 style={{ border: "1px solid " }}
                 className=" !rounded-xl "
               />

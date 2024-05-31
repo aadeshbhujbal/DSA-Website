@@ -23,7 +23,7 @@ export default function Page({ params }: { params: { slug: string } }) {
     <Section className="!pb-0">
       <Container className="!mt-20 sm:!mt-4">
         <div className="grid grid-cols-1 md:grid-cols-2">
-          <div className="flex flex-col justify-center gap-8 md:gap-1 ">
+          <div className="flex flex-col  gap-8 !align-top md:gap-1 ">
             <Image
               src={trainer_Image}
               alt={"certificate"}

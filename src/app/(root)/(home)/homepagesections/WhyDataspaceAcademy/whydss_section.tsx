@@ -1,14 +1,14 @@
 "use client"
-import Image from "next/image"
 import dynamic from "next/dynamic"
+import Image from "next/image"
 
 import React from "react"
+import GetInTouch from "@/components/shared/GetInTouch"
 import Button from "@/components/ui/button"
 import { Container } from "@/components/ui/Container"
 import { Section } from "@/components/ui/Section"
 import DataspaceCertification from "./DataspaceCertification"
 import WhatWePromise from "./WhatWePromise"
-import GetInTouch from "@/components/shared/GetInTouch"
 const ReactPlayer = dynamic(() => import("react-player"), { ssr: false })
 
 const WhyChooseDatapaceAcademy = () => {
@@ -19,8 +19,9 @@ const WhyChooseDatapaceAcademy = () => {
           Why choose <br /> <span className="text-blue-secondary">DataSpace Academy?</span>
         </h2>
         <p className="base-regular max-w-xl  py-2 text-white">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore Lorem
-          ipsum dolor sit amet, consectetur adipiscing elit.
+          Driven by the ethos of excellence, DataSpace Academy stands out as an award-winning ed-tech for the most
+          in-demand career skills. We not only equip our learners with theoretical training but also empower them for
+          the real-world workplace through hands-on training.
         </p>
 
         <GetInTouch
@@ -32,7 +33,7 @@ const WhyChooseDatapaceAcademy = () => {
           }
         />
       </div>
-      <div className="self-starat sm:ml-auto sm:self-center">
+      <div className="self-starat mt-6 sm:ml-auto sm:mt-0 sm:self-center">
         <ReactPlayer
           playIcon={
             <Image width={50} height={50} alt="Play button" style={{ maxWidth: "80px" }} src="/images/play-1.png" />
@@ -41,7 +42,7 @@ const WhyChooseDatapaceAcademy = () => {
           url="/videos/get-started.mp4" // Replace with your video URL
           controls={true}
           width={320}
-          height={250}
+          height={220}
           style={{ border: "1px solid " }}
           className=" !rounded-xl "
         />

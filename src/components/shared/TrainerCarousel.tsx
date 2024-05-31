@@ -20,11 +20,19 @@ const TrainerCarousel: React.FC<{ trainerDetails: Trainers[] }> = ({ trainerDeta
           Get interactive classes by industry experts
         </h2>
         <div className="noise-bg py-1">
-          <div className=" mx-auto lg:max-w-6xl">
+          <div className=" mx-auto lg:max-w-full">
+            <style>
+              {`
+        .swiper-pagination .swiper-pagination-bullet-active {
+          width: 20px !important;
+          border-radius: 20px !important;
+          
+        }
+        `}
+            </style>
             <Swiper
               parallax={true}
               spaceBetween={30}
-              centeredSlides={true}
               autoplay={{
                 delay: 3000,
                 disableOnInteraction: true,
@@ -35,31 +43,36 @@ const TrainerCarousel: React.FC<{ trainerDetails: Trainers[] }> = ({ trainerDeta
               }}
               speed={2000}
               navigation={true}
-              modules={[Autoplay, Pagination, Navigation]}
+              modules={[Autoplay, Pagination]}
               className="mySwiper ease-in"
+              breakpoints={{
+                1024: {
+                  slidesPerView: 2,
+                },
+              }}
             >
               {" "}
-              {trainerDetails.map((trainer, index) => {
+              {trainerDetails.map((trainer) => {
                 return (
                   <SwiperSlide key={trainer.id}>
-                    <Card className="!m-8 flex max-w-4xl  flex-col gap-4 rounded-lg border-none p-6 shadow-lg sm:flex-row lg:!mx-auto">
-                      <div className="self-center">
+                    <Card className="m-4 mb-12 flex max-w-4xl flex-col gap-4 rounded-lg border-none p-4 shadow-lg sm:flex-row md:m-8 md:gap-6 md:p-6 lg:!mx-auto">
+                      <div className="self-center md:basis-5/12 2xl:basis-1/3 ">
                         <Image
                           src={trainer.trainer_Image}
                           alt={`${trainer.trainer_Name} - "Industry Experts"`}
                           width={360}
                           height={360}
-                          className=" w-full max-w-60 md:w-auto"
+                          className="sm:max-w-auto !w-full max-w-80 sm:object-contain"
                         />
                       </div>
-                      <div className="">
+                      <div className="md:basis-7/12 2xl:basis-8/12">
                         <h4 className="h5  !font-medium text-black">{trainer.trainer_Name}</h4>
                         <p className="small-regular text-[#404040]">{trainer.trainer_Designation}</p>
-                        <p className="base-regular py-3">{trainer.trainer_Bio}</p>
-                        <div className=" flex flex-col gap-4 sm:flex-row">
-                          <div className="">
+                        <p className="base-regular hidden py-3 sm:block">{trainer.trainer_Bio}</p>
+                        <div className=" mt-4 flex  flex-row  gap-2 md:gap-4">
+                          <div className=" self-center">
                             <Button
-                              className="rounded-md border-link"
+                              className="rounded-md border-link py-0 text-xs md:py-3 md:text-sm "
                               href={trainer.slug}
                               target="_blank"
                               size={"default"}
@@ -69,15 +82,15 @@ const TrainerCarousel: React.FC<{ trainerDetails: Trainers[] }> = ({ trainerDeta
                               View Profile <RightChevron className="ml-2" />
                             </Button>
                           </div>
-                          <div className="flex flex-row gap-2">
+                          <div className="flex flex-row gap-2 self-center">
                             <Image
                               src={"/images/linkedin.png"}
-                              className="self-center"
+                              className="size-8 self-center md:size-11"
                               alt={"Trainer"}
                               width={45}
                               height={45}
                             />
-                            <div className="small-regular slef-center">
+                            <div className="small-regular self-center">
                               Explore {trainer.trainer_Name} <br /> on{" "}
                               <Link className="text-link underline" href={trainer.trainer_linkinUrl}>
                                 Linked In

@@ -47,35 +47,40 @@ export const navigationDesktopHamburger: NavigationHome[] = [
 ]
 export const trendingPrograms: TrendingPrograms[] = [
   {
-    name: "Data Analytics",
+    name: "Cybersecurity ",
     route: "/Data Analytics",
 
+    color: "#0077E5",
+  },
+  {
+    name: " Business Analytics",
+    route: "/data-analytics",
     color: "#41BF0B",
   },
   {
-    name: "Ethical Hacking",
-    route: "/ethical-hacking",
-    color: "#41BF0B",
+    name: "Data Analytics",
+    route: "/data-science",
+    color: "#0077E5",
   },
   {
     name: "Data Science",
-    route: "/data-science",
+    route: "/ethical-hacking",
+    color: "#0077E5",
+  },
+  {
+    name: "AWS ",
+    route: "/machine-learning",
     color: "#41BF0B",
   },
   {
-    name: "Business Analytics",
-    route: "/data-analytics",
-    color: "#FFB701",
-  },
-  {
     name: "Machine Learning",
-    route: "/machine-learning",
-    color: "#FFB701",
+    route: "/aws",
+    color: "#41BF0B",
   },
   {
-    name: "AWS",
+    name: "Digital Marketing    ",
     route: "/aws",
-    color: "#FFB701",
+    color: "#41BF0B",
   },
 ]
 export const hiringCompanies: HiringCompanies[] = [

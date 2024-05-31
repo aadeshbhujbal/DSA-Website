@@ -1,8 +1,8 @@
 import Image from "next/image"
 import React from "react"
+import GetInTouch from "@/components/shared/GetInTouch"
 import Button from "@/components/ui/button"
 import { TickIcon } from "@/constants/icons"
-import GetInTouch from "@/components/shared/GetInTouch"
 
 const DataspaceCertification = () => {
   return (
@@ -22,21 +22,22 @@ const DataspaceCertification = () => {
         <div className="">
           <h2 className="h4 my-2 text-left !font-medium text-white">DataSpace Certification</h2>
           <p className="base-regular max-w-xl py-2 text-white">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore Lorem
-            ipsum dolor sit amet, consectetur adipiscing elit.
+            DataSpace Academy’s Certification is acknowledged all across the globe as a valid testament to a learner’s
+            expertise and skills in the most in-demand career domains. Experience professional growth with our
+            industry-leading certification courses and practical training. Join us to unlock your dream career.
           </p>
           <ul className="my-4 flex flex-col gap-3 lg:flex-row">
             <li className="small-medium flex items-center text-white">
               <TickIcon title="Easy apply for trending jobs" titleId="easyApply" className="mr-2" />
-              Easy apply for trending jobs
+              Professional Growth{" "}
             </li>
             <li className="small-medium flex items-center text-white">
               <TickIcon title="Get the best learning experience" titleId="learningExperience" className="mr-2" />
-              Get the best learning experience
+              Industry Recognition
             </li>
             <li className="small-medium flex items-center text-white">
               <TickIcon title="Enroll free skill-up courses" titleId="freeCourses" className="mr-2" />
-              Enroll free skill-up courses
+              Practical Skill Development
             </li>
           </ul>
 

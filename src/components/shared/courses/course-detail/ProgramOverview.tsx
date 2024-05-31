@@ -26,7 +26,7 @@ const ProgramOverview: React.FC<ProgramOverviewProps> = ({
             <p className="base-medium p max-w-xl">{description}</p>
             <ul className="my-4 flex flex-col gap-3 lg:flex-col">
               {items.map((item) => (
-                <li key={item.id} className="small-medium flex items-center text-black">
+                <li key={item.id} className="base-regular flex items-center text-black">
                   <TickIcon title={item.title} titleId={item.id} className="mr-2 " />
                   {item.content}
                 </li>
@@ -49,7 +49,7 @@ const ProgramOverview: React.FC<ProgramOverviewProps> = ({
               url={videoUrl}
               controls={true}
               width={350}
-              height={250}
+              height={220}
               style={{ border: "1px solid " }}
               className=" !rounded-xl "
             />

@@ -6,7 +6,7 @@ import { Container } from "@/components/ui/Container"
 import { Section } from "@/components/ui/Section"
 
 interface HeroProps {
-  backgroundImage: string
+  backgroundImage?: string
   heading: string
   background?: string
   children?: React.ReactNode
@@ -16,11 +16,7 @@ interface HeroProps {
   buttonLink: string
   brochureText: string
   brochureLink: string
-
   rating: string
-}
-interface Herobackground {
-  [key: string]: string
 }
 
 interface HeroCourseProps {
@@ -28,29 +24,37 @@ interface HeroCourseProps {
   children?: ReactNode
 }
 
-const herobackground: Herobackground = {
-  backgroundSize: "cover",
-  backgroundAttachment: "fixed",
-  backgroundRepeat: "no-repeat",
-}
 const HeroCourse: React.FC<HeroCourseProps> = ({ HeroData, children }) => {
-  const inlineStyles = {
-    ...herobackground,
-    backgroundImage: `url(${HeroData[0]?.backgroundImage || ""})`,
-    background: HeroData[0]?.background || "",
-  }
+  // const inlineStyles = {
+  //   ...herobackground,
+  //   backgroundImage: `url(${HeroData[0]?.backgroundImage || HeroData[0]?.backgroundImage})`,
+
+  //   background: HeroData[0]?.background ? HeroData[0].background : `url(${HeroData[0]?.backgroundImage})`,
+  // }
+
+  const inlineStyles: React.CSSProperties = HeroData[0]?.background
+    ? {
+        backgroundColor: HeroData[0]?.background,
+      }
+    : {
+        backgroundImage: `url(${HeroData[0]?.backgroundImage})`,
+        backgroundSize: "cover",
+        backgroundAttachment: "fixed",
+        backgroundRepeat: "no-repeat",
+        backgroundColor: HeroData[0]?.background || "#000000",
+      }
   return (
     <>
       <Section className="!p-0">
         <div className=" !flex " style={inlineStyles}>
           <Container className=" lg:self-center">
             <div className="flex flex-col md:gap-8 lg:flex-row lg:py-16 ">
-              <div className=" self-center text-white md:!basis-3/5 ">
+              <div className=" self-center text-white md:!basis-7/12 ">
                 <h1 className="h2 my-3 pt-8  !font-medium sm:pt-0 lg:!text-6xl 2xl:text-7xl ">
                   {HeroData[0]?.heading || ""}
                 </h1>
 
-                <p className="base-medium my-3 max-w-4xl 2xl:my-6 2xl:text-2xl">{HeroData[0]?.paragraph || ""}</p>
+                <p className="body-medium my-3 max-w-4xl 2xl:my-6 2xl:text-2xl">{HeroData[0]?.paragraph || ""}</p>
                 <div className="my-3 flex flex-row gap-2 2xl:my-4">
                   <Image src={"/images/star1.png"} className="size-6 self-center" alt="Star" width={20} height={10} />
                   <p className="base-medium my-3 2xl:text-xl ">
@@ -95,7 +99,9 @@ const HeroCourse: React.FC<HeroCourseProps> = ({ HeroData, children }) => {
                   />
                 </div>
               </div>
-              <div className="mx-auto self-center md:basis-2/5 md:pb-12  lg:max-w-[450px]">{children}</div>
+              <div className="!hero-contactForm-bg mx-auto basis-5/12 self-center px-7 md:px-12 lg:max-w-[470px] 2xl:max-w-[500px]">
+                {children}
+              </div>
             </div>
           </Container>
         </div>

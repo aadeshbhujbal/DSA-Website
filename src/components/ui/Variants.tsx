@@ -31,7 +31,7 @@ export const Variants = ({ variant, size }: { variant?: VariantProps["variant"];
   const sizeClasses = {
     default: "h-10 px-4 py-2",
     small: "h-9 rounded-md px-3 text-sm",
-    medium: "text-base h-11 rounded-lg px-8",
+    medium: "text-base h-11 rounded-lg px-6 md:px-8",
     large: "text-lg rounded-lg px-6 !max-w-[350px] !w-full md:px-20 h-11 ",
     icon: "h-10 w-10",
   }

@@ -1,4 +1,16 @@
-import { FaqItemProps, LearnersReview, TrainerCarouselProps, Trainers, VoiceFromStudentsProps } from "@/types"
+import { FaqItemProps, LearnersReview, Trainers, VoiceFromStudentsProps } from "@/types"
+export const CourseHeroData = [
+  {
+    backgroundImage: "/images/herobg.png",
+    heading: "Get The Best Cybersecurity Courses at One Place",
+    subheading: "Build your future with our popular cybersecurity programs.",
+    paragraph:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+    buttonText: "Explore Programs",
+    buttonLink: "#cybersecuritryCourses",
+    rating: "4.8/5 Rating Program (1267 reviews)",
+  },
+]
 
 export const cybersecuritylearnersReviewUpperCarousel: LearnersReview[] = [
   {

@@ -24,6 +24,7 @@ interface HeroFormProps {
 }
 
 const isDevelopment = process.env.NODE_ENV === "development"
+const siteKey = process.env.RECAPTCHA_SITE_KEY || "YOUR_DEFAULT_SITE_KEY"
 
 const MockReCAPTCHA: React.FC<{ onChange: (token: string) => void }> = ({ onChange }) => {
   const handleCaptchaChange = () => {
@@ -154,7 +155,7 @@ const HeroForm: React.FC<HeroFormProps> = ({ title, subtitle }) => {
         <Form {...form}>
           <form
             onSubmit={onSubmit}
-            className="mx-auto flex w-full flex-col  gap-4 md:max-w-6xl lg:!flex-col 3xl:max-w-6xl"
+            className="mx-auto flex w-full max-w-full flex-col  gap-2 md:max-w-6xl lg:!flex-col 2xl:gap-3 3xl:max-w-6xl"
           >
             <FormField
               control={form.control}
@@ -163,7 +164,7 @@ const HeroForm: React.FC<HeroFormProps> = ({ title, subtitle }) => {
                 <FormItem className="w-full  ">
                   <Input
                     placeholder="Name"
-                    className=" border-![#EBEBEB]!outline-none !w-full border-2  bg-white !text-black !ring-offset-0  placeholder:text-black focus:border-link focus:!outline-none focus-visible:!outline-none focus-visible:ring-0 2xl:!h-12 2xl:max-w-full"
+                    className=" base-regular border-![#EBEBEB]!outline-none !w-full border-2  bg-white !text-black !ring-offset-0  placeholder:text-black focus:border-link focus:!outline-none focus-visible:!outline-none focus-visible:ring-0 2xl:!h-12 2xl:max-w-full"
                     size="medium"
                     variant="ghost"
                     {...field}
@@ -180,7 +181,7 @@ const HeroForm: React.FC<HeroFormProps> = ({ title, subtitle }) => {
                 <FormItem className="w-full  ">
                   <Input
                     placeholder="Email Address"
-                    className=" border-![#EBEBEB]!outline-none !w-full  border-2 bg-white !text-black  !ring-offset-0 placeholder:text-black focus:border-link focus:!outline-none focus-visible:!outline-none focus-visible:ring-0 2xl:!h-12 2xl:max-w-full"
+                    className=" base-regular border-![#EBEBEB]!outline-none !w-full  border-2 bg-white !text-black  !ring-offset-0 placeholder:text-black focus:border-link focus:!outline-none focus-visible:!outline-none focus-visible:ring-0 2xl:!h-12 2xl:max-w-full"
                     size="medium"
                     variant="ghost"
                     {...field}
@@ -194,8 +195,8 @@ const HeroForm: React.FC<HeroFormProps> = ({ title, subtitle }) => {
                 control={form.control}
                 name="country"
                 render={({ field }) => (
-                  <FormItem className={"!w-28 md:!w-36"}>
-                    <div className=" !w-28 md:!w-36">
+                  <FormItem className={" w-24 md:!w-28 "}>
+                    <div className=" w-24 md:!w-28 ">
                       <Select
                         onValueChange={(value: string) => {
                           setSelectedCountry(value)
@@ -208,14 +209,14 @@ const HeroForm: React.FC<HeroFormProps> = ({ title, subtitle }) => {
                         defaultValue={selectedCountry} // Set default value to +91
                       >
                         {/* SelectTrigger component */}
-                        <SelectTrigger className="!w-30 border-![#EBEBEB] w-full border-2 bg-white text-black outline-none !ring-offset-link placeholder:text-black focus:!outline-none focus:ring-0  focus-visible:border-link focus-visible:!outline-none focus-visible:ring-0 2xl:!h-12">
-                          <SelectValue placeholder=" +91" className="!w-30 !font-satoshi ">
+                        <SelectTrigger className=" base-regular md:!w-30 border-![#EBEBEB] w-full border-2 bg-white text-black outline-none !ring-offset-link placeholder:text-black focus:!outline-none focus:ring-0 focus-visible:border-link  focus-visible:!outline-none focus-visible:ring-0 md:!w-28 2xl:!h-12">
+                          <SelectValue placeholder=" +91" className="!w-28 !font-satoshi ">
                             {selectedCountryFlag && selectedCountryFlag} {selectedCountry && `(${selectedCountry})`}
                           </SelectValue>
                         </SelectTrigger>
 
                         {/* SelectContent component */}
-                        <SelectContent className=" border-![#EBEBEB]!outline-none w-full border-2 bg-white  text-black !ring-offset-link placeholder:text-black focus:!outline-none focus-visible:border-link focus-visible:!outline-none focus-visible:ring-0">
+                        <SelectContent className="base-regular border-![#EBEBEB]!outline-none w-full border-2 bg-white  text-black !ring-offset-link placeholder:text-black focus:!outline-none focus-visible:border-link focus-visible:!outline-none focus-visible:ring-0">
                           {/* Display country options */}
                           {countryData.countries.map((country) => (
                             <SelectItem key={country.phone_code} value={country.phone_code}>
@@ -239,7 +240,7 @@ const HeroForm: React.FC<HeroFormProps> = ({ title, subtitle }) => {
                   <FormItem className="w-full">
                     <Input
                       placeholder="Phone Number"
-                      className=" border-![#EBEBEB]!outline-none w-full border-2 bg-white  text-black !ring-offset-link placeholder:text-black focus:!outline-none focus-visible:border-link focus-visible:!outline-none focus-visible:ring-0 2xl:!h-12"
+                      className="base-regular border-![#EBEBEB]!outline-none w-full border-2 bg-white  text-black !ring-offset-link placeholder:text-black focus:!outline-none focus-visible:border-link focus-visible:!outline-none focus-visible:ring-0 2xl:!h-12"
                       size="medium"
                       variant="ghost"
                       {...field}
@@ -264,14 +265,14 @@ const HeroForm: React.FC<HeroFormProps> = ({ title, subtitle }) => {
                     }}
                   >
                     {/* SelectTrigger component */}
-                    <SelectTrigger className=" border-![#EBEBEB] focus-visible:ring-02xl:!h-12 w-full border-2 bg-white text-black outline-none !ring-offset-link placeholder:text-black focus:!outline-none  focus:ring-0 focus-visible:border-link focus-visible:!outline-none 2xl:!h-12 ">
+                    <SelectTrigger className="base-regular border-![#EBEBEB] focus-visible:ring-02xl:!h-12 w-full border-2 bg-white text-black outline-none !ring-offset-link placeholder:text-black focus:!outline-none  focus:ring-0 focus-visible:border-link focus-visible:!outline-none 2xl:!h-12 ">
                       <SelectValue placeholder="State" className=" ">
                         {field.value ? field.value : "State"}
                       </SelectValue>
                     </SelectTrigger>
 
                     {/* SelectContent component */}
-                    <SelectContent className=" border-![#EBEBEB]!outline-none w-full border-2 bg-white  text-black !ring-offset-link placeholder:text-black focus:!outline-none focus-visible:border-link focus-visible:!outline-none focus-visible:ring-0">
+                    <SelectContent className="base-regular border-![#EBEBEB]!outline-none w-full border-2 bg-white  text-black !ring-offset-link placeholder:text-black focus:!outline-none focus-visible:border-link focus-visible:!outline-none focus-visible:ring-0">
                       {/* Display state options */}
                       {stateData.states.map((state) => (
                         <SelectItem key={state.id} value={state.name}>
@@ -299,10 +300,7 @@ const HeroForm: React.FC<HeroFormProps> = ({ title, subtitle }) => {
                 </div>
               </div>
             </div>
-            <ReCAPTCHAComponent
-              sitekey="JOASDOMOSADASDOASD" // Replace with your ReCaptcha site key
-              onChange={onCaptchaChange}
-            />
+            <ReCAPTCHAComponent sitekey={siteKey} onChange={onCaptchaChange} />
 
             {/* Submit button */}
             <div className="w-full align-top ">

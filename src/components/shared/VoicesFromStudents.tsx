@@ -1,15 +1,15 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
 "use client"
 import dynamic from "next/dynamic"
+import Image from "next/image"
 import React, { useEffect, useState } from "react"
 
+import { Autoplay, Navigation, Pagination } from "swiper/modules"
+import { Swiper, SwiperSlide } from "swiper/react"
 import { Card } from "@/components/ui/card"
 import { Container } from "@/components/ui/Container"
 import { Section } from "@/components/ui/Section"
-import Image from "next/image"
 import { VoiceFromStudentsProps } from "@/types"
-import { Autoplay, Navigation, Pagination } from "swiper/modules"
-import { Swiper, SwiperSlide } from "swiper/react"
 import "swiper/css"
 import "swiper/css/pagination"
 const ReactPlayer = dynamic(() => import("react-player"), { ssr: false })
@@ -21,12 +21,13 @@ const VoicesFromStudentsSlider: React.FC<{ slides: VoiceFromStudentsProps[] }> =
     setShowPlayer(true)
   }, [])
   return (
-    <div className="mx-auto w-full max-w-7xl ">
+    <div className="mx-auto w-full max-w-full ">
       <style>
         {`
         .swiper-pagination .swiper-pagination-bullet-active {
           width: 20px !important;
           border-radius: 20px !important;
+          
         }
         `}
       </style>
@@ -46,24 +47,12 @@ const VoicesFromStudentsSlider: React.FC<{ slides: VoiceFromStudentsProps[] }> =
         speed={2000}
         modules={[Autoplay, Pagination]}
         className="mySwiper ease-in"
-        breakpoints={{
-          640: {
-            slidesPerView: 1,
-            spaceBetween: 2,
-          },
-          768: {
-            slidesPerView: 1,
-          },
-          1024: {
-            slidesPerView: 1.5,
-          },
-        }}
       >
         {" "}
         {slides.map((slide, index) => {
           return (
             <SwiperSlide key={slide.id} style={{ width: "auto", height: "auto" }} className="lg:!max-w-3xl">
-              <div className="m-8 mx-auto flex max-w-3xl flex-col gap-1 !rounded-xl md:!flex-row lg:gap-3">
+              <div className="m-8 mx-auto mb-12 flex max-w-full flex-col  gap-0  !rounded-xl bg-white p-4 md:!flex-row md:gap-3 md:bg-transparent md:p-0 ">
                 <div className="sm:mx-none mx-auto !rounded-xl ">
                   <ReactPlayer
                     playIcon={
@@ -85,7 +74,7 @@ const VoicesFromStudentsSlider: React.FC<{ slides: VoiceFromStudentsProps[] }> =
                   />
                 </div>
                 <div className="mx-auto">
-                  <Card className=" w-[280px] max-w-xs !rounded-xl p-8 pt-10 sm:w-auto sm:max-w-md md:h-[320px] ">
+                  <Card className=" w-[280px] max-w-xs !rounded-xl border-none  px-2 pt-5 shadow-none sm:w-auto sm:max-w-md md:h-[320px] md:border md:p-8 md:pt-10 md:shadow-sm ">
                     <h5 className="h5 mb-4 font-medium">{slide.h5}</h5>
                     <p className="small-regular">{slide.p}</p>
                   </Card>
@@ -105,9 +94,9 @@ interface VoicesFromStudentsProps {
 
 const VoicesFromStudents: React.FC<VoicesFromStudentsProps> = ({ slides }) => {
   return (
-    <Section className="!p-0 ">
-      <Container className="!pb-4 sm:p-0">
-        <h2 className="h4 my-4 px-8 pb-2 pt-4 text-center !font-medium text-black sm:px-0">Voices from Our Students</h2>
+    <Section className="max-w-full !p-0 ">
+      <Container className="!max-w-full !pb-4 sm:p-0">
+        <h2 className="h4 my-4 px-8 pb-2  text-center !font-medium text-black sm:px-0">Voices from Our Students</h2>
         <VoicesFromStudentsSlider slides={slides} />
       </Container>
     </Section>

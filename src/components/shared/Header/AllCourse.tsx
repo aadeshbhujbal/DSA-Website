@@ -1,7 +1,7 @@
 import { ChevronRight } from "lucide-react"
 import Image from "next/image"
 import Link from "next/link"
-import React, { useEffect, useState } from "react" // Import useEffect
+import React, { useState } from "react" // Import useEffect
 import Button from "@/components/ui/button"
 import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog"
 import { OurProgramCardProps } from "@/types"

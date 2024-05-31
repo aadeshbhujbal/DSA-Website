@@ -1,16 +1,19 @@
 import Image from "next/image"
+import Button from "@/components/ui/button"
 import { Container } from "@/components/ui/Container"
 import { Section } from "@/components/ui/Section"
-import Button from "@/components/ui/button"
 
 const Lms = () => {
   return (
     <Section className="bg-gradient-to-t from-[#c6ffae4d]  to-white/10 !p-0 ">
       {" "}
       <Container className="p-6 !opacity-100 ">
-        <h2 className="h4 py-2 text-center !font-medium text-black">Get immersive learning experience</h2>
-        <p className="mx-auto pb-6 text-center sm:pb-2 md:max-w-2xl 3xl:max-w-6xl">
-          Meet our Learning Management System (LMS), where innovation meets education. Our LMS offers a seamless
+        <h2 className="h4 py-2 text-center !font-medium text-black">
+          Dive into a state-of-the-art Immersive Learning Experience
+        </h2>
+        <p className="base-regular mx-auto pb-6 text-center sm:pb-2 md:max-w-2xl 3xl:max-w-6xl">
+          Say Hello to our dedicated LMS (Learning Management System) where you will find complete account of our course
+          and cohorts. A blend of innovation and education, our LMS is designed with care to ensure the most seamless
           learning experience.
         </p>
         <div className="mx-auto flex flex-col md:flex-row 2xl:max-w-screen-2xl">
@@ -24,26 +27,30 @@ const Lms = () => {
           <div className="mx-auto  self-center ">
             <ul className="tick-icon-list">
               <li>
-                <h6 className="base-medium">Interactive Content Delivery:</h6>
-                <p className="base-regular">Engage learners with multimedia, simulations, and gamified experiences.</p>
+                <h6 className="base-medium">Interactive classes</h6>
+                <p className="base-regular">
+                  We ensure the most engaging learning ambience with interactive classes, doubt-clearing sessions, and
+                  MCQ quizzes.
+                </p>
               </li>
               <li>
-                <h6 className="base-medium">Robust Assessment Tools:</h6>
+                <h6 className="base-medium">Course Tracking</h6>
                 <p className="base-regular">
-                  Track progress and assess performance with customizable quizzes and assignments.
+                  Easy tracking of courses progress, classes assigned, and upcoming classes.
                 </p>
               </li>
 
               <li>
-                <h6 className="base-medium">Collaborative Spaces:</h6>
+                <h6 className="base-medium">Academic Resources</h6>
                 <p className="base-regular">
-                  Foster interaction and communication through discussion forums and group projects
+                  You will have access to all the academic resources related to your course in just a few clicks, in one
+                  single portal.
                 </p>
               </li>
-              <li>
+              {/* <li>
                 <h6 className="base-medium">Comprehensive Analytics:</h6>
                 <p className="base-regular"> Gain insights into learner engagement and course effectiveness.</p>
-              </li>
+              </li> */}
             </ul>
             <Button variant={"default"} href="" size="medium" className="mt-5 w-full  max-w-[250px]">
               Start Learning

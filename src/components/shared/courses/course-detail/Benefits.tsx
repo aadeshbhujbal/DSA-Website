@@ -11,44 +11,19 @@ interface BenefitsProps {
   heading?: string
   salaryTitle: string
   salaryPara: string
+  graphData: { name: string; range: number; label: string }[] // New prop for graph data
 }
 
-const data = [
-  {
-    name: "Beginner",
-    range: 100,
-    label: "₹3LPA - ₹6LPA",
-  },
-  {
-    name: "Intermediate",
-    range: 200,
-    label: "₹8LPA - ₹10LPA",
-  },
-  {
-    name: "Expert",
-    range: 300,
-    label: "₹10LPA - ₹15LPA",
-  },
-]
-const getIntroOfPage = (label: string) => {
-  if (label === "Beginner") {
-    return "₹8LPA - ₹10LPA"
-  }
-  if (label === "Intermediate") {
-    return "₹8LPA - ₹10LPA"
-  }
-  if (label === "Expert") {
-    return "₹10LPA - ₹15LPA"
-  }
-
-  return ""
+const getIntroOfPage = (label: string, data: { name: string; range: number; label: string }[]) => {
+  const entry = data.find((item) => item.name === label)
+  return entry ? entry.label : ""
 }
 
-const CustomTooltip = ({ active, payload, label }: any) => {
+const CustomTooltip = ({ active, payload, label, data }: any) => {
   if (active && payload && payload.length) {
     return (
       <div className="custom-tooltip">
-        <p className="label">{`${label} : ${getIntroOfPage(label)}`}</p>
+        <p className="label">{`${label} : ${getIntroOfPage(label, data)}`}</p>
       </div>
     )
   }
@@ -56,7 +31,7 @@ const CustomTooltip = ({ active, payload, label }: any) => {
   return null
 }
 
-const Benefits: React.FC<BenefitsProps> = ({ benefitsData, heading, salaryTitle, salaryPara }) => {
+const Benefits: React.FC<BenefitsProps> = ({ benefitsData, heading, salaryTitle, salaryPara, graphData }) => {
   const colors = ["#3B82F6", "#F59E0B", "#1AAA03", "#14B8A6", "#0A0A0A"]
 
   return (
@@ -93,13 +68,12 @@ const Benefits: React.FC<BenefitsProps> = ({ benefitsData, heading, salaryTitle,
           </div>
           <div className="">
             <h2 className="h5 pb-4 text-left !font-medium text-black">{salaryTitle}</h2>
-            <p>{salaryPara}</p>
-            <div className=" my-5">
-              {" "}
+            <p className="p">{salaryPara}</p>
+            <div className="my-5">
               <BarChart
                 width={320}
                 height={200}
-                data={data}
+                data={graphData}
                 margin={{
                   top: 50,
                   right: 30,
@@ -108,11 +82,11 @@ const Benefits: React.FC<BenefitsProps> = ({ benefitsData, heading, salaryTitle,
                 }}
               >
                 <XAxis dataKey="name" />
-                <Tooltip content={<CustomTooltip />} />{" "}
+                <Tooltip content={<CustomTooltip data={graphData} />} />
                 <Bar dataKey="range" label={"label"} fill="#8884d8" barSize={65}>
-                  <LabelList dataKey="label" position="top" fontSize={14} />{" "}
-                  {data.map((entry, index) => (
-                    <Cell key={`cell-${index}`} fill={colors[index % 20]} />
+                  <LabelList dataKey="label" position="top" fontSize={14} />
+                  {graphData.map((entry, index) => (
+                    <Cell key={`cell-${index}`} fill={colors[index % colors.length]} />
                   ))}
                 </Bar>
               </BarChart>

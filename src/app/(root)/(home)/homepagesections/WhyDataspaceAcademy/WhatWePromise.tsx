@@ -15,7 +15,7 @@ const AnimatedLine: React.FC<{ startX: number; endX: number; maxWidth: number }>
 
   return (
     <motion.div
-      className="absolute left-0 top-1/2 h-0.5 bg-white"
+      className="absolute left-0 top-1/3 h-0.5 bg-white"
       style={{
         width: `${width}px`,
         left: `${startX}px`,
@@ -30,18 +30,18 @@ const AnimatedLine: React.FC<{ startX: number; endX: number; maxWidth: number }>
 const PromiseCard: React.FC<PromiseCardProps> = ({ heading, imageUrl, imageAlt, paragraph }) => {
   return (
     <div className="relative !mx-auto flex !content-center justify-center">
-      <div className="relative mt-8 max-w-[240px] rounded-md bg-gradient-to-r from-[#0077E5] to-[#9DFF74] p-[1px]">
+      <div className="relative mt-8 rounded-md bg-gradient-to-r from-[#0077E5] to-[#9DFF74] p-px md:max-w-[260px]">
         <div className="relative flex items-center justify-center rounded-md bg-[#020C15]">
           <div className="absolute left-1/2 top-8 -translate-x-1/2 -translate-y-full">
-            <div className="rounded bg-gradient-to-r from-[#0077E5] to-[#9DFF74] p-[1px]">
+            <div className="rounded bg-gradient-to-r from-[#0077E5] to-[#9DFF74] p-px">
               <div className="rounded-md bg-[#020C15] p-4 text-white">
                 <Image src={imageUrl} width={30} height={30} alt={imageAlt} />
               </div>
             </div>
           </div>
-          <div className="mt-8 h-72 px-6 py-4">
-            <h5 className="h5 font-medium text-white">{heading}</h5>
-            <p className="py-3 text-white/80">{paragraph}</p>
+          <div className="mt-8 h-72 px-4 py-4 md:px-6 2xl:h-80">
+            <h5 className="text-sm font-medium text-white md:text-xl">{heading}</h5>
+            <p className=" py-3 text-xs text-white/80 md:text-sm 2xl:text-base">{paragraph}</p>
           </div>
         </div>
       </div>
@@ -73,7 +73,7 @@ const WhatWePromise: React.FC = () => {
     if (firstCardRef.current && lastCardRef.current) {
       const firstCardRect = firstCardRef.current.getBoundingClientRect()
       const lastCardRect = lastCardRef.current.getBoundingClientRect()
-      setLineStartX(240) // Set startX to 0
+      setLineStartX(260) // Set startX to 0
       setLineEndX(lastCardRect.left)
       // Adjust maximum width based on viewport width
       if (viewportWidth <= 1660) {
@@ -88,14 +88,16 @@ const WhatWePromise: React.FC = () => {
 
   return (
     <>
-      <h2 className="h4 my-2 text-left font-medium text-white">DataSpace Academy Promise to provide:</h2>
-      <div className="relative grid grid-cols-1 !content-center items-center justify-center gap-6 py-6 sm:grid-cols-2  lg:flex lg:flex-nowrap lg:justify-between  lg:gap-0">
+      <h2 className="h4 my-2 mt-4 text-left font-medium text-white lg:my-0 lg:mt-8">Our USP</h2>
+      <div className="relative grid grid-cols-2 !content-center items-center justify-center gap-6 py-6 sm:grid-cols-2  lg:flex lg:flex-nowrap lg:justify-between  lg:gap-0">
         <div ref={firstCardRef}>
           <PromiseCard
-            heading="Comprehensive Curriculum"
+            heading="Industry-leading curriculum
+            "
             imageUrl="/images/book-1.svg"
             imageAlt="Book"
-            paragraph="Our courses cover data analysis, machine learning, big data technologies, and more, ensuring a holistic education tailored to industry demands."
+            paragraph="All our courses follow industry-leading curriculum to ensure the most advanced training for our learners. We update our curriculum at regular intervals to ensure updated training programs. 
+            "
           />
         </div>
         {viewportWidth > 1020 && lineEndX > 0 && lineStartX > 0 && (
@@ -103,18 +105,20 @@ const WhatWePromise: React.FC = () => {
         )}
         <div>
           <PromiseCard
-            heading="Live Classes by Industry Experts"
+            heading="Live mentorship by industry experts
+
+            "
             imageUrl="/images/online-youtube-course-1.svg"
             imageAlt="Youtube"
-            paragraph="Access live classes led by industry expert instructors who offer personalized guidance and mentorship, drawing from their extensive industry experience"
+            paragraph="We offer live classes by industry experts in both offline and online modes to ensure personalised mentorship for each course. "
           />
         </div>
         <div>
           <PromiseCard
-            heading="Industry-Relevant Projects"
+            heading="Capstone projects            "
             imageUrl="/images/projects-1.svg"
             imageAlt="Project"
-            paragraph="Hands-on projects offer real-world experience, enhancing portfolios and showcasing practical skills to employers."
+            paragraph="Our courses are backed by industry-relevant capstone projects that help our learners develop real-world skills through practical training."
           />
         </div>
         <div ref={lastCardRef}>
@@ -122,7 +126,7 @@ const WhatWePromise: React.FC = () => {
             heading="Placement Assistance"
             imageUrl="/images/job-1.svg"
             imageAlt="Book"
-            paragraph="We provide job placement assistance, ensuring our learners secure rewarding positions in the respective field."
+            paragraph="We are backed by a long roster of placement partners that enable us to support our learners with 100% placement assistance. We also conduct mock interview sessions and communication classes to help them crack job interviews like a pro."
           />
         </div>
       </div>

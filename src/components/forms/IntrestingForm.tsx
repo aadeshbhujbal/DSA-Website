@@ -113,7 +113,7 @@ const IntrestingForm: React.FC = () => {
     <Section className="relative !py-0">
       {/* Background grid pattern */}
       <GridPattern
-        className="gradient-dark-background absolute inset-0 z-[-10] size-full  fill-[#0142ac27] stroke-[#e0e5f20a] text-black"
+        className="gradient-dark-background absolute inset-0 -z-10 size-full  fill-[#0142ac27] stroke-[#e0e5f20a] text-black"
         yOffset={0}
         interactive
       />
@@ -138,7 +138,7 @@ const IntrestingForm: React.FC = () => {
                 <FormItem className="w-full lg:!max-w-[23rem] ">
                   <Input
                     placeholder="Email Address"
-                    className=" border-![#EBEBEB]!outline-none  w-full border-2 bg-black  text-white !ring-offset-0 placeholder:text-[#EBEBEB] focus:border-link focus:!outline-none focus-visible:!outline-none focus-visible:ring-0"
+                    className=" border-![#EBEBEB]!outline-none  w-full border-2 bg-black  text-white !ring-offset-0 placeholder:text-border focus:border-link focus:!outline-none focus-visible:!outline-none focus-visible:ring-0"
                     size="medium"
                     variant="ghost"
                   />
@@ -151,8 +151,8 @@ const IntrestingForm: React.FC = () => {
                 control={form.control}
                 name="country"
                 render={({ field }) => (
-                  <FormItem className={"!w-28 md:!w-36"}>
-                    <div className=" !w-28 md:!w-36">
+                  <FormItem className={"!w-28 "}>
+                    <div className=" !w-28 ">
                       <Select
                         onValueChange={(value: string) => {
                           setSelectedCountry(value)
@@ -165,14 +165,14 @@ const IntrestingForm: React.FC = () => {
                         defaultValue={selectedCountry} // Set default value to +91
                       >
                         {/* SelectTrigger component */}
-                        <SelectTrigger className="!w-30 border-![#EBEBEB] w-full border-2 bg-black text-white outline-none !ring-offset-link placeholder:text-[#EBEBEB] focus:!outline-none focus:ring-0  focus-visible:border-link focus-visible:!outline-none focus-visible:ring-0 ">
+                        <SelectTrigger className="!w-30 border-![#EBEBEB] w-full border-2 bg-black text-white outline-none !ring-offset-link placeholder:text-border focus:!outline-none focus:ring-0  focus-visible:border-link focus-visible:!outline-none focus-visible:ring-0 ">
                           <SelectValue placeholder=" +91" className="!w-30 ">
                             {selectedCountryFlag && selectedCountryFlag} {selectedCountry && `(${selectedCountry})`}
                           </SelectValue>
                         </SelectTrigger>
 
                         {/* SelectContent component */}
-                        <SelectContent className=" border-![#EBEBEB]!outline-none w-full border-2 bg-black  text-white !ring-offset-link placeholder:text-[#EBEBEB] focus:!outline-none focus-visible:border-link focus-visible:!outline-none focus-visible:ring-0">
+                        <SelectContent className=" border-![#EBEBEB]!outline-none w-full border-2 bg-black  text-white !ring-offset-link placeholder:text-border focus:!outline-none focus-visible:border-link focus-visible:!outline-none focus-visible:ring-0">
                           {/* Display country options */}
                           {countryData.countries.map((country) => (
                             <SelectItem key={country.phone_code} value={country.phone_code}>
@@ -196,7 +196,7 @@ const IntrestingForm: React.FC = () => {
                   <FormItem className="w-full">
                     <Input
                       placeholder="Phone Number"
-                      className=" border-![#EBEBEB]!outline-none w-full border-2 bg-black  text-white !ring-offset-link placeholder:text-[#EBEBEB] focus:!outline-none focus-visible:border-link focus-visible:!outline-none focus-visible:ring-0"
+                      className=" border-![#EBEBEB]!outline-none w-full border-2 bg-black  text-white !ring-offset-link placeholder:text-border focus:!outline-none focus-visible:border-link focus-visible:!outline-none focus-visible:ring-0"
                       size="medium"
                       variant="ghost"
                       {...field}

@@ -44,6 +44,7 @@ const page = () => {
     "Nuclei.png",
     "Shodan.png",
   ]
+
   return (
     <div>
       <HeroCourse HeroData={HeroData}>
@@ -70,6 +71,23 @@ const page = () => {
         salaryTitle=" Salary Range of a Cybersecurity Expert in India"
         salaryPara=" In India, the salary range for ethical hackers can vary based on factors such as experience, location,
               industry, and certifications."
+        graphData={[
+          {
+            name: "Beginner",
+            range: 100,
+            label: "₹3LPA - ₹6LPA",
+          },
+          {
+            name: "Intermediate",
+            range: 200,
+            label: "₹8LPA - ₹10LPA",
+          },
+          {
+            name: "Expert",
+            range: 300,
+            label: "₹10LPA - ₹15LPA",
+          },
+        ]}
       />
       <CourseCurriculum curriculumData={CybersecurityCurriculumData} assignments={20} hours={20} skills={50} />
       <ToolsCybersecurity imageFilenames={imageFilenames} />

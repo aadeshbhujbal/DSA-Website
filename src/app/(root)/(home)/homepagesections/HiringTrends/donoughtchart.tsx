@@ -49,15 +49,15 @@ const DonutChart = () => {
           wrapperStyle={{ borderRadius: "3px", margin: "0 auto" }}
           content={({ payload }) =>
             (payload ?? []).map((entry, index) => (
-              <span key={`item-${index}`} style={{ paddingRight: "20px", display: "flex-row", alignItems: "center" }}>
+              <span key={`item-${index}`} style={{ paddingRight: "15px", display: "flex-row", alignItems: "center" }}>
                 <span
                   style={{
                     display: "inline-block",
-                    width: "16px",
+                    width: "14px",
                     transform: "translateY(3px)",
-                    height: "16px",
+                    height: "14px",
                     borderRadius: "4px",
-                    marginRight: "5px",
+                    marginRight: "7.5px",
                     backgroundColor: entry.color,
                   }}
                 ></span>

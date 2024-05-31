@@ -11,6 +11,7 @@ import LearnerReview from "@/components/shared/LearnerReview"
 import TrainerCarousel from "@/components/shared/TrainerCarousel"
 import VoicesFromStudents from "@/components/shared/VoicesFromStudents"
 import {
+  CourseHeroData,
   cybersecuritylearnersReviewLowerCarousel,
   cybersecuritylearnersReviewUpperCarousel,
   CybersecurityMasterpageFaqs,
@@ -18,9 +19,9 @@ import {
   cybersecurityvoiceFromStudents,
 } from "@/constants/courses/cybersecuritycourses"
 
-import CybersecuritryCourses from "../../../../components/shared/courses/course-masterpage/CybersecuritryCourses"
+import CoursesSubCategories from "../../../../components/shared/courses/course-masterpage/CoursesSubCategories"
 import ToolsCybersecurity from "../../../../components/shared/courses/course-masterpage/ToolsCybersecurity"
-import Whycybersecurity from "../../../../components/shared/courses/course-masterpage/whycybersecurity"
+import WhyCourse from "../../../../components/shared/courses/course-masterpage/whyCourse"
 
 const Page = () => {
   // const handleButtonClick = () => {
@@ -39,21 +40,39 @@ const Page = () => {
 
   return (
     <>
-      <HeroCourseMaster
-        background={"black"}
-        backgroundImage="https://example.com/background.jpg"
-        heading="Get The Best Cybersecurity
-        Courses at One Place"
-        subheading="Build your future with our popular cybersecurity programs."
-        paragraph="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
-        buttonText="Explore Programs"
-        buttonLink="#cybersecuritryCourses"
-        rating={"4.8/5 Rating Program (1267 reviews)"}
-      >
+      <HeroCourseMaster HeroData={CourseHeroData}>
         <HeroForm />
       </HeroCourseMaster>
-      <Whycybersecurity />
-      <CybersecuritryCourses id="cybersecuritryCourses" />
+      <WhyCourse
+        title1="Why should you learn Cybersecurity in 2023?"
+        content1="Embark on an exhilarating journey in 2023 by diving into ethical hacking. Unlock career opportunities, become a digital guardian, and contribute to a global community of cyber defenders."
+        title2="Salary Range of a Cybersecurity Expert in India"
+        content2="In India, the salary range for ethical hackers can vary based on factors such as experience, location, industry, and certifications."
+        graphData={[
+          {
+            name: "Beginner",
+            range: 100,
+            label: "₹3LPA - ₹6LPA",
+          },
+          {
+            name: "Intermediate",
+            range: 200,
+            label: "₹8LPA - ₹10LPA",
+          },
+          {
+            name: "Expert",
+            range: 300,
+            label: "₹10LPA - ₹15LPA",
+          },
+        ]}
+      />
+
+      <CoursesSubCategories
+        id="cybersecuritryCourses"
+        courseid={2}
+        title="Explore the best cybersecurity courses"
+        description="Embark on an exhilarating journey in 2023 by diving into ethical hacking. Unlock career opportunities, become a digital guardian, and contribute to a global community of cyber defenders."
+      />
       <ToolsCybersecurity imageFilenames={imageFilenames} />
       <ConfusedaboutCourse
         title="Confused about which course to take?"

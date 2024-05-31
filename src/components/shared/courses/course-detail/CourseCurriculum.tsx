@@ -42,7 +42,9 @@ const CourseCurriculum: React.FC<CurriculumItemProps> = ({ curriculumData, hours
                 <span> {skills}+ Skills & Tools</span>
               </div>
             </Card>
-            <Card className={`overflow-scroll rounded-md p-2 shadow-lg sm:px-6 ${isFullView ? "h-min" : "h-[430px]"}`}>
+            <Card
+              className={`no-scrollbar overflow-auto rounded-md p-2 shadow-lg sm:px-6 ${isFullView ? "h-min" : "h-[430px]"}`}
+            >
               <Accordion type="single" collapsible defaultValue="0">
                 {curriculumData.map((item, index) => {
                   return (

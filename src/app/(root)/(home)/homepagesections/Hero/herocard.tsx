@@ -1,8 +1,8 @@
 "use client"
-import React from "react"
 import { motion } from "framer-motion"
-import { cn } from "@/lib/utils"
+import React from "react"
 import { Section } from "@/components/ui/Section"
+import { cn } from "@/lib/utils"
 
 const herocardcontent = [
   {
@@ -77,7 +77,7 @@ const HeroCard: React.FC<HeroCardProps> = ({ className, x, y, rotate, title, sub
   return (
     <motion.div
       className={cn(
-        "inset-y absolute inset-x-0 z-[-1] hidden max-w-44 rounded-xl border-b-[6px] !bg-[#ffffff] px-4 py-6 text-center text-card-foreground opacity-100 shadow-hero-card md:px-6 lg:block ",
+        "inset-y absolute inset-x-0 z-[-1] hidden max-w-40 rounded-xl  border-b-[6px] !bg-[#ffffff] px-4 py-6 text-center text-card-foreground opacity-100 shadow-hero-card md:px-6 lg:block 2xl:max-w-44 ",
         className
       )}
       style={{ x, y: adjustedY, rotate: `${rotate}deg`, borderColor }}

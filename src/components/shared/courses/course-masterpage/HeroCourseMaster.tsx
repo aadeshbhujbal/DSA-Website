@@ -7,7 +7,7 @@ import { Section } from "@/components/ui/Section"
 interface HeroProps {
   backgroundImage: string
   heading: string
-  background: string
+  background?: string
   children?: React.ReactNode
   subheading: string
   paragraph: string
@@ -15,52 +15,44 @@ interface HeroProps {
   buttonLink: string
   rating: string
 }
-interface Herobackground {
-  [key: string]: string
-}
-const herobackground: Herobackground = {
-  backgroundSize: "cover",
-  backgroundAttachment: "fixed",
-  backgroundRepeat: "no-repeat",
-  Height: "100%",
+
+interface HeroMasterProps {
+  HeroData: HeroProps[]
+  children?: React.ReactNode
 }
 
-const HeroCourseMaster: React.FC<HeroProps> = ({
-  backgroundImage,
-  heading,
-  background,
-  subheading,
-  paragraph,
-  buttonText,
-  buttonLink,
-  rating,
-  children,
-}) => {
-  const inlineStyles = {
-    ...herobackground,
-    backgroundImage: `url(${backgroundImage})`,
-    background,
-  }
+const HeroCourseMaster: React.FC<HeroMasterProps> = ({ HeroData, children }) => {
+  const inlineStyles: React.CSSProperties = HeroData[0]?.background
+    ? {
+        backgroundColor: HeroData[0]?.background,
+      }
+    : {
+        backgroundImage: `url(${HeroData[0]?.backgroundImage})`,
+        backgroundSize: "cover",
+        backgroundAttachment: "fixed",
+        backgroundRepeat: "no-repeat",
+        backgroundColor: HeroData[0]?.background || "#000000",
+      }
   return (
     <Section className="!scroll-smooth !p-0">
       <div className=" !flex  h-full " style={inlineStyles}>
         <Container className=" self-center">
           <div className="flex flex-col md:gap-8 lg:flex-row lg:py-16 ">
-            <div className=" !basis-3/5 self-center  text-white ">
-              <h1 className="h2 my-3  !font-medium lg:!text-6xl 2xl:text-7xl ">{heading}</h1>
-              <p className="body-medium my-3 2xl:my-6  2xl:text-2xl ">{subheading}</p>
-              <p className="base-medium my-3 2xl:my-6 2xl:text-xl">{paragraph}</p>
+            <div className=" !basis-7/12 self-center  text-white ">
+              <h1 className="h2 my-3  !font-medium lg:!text-6xl 2xl:text-7xl ">{HeroData[0]?.heading}</h1>
+              <p className="body-medium my-3 2xl:my-6  2xl:text-2xl ">{HeroData[0]?.subheading}</p>
+              <p className="base-regular my-3 2xl:my-6 2xl:text-xl">{HeroData[0]?.paragraph}</p>
               <div className="my-3 flex flex-row gap-2 2xl:my-4">
                 <Image src={"/images/star1.png"} className="size-6 self-center" alt="Star" width={20} height={10} />
-                <p className="base-medium my-3 2xl:text-xl ">{rating}</p>
+                <p className="base-medium my-3 2xl:text-xl ">{HeroData[0]?.rating}</p>
               </div>
               <Button
                 className="max-w-[250px] !scroll-smooth md:max-w-[350px] 2xl:text-lg "
                 variant={"default"}
                 size="large"
-                href={buttonLink}
+                href={HeroData[0]?.buttonLink}
               >
-                {buttonText}
+                {HeroData[0]?.buttonText}
               </Button>
               <div className="my-8 flex gap-4 text-white   lg:my-6">
                 {" "}
@@ -71,12 +63,14 @@ const HeroCourseMaster: React.FC<HeroProps> = ({
                   src={"/images/rating.png"}
                   width={130}
                   height={100}
-                  alt={rating}
+                  alt={HeroData[0]?.rating || ""}
                   className="w-auto max-w-[155px] 2xl:max-w-96"
                 />
               </div>
             </div>
-            <div className="mx-auto basis-2/5 self-center lg:max-w-[450px]">{children}</div>
+            <div className="!hero-contactForm-bg mx-auto basis-5/12 self-center px-7 md:px-12 lg:max-w-[470px] 2xl:max-w-[500px]">
+              {children}
+            </div>
           </div>
         </Container>
       </div>

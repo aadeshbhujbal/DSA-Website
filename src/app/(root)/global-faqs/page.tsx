@@ -2,7 +2,7 @@
 import React from "react"
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion"
 import { Container } from "@/components/ui/Container"
-import { VerticalTabs, VerticalTabsContent, VerticalTabsList, VerticalTabsTrigger } from "@/components/ui/VerticalTabs"
+import { VerticalTabs, VerticalTabsList, VerticalTabsTrigger } from "@/components/ui/VerticalTabs"
 import tabs from "./content"
 import Rating from "../(home)/homepagesections/Hero/Rating"
 

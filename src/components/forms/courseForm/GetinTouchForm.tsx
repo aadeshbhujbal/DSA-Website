@@ -5,6 +5,7 @@ import React, { useEffect, useState } from "react"
 import ReCAPTCHA from "react-google-recaptcha"
 import { useForm } from "react-hook-form"
 import * as z from "zod"
+import Button from "@/components/ui/button"
 import { Checkbox } from "@/components/ui/checkbox"
 import { Form, FormField, FormItem, FormMessage } from "@/components/ui/form"
 import Input from "@/components/ui/input"
@@ -14,13 +15,12 @@ import { HeroFormSchema } from "@/functions/validations"
 
 import { countryData } from "../FormComponents/countries"
 import { stateData } from "../FormComponents/state"
-import Button from "@/components/ui/button"
 
 type FormData = z.infer<typeof HeroFormSchema>
 interface GetInTouchProps {}
 
 const isDevelopment = process.env.NODE_ENV === "development"
-
+const siteKey = process.env.RECAPTCHA_SITE_KEY || "YOUR_DEFAULT_SITE_KEY"
 const MockReCAPTCHA: React.FC<{ onChange: (token: string) => void }> = ({ onChange }) => {
   const handleCaptchaChange = () => {
     const token = "MOCK_TOKEN"
@@ -36,7 +36,7 @@ const MockReCAPTCHA: React.FC<{ onChange: (token: string) => void }> = ({ onChan
 
 const ReCAPTCHAComponent = isDevelopment ? MockReCAPTCHA : ReCAPTCHA
 
-const GetInTouchForm: React.FC<GetInTouchProps> = () => {
+const GetInTouchForm: React.FC<GetInTouchProps & { onSubmit: () => void }> = ({ onSubmit }) => {
   const currentPathname = usePathname()
   const lastSlug = currentPathname.split("/").pop() || ""
   const [isSubmitting, setIsSubmitting] = useState(false)
@@ -45,8 +45,6 @@ const GetInTouchForm: React.FC<GetInTouchProps> = () => {
   const [selectedCountryFlag, setSelectedCountryFlag] = useState<string>("🇮🇳")
   const [selectedState, setSelectedState] = useState<string>("")
   const [captchaToken, setCaptchaToken] = useState<string>("")
-  const [showThankYou, setShowThankYou] = useState(false)
-  const [canSubmit, setCanSubmit] = useState(true)
 
   const form = useForm<FormData>({
     resolver: zodResolver(HeroFormSchema),
@@ -60,7 +58,7 @@ const GetInTouchForm: React.FC<GetInTouchProps> = () => {
     },
   })
 
-  const onSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault()
 
     if (!captchaToken) {
@@ -103,20 +101,25 @@ const GetInTouchForm: React.FC<GetInTouchProps> = () => {
         existingData.push(formattedData)
 
         localStorage.setItem("formData", JSON.stringify(existingData))
+        const exportedDataJSON = JSON.stringify(existingData, null, 2)
+        const blob = new Blob([exportedDataJSON], { type: "application/json" })
+        const url = URL.createObjectURL(blob)
+        const a = document.createElement("a")
+        a.href = url
+        a.download = "formData.json"
 
         console.log("Data successfully stored in localStorage")
       } catch (error) {
         console.error("Error storing data in localStorage:", error)
       }
+
       setIsSubmitting(false)
-      setShowThankYou(true)
-      setCanSubmit(false) // Disable submission
+      setSubmitted(true)
       form.reset()
       setTimeout(() => {
         setSubmitted(false)
-        setCanSubmit(true) // Enable submission after 5 seconds
-        setShowThankYou(false) // Hide the thank you message
-      }, 80000)
+        onSubmit() // Call the passed onSubmit prop to update the parent component state
+      }, 2000)
     } else {
       setIsSubmitting(false)
     }
@@ -130,10 +133,11 @@ const GetInTouchForm: React.FC<GetInTouchProps> = () => {
 
   return (
     <div className="mx-auto max-w-sm self-center">
+      {/* Main form */}
       <Form {...form}>
         <form
-          onSubmit={onSubmit}
-          className="mx-auto flex w-full flex-col  gap-4 md:max-w-6xl lg:!flex-col 3xl:max-w-6xl"
+          onSubmit={handleSubmit}
+          className="mx-auto flex w-full flex-col  gap-2 md:max-w-6xl lg:!flex-col 2xl:gap-3 3xl:max-w-6xl"
         >
           <FormField
             control={form.control}
@@ -142,7 +146,7 @@ const GetInTouchForm: React.FC<GetInTouchProps> = () => {
               <FormItem className="w-full  ">
                 <Input
                   placeholder="Name"
-                  className=" border-![#EBEBEB]!outline-none !w-full border-2  bg-white !text-black !ring-offset-0  placeholder:text-black focus:border-link focus:!outline-none focus-visible:!outline-none focus-visible:ring-0 2xl:!h-12 2xl:max-w-full"
+                  className="base-regular  border-![#EBEBEB]!outline-none !w-full border-2  bg-white !text-black !ring-offset-0  placeholder:text-black focus:border-link focus:!outline-none focus-visible:!outline-none focus-visible:ring-0 2xl:!h-12 2xl:max-w-full"
                   size="medium"
                   variant="ghost"
                   {...field}
@@ -159,7 +163,7 @@ const GetInTouchForm: React.FC<GetInTouchProps> = () => {
               <FormItem className="w-full  ">
                 <Input
                   placeholder="Email Address"
-                  className=" border-![#EBEBEB]!outline-none !w-full  border-2 bg-white !text-black  !ring-offset-0 placeholder:text-black focus:border-link focus:!outline-none focus-visible:!outline-none focus-visible:ring-0 2xl:!h-12 2xl:max-w-full"
+                  className="base-regular border-![#EBEBEB]!outline-none !w-full  border-2 bg-white !text-black  !ring-offset-0 placeholder:text-black focus:border-link focus:!outline-none focus-visible:!outline-none focus-visible:ring-0 2xl:!h-12 2xl:max-w-full"
                   size="medium"
                   variant="ghost"
                   {...field}
@@ -173,8 +177,8 @@ const GetInTouchForm: React.FC<GetInTouchProps> = () => {
               control={form.control}
               name="country"
               render={({ field }) => (
-                <FormItem className={"!w-28 md:!w-36"}>
-                  <div className=" !w-28 md:!w-36">
+                <FormItem className={"!w-28 "}>
+                  <div className=" !w-28 ">
                     <Select
                       onValueChange={(value: string) => {
                         setSelectedCountry(value)
@@ -187,14 +191,14 @@ const GetInTouchForm: React.FC<GetInTouchProps> = () => {
                       defaultValue={selectedCountry} // Set default value to +91
                     >
                       {/* SelectTrigger component */}
-                      <SelectTrigger className="!w-30 border-![#EBEBEB] w-full border-2 bg-white text-black outline-none !ring-offset-link placeholder:text-black focus:!outline-none focus:ring-0  focus-visible:border-link focus-visible:!outline-none focus-visible:ring-0 2xl:!h-12">
+                      <SelectTrigger className=" base-regular !w-30 border-![#EBEBEB] w-full border-2 bg-white text-black outline-none !ring-offset-link placeholder:text-black focus:!outline-none focus:ring-0  focus-visible:border-link focus-visible:!outline-none focus-visible:ring-0 2xl:!h-12">
                         <SelectValue placeholder=" +91" className="!w-30 !font-satoshi ">
                           {selectedCountryFlag && selectedCountryFlag} {selectedCountry && `(${selectedCountry})`}
                         </SelectValue>
                       </SelectTrigger>
 
                       {/* SelectContent component */}
-                      <SelectContent className=" border-![#EBEBEB]!outline-none w-full border-2 bg-white  text-black !ring-offset-link placeholder:text-black focus:!outline-none focus-visible:border-link focus-visible:!outline-none focus-visible:ring-0">
+                      <SelectContent className=" border-![#EBEBEB]!outline-none base-regular w-full border-2  bg-white text-black !ring-offset-link placeholder:text-black focus:!outline-none focus-visible:border-link focus-visible:!outline-none focus-visible:ring-0">
                         {/* Display country options */}
                         {countryData.countries.map((country) => (
                           <SelectItem key={country.phone_code} value={country.phone_code}>
@@ -218,7 +222,7 @@ const GetInTouchForm: React.FC<GetInTouchProps> = () => {
                 <FormItem className="w-full">
                   <Input
                     placeholder="Phone Number"
-                    className=" border-![#EBEBEB]!outline-none w-full border-2 bg-white  text-black !ring-offset-link placeholder:text-black focus:!outline-none focus-visible:border-link focus-visible:!outline-none focus-visible:ring-0 2xl:!h-12"
+                    className=" border-![#EBEBEB]!outline-none base-regular w-full border-2  bg-white text-black !ring-offset-link placeholder:text-black focus:!outline-none focus-visible:border-link focus-visible:!outline-none focus-visible:ring-0 2xl:!h-12 "
                     size="medium"
                     variant="ghost"
                     {...field}
@@ -243,14 +247,14 @@ const GetInTouchForm: React.FC<GetInTouchProps> = () => {
                   }}
                 >
                   {/* SelectTrigger component */}
-                  <SelectTrigger className=" border-![#EBEBEB] focus-visible:ring-02xl:!h-12 w-full border-2 bg-white text-black outline-none !ring-offset-link placeholder:text-black focus:!outline-none  focus:ring-0 focus-visible:border-link focus-visible:!outline-none 2xl:!h-12 ">
+                  <SelectTrigger className=" border-![#EBEBEB] focus-visible:ring-02xl:!h-12 base-regular w-full border-2 bg-white text-black outline-none !ring-offset-link placeholder:text-black  focus:!outline-none focus:ring-0 focus-visible:border-link focus-visible:!outline-none 2xl:!h-12 ">
                     <SelectValue placeholder="State" className=" ">
                       {field.value ? field.value : "State"}
                     </SelectValue>
                   </SelectTrigger>
 
                   {/* SelectContent component */}
-                  <SelectContent className=" border-![#EBEBEB]!outline-none w-full border-2 bg-white  text-black !ring-offset-link placeholder:text-black focus:!outline-none focus-visible:border-link focus-visible:!outline-none focus-visible:ring-0">
+                  <SelectContent className=" base-regular border-![#EBEBEB]!outline-none w-full border-2 bg-white  text-black !ring-offset-link placeholder:text-black focus:!outline-none focus-visible:border-link focus-visible:!outline-none focus-visible:ring-0">
                     {/* Display state options */}
                     {stateData.states.map((state) => (
                       <SelectItem key={state.id} value={state.name}>
@@ -278,11 +282,7 @@ const GetInTouchForm: React.FC<GetInTouchProps> = () => {
               </div>
             </div>
           </div>
-          <ReCAPTCHAComponent
-            sitekey="JOASDOMOSADASDOASD" // Replace with your ReCaptcha site key
-            onChange={onCaptchaChange}
-          />
-
+          <ReCAPTCHAComponent sitekey={siteKey} onChange={onCaptchaChange} />
           {/* Submit button */}
           <div className="w-full align-top ">
             <Button

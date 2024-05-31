@@ -11,13 +11,12 @@ import { Trainers } from "@/types"
 
 export const TrainerCard: React.FC<{ trainerDetails: Trainers[] }> = ({ trainerDetails }) => {
   const id = useId()
-
   return (
     <>
       {trainerDetails.map((item) => (
         <Link href={`/trainers/${item.slug}`} key={`${id}-${item.trainer_Name}`}>
           {" "}
-          <Card className="h-[320px] max-w-[320px]">
+          <Card className="h-[320px] max-w-[320px] sm:w-[320px]">
             <div className="relative">
               <Image
                 src={item.trainer_Image}
